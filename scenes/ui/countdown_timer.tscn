@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq8qlq4ecrkft"]
+
+[ext_resource type="Script" uid="uid://cxldbpt4v2pcq" path="res://ui/countdown_timer.gd" id="1_v2468"]
+
+[node name="CountdownTimer" type="CanvasLayer"]
+script = ExtResource("1_v2468")
+
+[node name="TimerDisplay" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -83.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Minutes" type="Label" parent="TimerDisplay"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "00"
+
+[node name="Colon01" type="Label" parent="TimerDisplay"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = ":"
+
+[node name="Seconds" type="Label" parent="TimerDisplay"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "00"
+
+[node name="Colon02" type="Label" parent="TimerDisplay"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = ":"
+
+[node name="Milliseconds" type="Label" parent="TimerDisplay"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "00"

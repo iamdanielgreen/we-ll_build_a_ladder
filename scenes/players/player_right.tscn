@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://dw4wntmk3vm5r"]
+
+[ext_resource type="Script" uid="uid://b7d73ptmtcac3" path="res://scripts/players/player_right.gd" id="1_d2uhr"]
+[ext_resource type="Texture2D" uid="uid://cvytsbfqpfsbd" path="res://assets/01_sprites/00_placeholders/Fighter_Cats_Tileset.png" id="2_d2uhr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2uhr"]
+atlas = ExtResource("2_d2uhr")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnxbd"]
+atlas = ExtResource("2_d2uhr")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg7dc"]
+atlas = ExtResource("2_d2uhr")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0apa"]
+atlas = ExtResource("2_d2uhr")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7a1i"]
+atlas = ExtResource("2_d2uhr")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww4wr"]
+atlas = ExtResource("2_d2uhr")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jcnf"]
+atlas = ExtResource("2_d2uhr")
+region = Rect2(32, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjidj"]
+atlas = ExtResource("2_d2uhr")
+region = Rect2(48, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8x1j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2uhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnxbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg7dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0apa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7a1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww4wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jcnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjidj")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_la24y"]
+radius = 7.0
+height = 18.0
+
+[node name="PlayerRight" type="CharacterBody2D"]
+script = ExtResource("1_d2uhr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_s8x1j")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_la24y")
