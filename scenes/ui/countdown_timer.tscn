@@ -33,7 +33,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = ":"
 
-[node name="Milliseconds" type="Label" parent="TimerDisplay"]
+[node name="Hundredths" type="Label" parent="TimerDisplay"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "00"

@@ -8,19 +8,21 @@ var time: float = 10.0  #time does not like being set above 59.999
 #That was until you tried setting it to 300.0 on 07/09 and apparently it's fine now?
 var minutes: int = 0
 var seconds: int = 0
-var milliseconds: int = 0
-
+#var milliseconds: int = 0
+var hundredths: int = 0
 
 func _process(delta) -> void:
 	time -= delta
 	
 	minutes = fmod(time, 3600) / 60
 	seconds = fmod(time, 60)
-	milliseconds = fmod(time, 1) * 1000
+	#milliseconds = fmod(time, 1) * 1000
+	hundredths = fmod(time, 1) * 100
 	
 	$TimerDisplay/Minutes.text = "%02d" % minutes
 	$TimerDisplay/Seconds.text = "%02d" % seconds
-	$TimerDisplay/Milliseconds.text = "%03d" % milliseconds
+	#$TimerDisplay/Milliseconds.text = "%03d" % milliseconds
+	$TimerDisplay/Hundredths.text = "%02d" % hundredths
 	
 	#NOTE 22/06/2025: THIS IS ONLY USEFUL IF YOU WANT A TIMER BUT SOMETIMES WANT TO TURN IT OFF.
 	
