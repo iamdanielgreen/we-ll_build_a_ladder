@@ -16,12 +16,43 @@ extends Node
 #<END NOTE>
 
 
+#NOTE: MECHANIC IDEA - COLLECTING/TOUCHING A THING TO WIN A LEVEL, 29/06/2025 = 17:50
+#An object sits in a level, and must be touched by both players at the same time to create the level's Win 
+#Condition. When either player enters the collision area of the object, a variable called PLAYER_X_WIN is set 
+#to TRUE. When both players do this, a third variable called LEVEL_WIN_CONDITION is set to TRUE. Once this
+#occurs, this triggers a function called LEVEL_WIN.
+#<END NOTE>
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+#IN LEVEL SCRIPT
 
+@onready var player_left: CharacterBody2D = $PlayerLeft
+@onready var player_right: CharacterBody2D = $PlayerRight
+@onready var test_macguffin: Area2D = $test_macguffin
+#NOTE: DO YOU NEED THESE? I DON'T THINK YOU NEED THESE?!?
+@onready var countdown_timer: CanvasLayer = $UI/CountdownTimer #NOTE: THIS ONE YOU NEED
+@onready var level_win_screen: CanvasLayer = $UI/LevelWin
+@onready var restart_button: Button = $UI/LevelWin/VBoxContainer/restart_button
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var player_left_win = false
+var player_right_win = false
+var win_condition = false #I KNOW YOU SAID LEVEL_WIN_CONDITION ABOVE BUT WHATEVER.
+
 func _process(delta: float) -> void:
-	pass
+	if player_left_win and player_left_win:
+		win_condition = true
+	
+	if win_condition:
+		countdown_timer.stop_timer()
+		countdown_timer.queue_free()
+		await get_tree().create_timer(0.25).timeout
+		level_win_screen.show()
+		restart_button.grab_focus()
+		
+
+func _on_test_macguffin_body_entered(body: Node2D) -> void:
+	if body == player_left:
+		player_left_win = true
+	if body == player_right:
+		player_right_win = true
+		
+#YOU THEN NEED AN BODY EXIT CONDITION

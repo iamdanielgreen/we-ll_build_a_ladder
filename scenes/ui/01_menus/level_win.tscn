@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://djf41hksfjemg"]
+
+[ext_resource type="Script" uid="uid://dqe0locpth0uy" path="res://scripts/ui/01_menus/level_win.gd" id="1_fsv4q"]
+
+[node name="LevelWin" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_fsv4q")
+
+[node name="level_win_text" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -447.5
+offset_top = -104.0
+offset_right = 447.5
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "We have succeeded."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.5
+offset_top = 10.0
+offset_right = 86.5
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="next_level_button" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Next Level"
+
+[node name="restart_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[node name="main_menu_button" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Main Menu"
+
+[node name="quit_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/next_level_button" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]

@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://couyspq32p6s4"]
+[gd_scene load_steps=13 format=4 uid="uid://couyspq32p6s4"]
 
 [ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/01_sprites/00_placeholders/temple-tileset.png" id="1_h8o7y"]
+[ext_resource type="Script" uid="uid://s4ra4ydd3771" path="res://scripts/levels/level_00_prototype_01.gd" id="1_xkn13"]
 [ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/player_left.tscn" id="2_2fliv"]
 [ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/player_right.tscn" id="3_0k1se"]
-[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://ui/01_menus/pause_menu.tscn" id="4_kjuh2"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/01_menus/pause_menu.tscn" id="4_kjuh2"]
+[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="5_t17a0"]
 [ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="5_wh6nh"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/01_menus/out_of_time.tscn" id="6_8xxpc"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/01_menus/level_win.tscn" id="9_v8qis"]
+[ext_resource type="PackedScene" uid="uid://x3r6l552uiae" path="res://scenes/items/test_macguffin.tscn" id="10_q4p61"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fliv"]
 texture = ExtResource("1_h8o7y")
@@ -91,11 +96,15 @@ physics_layer_1/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_2fliv")
 
 [node name="level_00_prototype01" type="Node2D"]
+script = ExtResource("1_xkn13")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 
+[node name="Players" type="Node" parent="."]
+
 [node name="PlayerLeft" parent="." instance=ExtResource("2_2fliv")]
+z_index = 1
 position = Vector2(-174, 96)
 
 [node name="PlayerRight" parent="." instance=ExtResource("3_0k1se")]
@@ -116,5 +125,22 @@ tile_set = SubResource("TileSet_0k1se")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("4_kjuh2")]
+visible = false
+
+[node name="LevelTitle" parent="UI" instance=ExtResource("5_t17a0")]
+visible = false
 
 [node name="CountdownTimer" parent="UI" instance=ExtResource("5_wh6nh")]
+
+[node name="OutOfTime" parent="UI" instance=ExtResource("6_8xxpc")]
+visible = false
+
+[node name="LevelWin" parent="UI" instance=ExtResource("9_v8qis")]
+visible = false
+
+[node name="test_macguffin" parent="." instance=ExtResource("10_q4p61")]
+z_index = -1
+position = Vector2(-9, -97)
+
+[connection signal="body_entered" from="test_macguffin" to="." method="_on_test_macguffin_body_entered"]
+[connection signal="body_exited" from="test_macguffin" to="." method="_on_test_macguffin_body_exited"]

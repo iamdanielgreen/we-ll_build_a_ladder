@@ -22,10 +22,7 @@ func pauseMenu():
 	else:
 		pause_menu.show()
 		resume_button.grab_focus()
-		#if GameManager.current_scene == "level_01_bedroom":
-			#player.visible = false
-		#else:
-			#pass
+
 		get_tree().paused = true
 		
 	paused = !paused # TODO What exactly is happening here? NOTE: 20/06/25 - DANIEL, THIS IS STILL A FLIP/FLOP.
@@ -38,3 +35,8 @@ func _on_main_menu_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_restart_button_pressed() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()
