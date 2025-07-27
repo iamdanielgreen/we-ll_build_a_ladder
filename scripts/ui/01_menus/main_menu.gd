@@ -14,7 +14,7 @@ func _ready() -> void:
 	start_game_button.grab_focus()	
 
 func _on_start_game_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/level_00_prototype01.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level_00_prototype02_jump.tscn")
 	
 func _on_credits_button_pressed() -> void:
 	pass

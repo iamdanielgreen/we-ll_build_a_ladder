@@ -33,5 +33,42 @@ func _physics_process(delta: float) -> void:
 		PR_sprite.flip_h = false
 	elif direction < 0.0:
 		PR_sprite.flip_h = true
+	
+	#HOLDING HANDS TEST
+	if Input.is_action_pressed("PR_holdhands"):
+		GameManager.PR_holdhands = true
+	elif Input.is_action_just_released("PR_holdhands"):
+		GameManager.PR_holdhands = false
+	
+	#MOVEMENT
+	if is_on_floor():
+		if direction == 0.0:
+			if GameManager.holding_hands: 
+				PR_sprite.play("idle_hands")
+			else:
+				PR_sprite.play("idle")
+		else:
+			if GameManager.holding_hands:
+				PR_sprite.play("run_hands")
+			else:
+				PR_sprite.play("run")
 
 	move_and_slide()
+
+
+#func _on_holding_hands_collider_body_entered(body: Node2D) -> void:
+	#if body.is_in_group("player"):
+		#print("Player Right wants to hold hands.")
+		#if Input.is_action_pressed("PR_holdhands"):
+			#GameManager.PR_holdhands = true
+			#print("Player Left is holding hands")
+		#elif Input.is_action_just_released("PR_holdhands"):
+			#GameManager.PR_holdhands = false
+
+
+func _on_holding_hands_collider_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	GameManager.player_in_range = true
+
+
+func _on_holding_hands_collider_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	GameManager.player_in_range = false

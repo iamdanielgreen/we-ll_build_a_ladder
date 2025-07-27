@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var PL_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var PH_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player_left: CharacterBody2D = $"."
 @onready var player_right: CharacterBody2D = $"."
 
@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("PL_jump") and is_on_floor():
+	if Input.is_action_just_pressed("PL_jump") or ("PR_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
 	#NOTE: THIS DOESN'T DO ANYTHING YET.
@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("PL_left", "PL_right")
+	var direction := Input.get_axis("PL_left", "PL_right" or ) or ("PR_left", "PR_right")
 	
 	if direction:
 		velocity.x = direction * SPEED
@@ -32,9 +32,9 @@ func _physics_process(delta: float) -> void:
 	
 	#Flips the sprite TODO: Add to player_two
 	if direction > 0.0: #You changed this from Brackeys to be 0.0, because it's a float now.
-		PL_sprite.flip_h = false
+		PH_sprite.flip_h = false
 	elif direction < 0.0:
-		PL_sprite.flip_h = true
+		PH_sprite.flip_h = true
 	
 	#HOLDING HANDS TEST
 	if Input.is_action_pressed("PL_holdhands"):
@@ -46,14 +46,14 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if direction == 0.0:
 			if GameManager.holding_hands:
-				PL_sprite.play("idle_hands")
+				PH_sprite.play("idle_hands")
 			else:
-				PL_sprite.play("idle")
+				PH_sprite.play("idle")
 		else:
 			if GameManager.holding_hands:
-				PL_sprite.play("run_hands")
+				PH_sprite.play("run_hands")
 			else:
-				PL_sprite.play("run")
+				PH_sprite.play("run")
 
 	move_and_slide()
 

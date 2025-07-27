@@ -1,54 +1,86 @@
-[gd_scene load_steps=13 format=3 uid="uid://c1ga3ku8h8jtx"]
+[gd_scene load_steps=22 format=3 uid="uid://c1ga3ku8h8jtx"]
 
 [ext_resource type="Script" uid="uid://b2xdxk84gc4jv" path="res://scripts/players/player_left.gd" id="1_knelu"]
-[ext_resource type="Texture2D" uid="uid://c7225w8dqop0c" path="res://assets/01_sprites/00_placeholders/Fighter_Tileset.png" id="2_upnpa"]
+[ext_resource type="Texture2D" uid="uid://cvytsbfqpfsbd" path="res://assets/01_sprites/00_placeholders/Fighter_Cats_Tileset.png" id="2_upnpa"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k1rik"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhate"]
 atlas = ExtResource("2_upnpa")
-region = Rect2(80, 32, 16, 32)
+region = Rect2(112, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u671f"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qakoe"]
+atlas = ExtResource("2_upnpa")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upnpa"]
+atlas = ExtResource("2_upnpa")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knelu"]
+atlas = ExtResource("2_upnpa")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1t6c"]
+atlas = ExtResource("2_upnpa")
+region = Rect2(48, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bfuu"]
+atlas = ExtResource("2_upnpa")
+region = Rect2(32, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya06h"]
+atlas = ExtResource("2_upnpa")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khftg"]
+atlas = ExtResource("2_upnpa")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kra5"]
 atlas = ExtResource("2_upnpa")
 region = Rect2(64, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s8x1j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_v23sj"]
 atlas = ExtResource("2_upnpa")
 region = Rect2(80, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_la24y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o2vn"]
 atlas = ExtResource("2_upnpa")
 region = Rect2(96, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_isvjw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h6q6"]
 atlas = ExtResource("2_upnpa")
-region = Rect2(64, 64, 16, 32)
+region = Rect2(112, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yawfj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh7xx"]
 atlas = ExtResource("2_upnpa")
-region = Rect2(80, 64, 16, 32)
+region = Rect2(0, 96, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lct21"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2pf2"]
 atlas = ExtResource("2_upnpa")
-region = Rect2(96, 64, 16, 32)
+region = Rect2(16, 96, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_amapn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt0ji"]
 atlas = ExtResource("2_upnpa")
-region = Rect2(112, 64, 16, 32)
+region = Rect2(32, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc17d"]
+atlas = ExtResource("2_upnpa")
+region = Rect2(48, 96, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s8x1j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k1rik")
+"texture": SubResource("AtlasTexture_vhate")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u671f")
+"texture": SubResource("AtlasTexture_qakoe")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s8x1j")
+"texture": SubResource("AtlasTexture_upnpa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_la24y")
+"texture": SubResource("AtlasTexture_knelu")
 }],
 "loop": true,
 "name": &"idle",
@@ -56,19 +88,53 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_isvjw")
+"texture": SubResource("AtlasTexture_x1t6c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yawfj")
+"texture": SubResource("AtlasTexture_0bfuu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lct21")
+"texture": SubResource("AtlasTexture_ya06h")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_amapn")
+"texture": SubResource("AtlasTexture_khftg")
+}],
+"loop": true,
+"name": &"idle_hands",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kra5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v23sj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o2vn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h6q6")
 }],
 "loop": true,
 "name": &"run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh7xx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2pf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt0ji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wc17d")
+}],
+"loop": true,
+"name": &"run_hands",
 "speed": 10.0
 }]
 
@@ -76,7 +142,11 @@ animations = [{
 radius = 7.0
 height = 18.0
 
-[node name="PlayerLeft" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_knelu"]
+radius = 8.0
+height = 26.0
+
+[node name="PlayerLeft" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_knelu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -84,7 +154,20 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_s8x1j")
 animation = &"idle"
 autoplay = "idle"
+frame = 2
+frame_progress = 0.460011
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
 shape = SubResource("CapsuleShape2D_la24y")
+
+[node name="HoldingHandsCollider" type="Area2D" parent="." groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoldingHandsCollider"]
+position = Vector2(0, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_knelu")
+debug_color = Color(1, 1, 0, 0.419608)
+
+[connection signal="area_shape_entered" from="HoldingHandsCollider" to="." method="_on_holding_hands_collider_area_shape_entered"]
+[connection signal="area_shape_exited" from="HoldingHandsCollider" to="." method="_on_holding_hands_collider_area_shape_exited"]
