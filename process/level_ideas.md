@@ -24,3 +24,7 @@
 #### We Climb A Tree / We Pick Blackberries
 #### We Wait For A Train
 #### We Make A Sculpture
+#### We Take A Walk
+##### 28/07/2025, 21:59
+
+You think of this as the last level of the game, or at least that other levels may lead to this level. The two players find themselves on either side of of a large crowd. To win, the players slot themselves into two gaps in the crowd, joining a protest march.
