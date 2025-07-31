@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 75
-text = "We are climbing."
+text = "We'll climb to the top."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -39,7 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 75
-text = "We jump for joy."
+text = "We'll jump for joy."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -58,6 +58,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 75
-text = "We take care of each other."
+text = "We'll take care of each other."
 horizontal_alignment = 1
 vertical_alignment = 1
