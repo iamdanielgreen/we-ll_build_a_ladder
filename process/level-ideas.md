@@ -1,11 +1,11 @@
 # Level Ideas
-[31/07/2025, 08:48 - Updated all level titles/candidates and repository name to "We'll..." rather than "We" to better reflect the source material that the game is inspired by.]
+##### 31/07/2025, 08:48
+Updated all level titles/candidates and repository name to "We'll..." rather than "We" to better reflect the source material that the game is inspired by.]
 
 ## Tutorial Levels
 
 #### We'll Jump For Joy
 #### (They do nothing) We'll Take Action [added 30/07/25, 17:56]
-#### 
 #### (They make noise) We'll Share Silence
 ##### 30/072025, 17:53
 DESIGN NOTE: Do the tutorial levels show the prompt sentence (e.g., "They build a wall, We Build A Ladder")? Let's try it and see if it's weird.
