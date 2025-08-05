@@ -3,7 +3,7 @@
 
 ## Tutorial Levels
 
-#### We'll Jump For Joy##
+#### We'll Jump For Joy
 
 **(17/07/2025, based on notebook notes)** The two players are on a platform. When they both press the jump button, the level is solved. They do not have to do this at the same time.
 - A tutorial level, one of three (?) that demonstrates each of the action buttons. It is intentionally as basic as it looks.
