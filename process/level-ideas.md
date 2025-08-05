@@ -3,7 +3,14 @@
 
 ## Tutorial Levels
 
-#### We'll Jump For Joy
+#### We'll Jump For Joy##
+
+**(17/07/2025, based on notebook notes)** The two players are on a platform. When they both press the jump button, the level is solved. They do not have to do this at the same time.
+- A tutorial level, one of three (?) that demonstrates each of the action buttons. It is intentionally as basic as it looks.
+- After five seconds, a tutorial prompt appears on screen instructing players to press the Down Action Button
+
+**(20/07/2025, whilst on a plane)** Prototype created. Currently works, and has been inserted into main sequence. It's currently the only level inserted into the main sequence.
+
 #### (They do nothing) We'll Take Action [added 30/07/25, 17:56]
 #### We'll ~~Look After~~ Take Care of Each Other / We Take Care of Each Other
 
@@ -11,12 +18,14 @@
 - It's worth thinking about that so far this the only example of a level where the solution is based around holding hands. Does this create problems for future you?
 
 #### (They make noise) We'll Share Silence
-##### 30/07/2025, 17:53
+##### (30/07/2025, 17:53 (Edited 03/08/25, 13:29)) 
 *DESIGN NOTE: Do the tutorial levels show the prompt sentence (e.g., "They build a wall, We Build A Ladder")? Let's try it and see if it's weird.*
 
-The two players appear on screen. They are in a white void. All they have to so is remain still. If they do this for three seconds, they complete the puzzle.
+The two players appear on screen. They are in a white void. All they have to so is remain still. If they do this for three seconds, they ~~complete the puzzle~~ solve the level.
 
 **(31/07/2025, 11:49)** Everything the player does creates sound - jumping, walking, pressing the action button. Even holding hands emits an "Awww" in the background. The point is to simply remain still (or perhaps, if holding hands, the timer only ticks down after the "Awww" sound stops playing).
+
+**(05/08/2025, 17:59)** As of last night, this level has been prototyped, though currently works independent of the main project (ie, level has not been attached to main sequence). There is currently a bug that *can* occur when the level resolves (current theory is that this has something to do with receiving inputs *after* the level is technically stopped), but I can't reliably recreate it using this method.
 
 
 ## Game Levels
@@ -80,3 +89,10 @@ You have previously drawn some little guys resembling a cup and an ice cube, whi
 
 One player is a pot plant, the other is the sun. The two must line up, at which point the sun will shine light on the plant. At this point, the players win/the level is solved.
 - Holding Hands: With both players pressing the Hands input, the plant will grow taller as the light shines on them.
+
+#### "We'll Take The Win"
+
+**(05/08/2025, 08:43)** The two players stand on a dias/medal podium (what's the actual word for this?). One is in second place, the other in third. To solve the level, both players have to stand on the first place position. 
+- DESIGN NOTE: One of the players is a weightlifter, who is perpetually holding a set of barbells.
+
+**(18:07)** You've thought this a lot over the course of the day, but this is essentially a retooling of "prototype01"

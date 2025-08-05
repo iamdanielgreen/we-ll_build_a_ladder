@@ -16,7 +16,7 @@ extends Node
 #<END NOTE>
 
 
-#NOTE: MECHANIC IDEA - COLLECTING/TOUCHING A THING TO WIN A LEVEL, 29/06/2025 = 17:50
+#NOTE: MECHANIC IDEA - COLLECTING/TOUCHING A THING TO WIN A LEVEL, 29/06/2025 - 17:50
 #An object sits in a level, and must be touched by both players at the same time to create the level's Win 
 #Condition. When either player enters the collision area of the object, a variable called PLAYER_X_WIN is set 
 #to TRUE. When both players do this, a third variable called LEVEL_WIN_CONDITION is set to TRUE. Once this
@@ -56,3 +56,12 @@ func _on_test_macguffin_body_entered(body: Node2D) -> void:
 		player_right_win = true
 		
 #YOU THEN NEED AN BODY EXIT CONDITION
+
+
+# NOTE: LEVEL IDEA: WE'LL SHARE SILENCE (ORIGINALLY WRITTEN 30+31/07/2025)
+
+#The two players appear on screen. They are in a white void. 
+#All they have to so is remain still. If they do this for three seconds, they solve the level.
+#Everything the player does creates sound - jumping, walking, pressing the action button. 
+#Even holding hands emits an "Awww" in the background. The point is to simply remain still. 
+# - - (or perhaps, if holding hands, the timer only ticks down after the "Awww" sound stops playing).
