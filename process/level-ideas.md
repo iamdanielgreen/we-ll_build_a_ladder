@@ -3,33 +3,13 @@
 
 ## Tutorial Levels
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #### We'll Jump For Joy
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 ### We'll Start A Movement
 **(06/08/2025, 18:39)** The two players are on a platform. When the inputs to move_left or move_right is pressed, the level is solved.
 - DESIGN NOTE: Is this really needed? It's a cute bit, but is it too obvious?
 
 ### We'll Jump For Joy
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 **(17/07/2025, based on notebook notes)** The two players are on a platform. When they both press the jump button, the level is solved. They do not have to do this at the same time.
 - A tutorial level, one of three (?) that demonstrates each of the action buttons. It is intentionally as basic as it looks.
