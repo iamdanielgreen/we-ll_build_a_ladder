@@ -65,3 +65,7 @@ func _on_test_macguffin_body_entered(body: Node2D) -> void:
 #Everything the player does creates sound - jumping, walking, pressing the action button. 
 #Even holding hands emits an "Awww" in the background. The point is to simply remain still. 
 # - - (or perhaps, if holding hands, the timer only ticks down after the "Awww" sound stops playing).
+
+
+#NOTE: TUTORIAL PROMPT ON "WE SHARE SILENCE"
+#IF/ELSE CHECK EVERY THREE SECONDS FOR A CONDITION CALLED TUTORIAL_SHOW?

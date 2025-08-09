@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="We Build A Ladder"
+config/name="We'll Build A Ladder"
 run/main_scene="uid://c0gul5vt2ly3f"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"

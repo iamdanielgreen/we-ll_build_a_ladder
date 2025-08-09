@@ -3,8 +3,6 @@
 
 ## Tutorial Levels
 
-#### We'll Jump For Joy
-
 ### We'll Start A Movement
 **(06/08/2025, 18:39)** The two players are on a platform. When the inputs to move_left or move_right is pressed, the level is solved.
 - DESIGN NOTE: Is this really needed? It's a cute bit, but is it too obvious?

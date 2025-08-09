@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://djf41hksfjemg"]
 
-[ext_resource type="Script" uid="uid://dqe0locpth0uy" path="res://scripts/ui/01_menus/level_win.gd" id="1_fsv4q"]
+[ext_resource type="Script" uid="uid://dqe0locpth0uy" path="res://scripts/ui/01_menus/level_win_menu.gd" id="1_bsj0w"]
 
-[node name="LevelWin" type="CanvasLayer"]
+[node name="LevelWinMenu" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_fsv4q")
+script = ExtResource("1_bsj0w")
 
 [node name="level_win_text" type="Label" parent="."]
 anchors_preset = 8
@@ -41,7 +41,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="next_level_button" type="Button" parent="VBoxContainer"]
-visible = false
 layout_mode = 2
 text = "Next Level"
 
@@ -50,11 +49,11 @@ layout_mode = 2
 text = "Restart"
 
 [node name="main_menu_button" type="Button" parent="VBoxContainer"]
-visible = false
 layout_mode = 2
 text = "Main Menu"
 
 [node name="quit_button" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Quit"
 

@@ -1,5 +1,8 @@
 extends Node
 
+#NOTE: YOU PROBABLY DON'T WANT THIS HERE, BUT IN THE LEVEL END MENU?
+const FILE_BEGIN = "res://scenes/levels/test_build_levels/test_build02_level_"
+
 var PL_holdhands = false
 var PR_holdhands = false
 var player_in_range = false
