@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://btq6qqh12hbij"]
+[gd_scene load_steps=2 format=3 uid="uid://btq6qqh12hbij"]
+
+[ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="1_a33bo"]
 
 [node name="level_title" type="CanvasLayer"]
 process_mode = 3
@@ -19,6 +21,7 @@ offset_bottom = 51.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_a33bo")
 theme_override_font_sizes/font_size = 75
 text = "We'll climb to the top."
 horizontal_alignment = 1
@@ -38,6 +41,7 @@ offset_bottom = 51.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_a33bo")
 theme_override_font_sizes/font_size = 75
 text = "We'll jump for joy."
 horizontal_alignment = 1
@@ -57,6 +61,7 @@ offset_bottom = 51.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_a33bo")
 theme_override_font_sizes/font_size = 75
 text = "We'll take care of each other."
 horizontal_alignment = 1
@@ -77,6 +82,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_a33bo")
 theme_override_font_sizes/font_size = 75
 text = "We'll share silence."
 horizontal_alignment = 1

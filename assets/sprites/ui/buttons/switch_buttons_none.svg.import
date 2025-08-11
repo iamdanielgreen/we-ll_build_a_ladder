@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvytsbfqpfsbd"
-path="res://.godot/imported/Fighter_Cats_Tileset.png-e6f1fc6dea0f0b4394b27bb4887e5e04.ctex"
+uid="uid://dsdghbhatfvjt"
+path="res://.godot/imported/switch_buttons_none.svg-564347b979dd7d63cbc57cefdb0d230d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/01_sprites/00_placeholders/Fighter_Cats_Tileset.png"
-dest_files=["res://.godot/imported/Fighter_Cats_Tileset.png-e6f1fc6dea0f0b4394b27bb4887e5e04.ctex"]
+source_file="res://assets/sprites/ui/buttons/switch_buttons_none.svg"
+dest_files=["res://.godot/imported/switch_buttons_none.svg-564347b979dd7d63cbc57cefdb0d230d.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7hmqec5xhcyd"]
+
+[ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="1_1pbcf"]
+[ext_resource type="Texture2D" uid="uid://bqvbkoxfcadfb" path="res://assets/sprites/ui/buttons/switch_buttons_down_outline.svg" id="2_vfqru"]
+
+[node name="TEST" type="CanvasLayer"]
+
+[node name="TestNode" type="Node" parent="."]
+
+[node name="test_text" type="Label" parent="TestNode"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_1pbcf")
+text = "JUMP
+"
+
+[node name="SwitchButtonsDownOutline" type="Sprite2D" parent="TestNode/test_text"]
+position = Vector2(74, 31)
+texture = ExtResource("2_vfqru")

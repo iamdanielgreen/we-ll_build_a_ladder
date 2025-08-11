@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0gul5vt2ly3f"]
+[gd_scene load_steps=3 format=3 uid="uid://c0gul5vt2ly3f"]
 
-[ext_resource type="Script" uid="uid://8yfrnavsikks" path="res://scripts/ui/01_menus/main_menu.gd" id="1_hi2j6"]
+[ext_resource type="Script" uid="uid://8yfrnavsikks" path="res://scripts/ui/01_menus/main_menu.gd" id="1_flhq8"]
+[ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_h1kbi"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hi2j6")
+script = ExtResource("1_flhq8")
 
 [node name="TitleScreen" type="CanvasLayer" parent="."]
 
@@ -26,8 +27,11 @@ offset_bottom = -110.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 150
 text = "We'll Build A Ladder"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Name_Text" type="Label" parent="TitleScreen/WBAL_Text"]
 visible = false
@@ -59,8 +63,11 @@ offset_right = 462.0
 offset_bottom = 162.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 80
 text = "A prototype by Daniel Green"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MainMenuButtons" type="VBoxContainer" parent="TitleScreen"]
 anchors_preset = 8
@@ -74,11 +81,13 @@ offset_right = 243.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 10
 
 [node name="StartGame_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 55
 text = "Start Game"
 
@@ -103,6 +112,7 @@ text = "Playtest Feedback
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 55
 text = "Quit Game"
 

@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=4 uid="uid://dbemkax3bnmot"]
 
-[ext_resource type="Script" uid="uid://d04q456paotvl" path="res://scripts/levels/level_00_prototype_03_silence.gd" id="1_0kf1p"]
+[ext_resource type="Script" uid="uid://c0yi55iaarjp7" path="res://scripts/levels/test_build_levels/test_build_two_level_2.gd" id="1_vgtd0"]
 [ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/player_left.tscn" id="2_v4iws"]
 [ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/player_right.tscn" id="3_ndfqy"]
-[ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/01_sprites/00_placeholders/temple-tileset.png" id="4_3wp0q"]
-[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/01_menus/pause_menu.tscn" id="5_e004i"]
+[ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="4_3wp0q"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="5_e004i"]
 [ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="6_wjqos"]
 [ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="7_3ouln"]
-[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/01_menus/out_of_time.tscn" id="8_ro4gk"]
-[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/01_menus/level_win_menu.tscn" id="9_we5ao"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="8_ro4gk"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="9_we5ao"]
 [ext_resource type="PackedScene" uid="uid://bbhadq8ux0i3f" path="res://scenes/ui/tutorial_prompts.tscn" id="10_0m7l0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fliv"]
@@ -95,8 +95,8 @@ physics_layer_0/collision_mask = 2
 physics_layer_1/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_2fliv")
 
-[node name="level_00_prototype03_silence" type="Node2D"]
-script = ExtResource("1_0kf1p")
+[node name="test_build_two_level_2" type="Node2D"]
+script = ExtResource("1_vgtd0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)

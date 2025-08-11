@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pdqtu5vgi6yk"
-path="res://.godot/imported/temple-tileset.png-0c32699ea4afb7cf25f70173cd2f2caf.ctex"
+uid="uid://0qsj8dad1efv"
+path="res://.godot/imported/switch_buttons_vertical_outline.svg-712b3ff866c12335333f2f0a507c9f57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/01_sprites/00_placeholders/temple-tileset.png"
-dest_files=["res://.godot/imported/temple-tileset.png-0c32699ea4afb7cf25f70173cd2f2caf.ctex"]
+source_file="res://assets/sprites/ui/buttons/switch_buttons_vertical_outline.svg"
+dest_files=["res://.godot/imported/switch_buttons_vertical_outline.svg-712b3ff866c12335333f2f0a507c9f57.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
