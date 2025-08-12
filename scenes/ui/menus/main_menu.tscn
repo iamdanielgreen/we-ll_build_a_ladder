@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0gul5vt2ly3f"]
+[gd_scene load_steps=6 format=3 uid="uid://c0gul5vt2ly3f"]
 
 [ext_resource type="Script" uid="uid://8yfrnavsikks" path="res://scripts/ui/01_menus/main_menu.gd" id="1_flhq8"]
 [ext_resource type="FontFile" uid="uid://s25petjrnke" path="res://assets/fonts/LeagueScriptNumberOne.otf" id="2_ct055"]
 [ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_h1kbi"]
 [ext_resource type="Script" uid="uid://bw4qfufbvmfjm" path="res://scripts/ui/01_menus/start_game_button.gd" id="3_whicr"]
+[ext_resource type="Texture2D" uid="uid://vmmfp77dkbcr" path="res://assets/sprites/ui/menus/WBAL_Feedback_QRcode.png" id="5_p0q51"]
 
 [node name="MainMenu" type="Control"]
 process_mode = 3
@@ -113,7 +114,6 @@ theme_override_font_sizes/font_size = 55
 text = "Credits"
 
 [node name="Feedback_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -172,6 +172,134 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 80
 text = "Continue"
 
+[node name="PlaytestFeedback_Screen" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FeedbackGroup" type="Control" parent="PlaytestFeedback_Screen"]
+anchors_preset = 0
+offset_top = 50.0
+offset_bottom = 50.0
+
+[node name="PlaytestFeedback_Text" type="Label" parent="PlaytestFeedback_Screen/FeedbackGroup"]
+layout_mode = 2
+offset_left = 30.0
+offset_right = 1023.0
+offset_bottom = 160.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_ct055")
+theme_override_font_sizes/font_size = 80
+text = "Playtest Feedback"
+vertical_alignment = 1
+
+[node name="ThankYou_text" type="Label" parent="PlaytestFeedback_Screen/FeedbackGroup"]
+layout_mode = 2
+offset_left = 30.0
+offset_top = 170.0
+offset_right = 1291.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 10
+theme_override_fonts/font = ExtResource("2_h1kbi")
+theme_override_font_sizes/font_size = 60
+text = "thank you for playing this test build of \"We'll Build A Ladder\".
+you can leave feedback using the qr code below."
+vertical_alignment = 1
+
+[node name="FeedbackQRcode" type="Sprite2D" parent="PlaytestFeedback_Screen/FeedbackGroup"]
+position = Vector2(304, 560)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("5_p0q51")
+
+[node name="Feedback_MainMenu_button" type="Button" parent="PlaytestFeedback_Screen/FeedbackGroup"]
+layout_mode = 2
+offset_left = 30.0
+offset_top = 860.0
+offset_right = 233.0
+offset_bottom = 909.0
+pivot_offset = Vector2(30, 0)
+theme_override_fonts/font = ExtResource("2_h1kbi")
+theme_override_font_sizes/font_size = 60
+text = "Main Menu"
+
+[node name="Credits_Screen" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="credits_text" type="Label" parent="Credits_Screen"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Button" type="Button" parent="Credits_Screen"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="WBAL_Text2" type="Label" parent="Credits_Screen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -725.0
+offset_top = -315.0
+offset_right = 725.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_ct055")
+theme_override_font_sizes/font_size = 100
+text = "We'll Build A Ladder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name_Text" type="Label" parent="Credits_Screen/WBAL_Text2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -462.0
+offset_top = 52.5
+offset_right = 462.0
+offset_bottom = 162.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "A game by Daniel Green"
+
+[node name="Prototype_Text" type="Label" parent="Credits_Screen/WBAL_Text2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -462.0
+offset_top = 52.5
+offset_right = 462.0
+offset_bottom = 162.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_h1kbi")
+theme_override_font_sizes/font_size = 80
+text = "A prototype by Daniel Green"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="BlackBG" type="ColorRect" parent="."]
 z_index = -5
 layout_mode = 1
@@ -191,3 +319,4 @@ color = Color(0, 0, 0, 1)
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Feedback_Button" to="." method="_on_feedback_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Quit_Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="WIP_screen/VBoxContainer/wipContinueButton" to="." method="_on_wip_continue_button_pressed"]
+[connection signal="pressed" from="PlaytestFeedback_Screen/FeedbackGroup/Feedback_MainMenu_button" to="." method="_on_feedback_main_menu_button_pressed"]

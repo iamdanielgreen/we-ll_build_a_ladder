@@ -41,11 +41,17 @@ func _on_feedback_button_pressed() -> void:
 	#$"Feedback".show()
 	#feedback_back_button.show()
 	#feedback_back_button.grab_focus()
+	
 
-#func _on_feedback_back_button_pressed() -> void:
-	#$"Feedback".hide()
-	#$"TitleScreen".show()
-	#start_button.grab_focus()
+func _on_feedback_main_menu_button_pressed() -> void:
+	pass # Replace with function body.
+
+func _on_feedback_back_button_pressed() -> void:
+	$PlaytestFeedback_Screen.hide()
+	$"TitleScreen".show()
+	start_game_button.grab_focus()
+	
+
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
