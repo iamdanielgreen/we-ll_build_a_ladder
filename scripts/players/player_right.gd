@@ -5,6 +5,10 @@ extends CharacterBody2D
 const SPEED = 130.0 #NOTE: DEFAULT IS 300.0
 const JUMP_VELOCITY = -300.0 #NOTE: DEFAULT IS -400.0
 
+func _ready() -> void:
+	#POINTS PLAYER TOWARDS LEFT ON GAME START. 
+	#NOTE: THIS IS NOT THE BEST SOLUTION, BUT IT WORKS.
+	PR_sprite.flip_h = true
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -46,7 +50,11 @@ func _physics_process(delta: float) -> void:
 			if GameManager.holding_hands: 
 				PR_sprite.play("idle_hands")
 			else:
-				PR_sprite.play("idle")
+				var current_scene_file = get_tree().current_scene.scene_file_path
+				if current_scene_file == "res://scenes/levels/test_build_levels/test_build_two_level_2.tscn":
+					PR_sprite.play("really_idle")
+				else:
+					PR_sprite.play("idle")
 		else:
 			if GameManager.holding_hands:
 				PR_sprite.play("run_hands")

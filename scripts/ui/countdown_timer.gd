@@ -5,9 +5,6 @@ extends CanvasLayer
 
 @onready var out_of_time: CanvasLayer = $"../OutOfTime"
 @onready var out_of_time_restart: Button = $"../OutOfTime/VBoxContainer/restart_button"
-#@onready var tutorial_prompts: CanvasLayer = $"../TutorialPrompts"
-#@onready var tutorial_prompts: Control = $"../TutorialPrompts"
-
 
 var time: float = 10.0  #time does not like being set above 59.999
 #That was until you tried setting it to 300.0 on 07/09 and apparently it's fine now?

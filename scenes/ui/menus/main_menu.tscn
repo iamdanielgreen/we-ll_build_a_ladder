@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0gul5vt2ly3f"]
+[gd_scene load_steps=5 format=3 uid="uid://c0gul5vt2ly3f"]
 
 [ext_resource type="Script" uid="uid://8yfrnavsikks" path="res://scripts/ui/01_menus/main_menu.gd" id="1_flhq8"]
+[ext_resource type="FontFile" uid="uid://s25petjrnke" path="res://assets/fonts/LeagueScriptNumberOne.otf" id="2_ct055"]
 [ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_h1kbi"]
+[ext_resource type="Script" uid="uid://bw4qfufbvmfjm" path="res://scripts/ui/01_menus/start_game_button.gd" id="3_whicr"]
 
 [node name="MainMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,23 +15,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_flhq8")
 
-[node name="TitleScreen" type="CanvasLayer" parent="."]
+[node name="TitleScreen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="WBAL_Text" type="Label" parent="TitleScreen"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -660.5
+offset_left = -725.0
 offset_top = -315.0
-offset_right = 660.5
+offset_right = 725.0
 offset_bottom = -110.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_h1kbi")
-theme_override_font_sizes/font_size = 150
+theme_override_fonts/font = ExtResource("2_ct055")
+theme_override_font_sizes/font_size = 100
 text = "We'll Build A Ladder"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -70,6 +80,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MainMenuButtons" type="VBoxContainer" parent="TitleScreen"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -78,7 +89,7 @@ anchor_bottom = 0.5
 offset_left = -243.0
 offset_top = -20.0
 offset_right = 243.0
-offset_bottom = 328.0
+offset_bottom = 194.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
@@ -90,12 +101,14 @@ size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 55
 text = "Start Game"
+script = ExtResource("3_whicr")
 
 [node name="Credits_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 55
 text = "Credits"
 
@@ -104,6 +117,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 55
 text = "Playtest Feedback
 "
@@ -116,16 +130,58 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 55
 text = "Quit Game"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="WIP_screen" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WIP_screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="wip_text" type="Label" parent="WIP_screen/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_spacing = 5
+theme_override_constants/paragraph_spacing = 5
+theme_override_fonts/font = ExtResource("2_h1kbi")
+theme_override_font_sizes/font_size = 80
+text = "\"We'll Build A Ladder\" is a work in active development.
+
+Gameplay, artwork, audio and other content 
+may not reflect the final version of the game.
+
+thank you for playing.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="wipContinueButton" type="Button" parent="WIP_screen/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_h1kbi")
+theme_override_font_sizes/font_size = 80
+text = "Continue"
+
+[node name="BlackBG" type="ColorRect" parent="."]
 z_index = -5
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.052
-anchor_bottom = 1.087
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = -51.0
 offset_top = -43.0
-offset_right = -50.8401
-offset_bottom = -42.96
+offset_right = 49.0
+offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -134,3 +190,4 @@ color = Color(0, 0, 0, 1)
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Credits_Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Feedback_Button" to="." method="_on_feedback_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="WIP_screen/VBoxContainer/wipContinueButton" to="." method="_on_wip_continue_button_pressed"]

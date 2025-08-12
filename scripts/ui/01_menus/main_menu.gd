@@ -1,21 +1,27 @@
+# MAIN_MENU.GD
+
 extends Control
-
-#NOTE: WHAT'S BELOW IS STRAIGHT UP BORROWED FROM EMU PARADE.
-
-#TODO: At present you have the SELECT/SHARE/BACK/- controller buttons set to hard quit the game.
-#NOTE: 02/07/2025 - THIS ISN'T PRESENTLY TRUE. 
 
 @onready var start_game_button: Button = $TitleScreen/MainMenuButtons/StartGame_Button
 @onready var credits_button: Button = $TitleScreen/MainMenuButtons/Credits_Button
 @onready var feedback_button: Button = $TitleScreen/MainMenuButtons/Feedback_Button
 @onready var quit_button: Button = $TitleScreen/MainMenuButtons/Quit_Button
 
+@onready var wip_continue_button: Button = $WIP_screen/VBoxContainer/wipContinueButton
+
 func _ready() -> void:
 	start_game_button.grab_focus()	
 
 func _on_start_game_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/test_build_levels/test_build_two_level_1.tscn")
+	$TitleScreen.hide()
+	$WIP_screen.show()
+	wip_continue_button.grab_focus()
+	#NOTE: RESTORE BELOW ONCE YOU MOVE TO FINAL GAME
+	#get_tree().change_scene_to_file("res://scenes/levels/test_build_levels/test_build_two_level_1.tscn")
 	
+func _on_wip_continue_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/test_build_levels/test_build_two_level_1.tscn")
+		
 func _on_credits_button_pressed() -> void:
 	pass
 	#$"TitleScreen".hide()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://c1ga3ku8h8jtx"]
 
 [ext_resource type="Script" uid="uid://b2xdxk84gc4jv" path="res://scripts/players/player_left.gd" id="1_knelu"]
-[ext_resource type="Texture2D" uid="uid://cvytsbfqpfsbd" path="res://assets/01_sprites/00_placeholders/Fighter_Cats_Tileset.png" id="2_upnpa"]
+[ext_resource type="Texture2D" uid="uid://cvytsbfqpfsbd" path="res://assets/sprites/00_placeholders/Fighter_Cats_Tileset.png" id="2_upnpa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vhate"]
 atlas = ExtResource("2_upnpa")
@@ -105,6 +105,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_vhate")
+}],
+"loop": true,
+"name": &"really_idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_6kra5")
 }, {
 "duration": 1.0,
@@ -152,10 +160,8 @@ script = ExtResource("1_knelu")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_s8x1j")
-animation = &"idle"
+animation = &"really_idle"
 autoplay = "idle"
-frame = 2
-frame_progress = 0.460011
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)

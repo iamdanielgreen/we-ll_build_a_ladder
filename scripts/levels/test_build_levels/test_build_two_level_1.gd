@@ -10,14 +10,7 @@ extends Node2D
 @onready var player_left: CharacterBody2D = $PlayerLeft
 @onready var player_right: CharacterBody2D = $PlayerRight
 @onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
-@onready var restart_button: Button = $UI/LevelWinMenu/VBoxContainer/restart_button
-
-
-
-
-
-
-
+@onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
 
 var player_left_win = false
 var player_right_win = false
@@ -65,8 +58,8 @@ func tutorial_prompt():
 	await get_tree().create_timer(3.0).timeout
 	if tutorial_condition:
 		tutorial_text.visible = true
-		#await get_tree().create_timer(5.5).timeout
-		#tutorial_text.visible = false
+		await get_tree().create_timer(5.5).timeout
+		tutorial_text.visible = false
 	else:
 		pass
 	
@@ -81,7 +74,7 @@ func levelEnd():
 		countdown_timer.stop_timer()
 		countdown_timer.hide()
 		level_win_screen.show()
-		restart_button.grab_focus()
+		next_level_button.grab_focus()
 		get_tree().paused = true
 	#countdown_timer.queue_free() #NOTE: 29/06/2025 - THIS CAUSES A CRASH. SO LET'S NOT USE IT.
 		await get_tree().create_timer(0.25).timeout
@@ -89,5 +82,5 @@ func levelEnd():
 		countdown_timer.stop_timer()
 		countdown_timer.hide()
 		level_win_screen.show()
-		restart_button.grab_focus()
+		next_level_button.grab_focus()
 		get_tree().paused = true

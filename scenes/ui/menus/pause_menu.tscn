@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dexbghebo1vra"]
+[gd_scene load_steps=3 format=3 uid="uid://dexbghebo1vra"]
 
 [ext_resource type="Script" uid="uid://cra8x18q8cxvn" path="res://scripts/ui/01_menus/pause_menu.gd" id="1_crd8p"]
+[ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_dd7lr"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_crd8p")
@@ -11,6 +12,7 @@ offset_top = 436.0
 offset_right = 1250.5
 offset_bottom = 539.0
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_dd7lr")
 theme_override_font_sizes/font_size = 75
 text = "We are paused."
 horizontal_alignment = 1
@@ -34,19 +36,27 @@ size_flags_vertical = 4
 
 [node name="resume_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dd7lr")
+theme_override_font_sizes/font_size = 25
 text = "Resume"
 
 [node name="restart_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dd7lr")
+theme_override_font_sizes/font_size = 25
 text = "Restart"
 
 [node name="main_menu_button" type="Button" parent="VBoxContainer"]
-visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dd7lr")
+theme_override_font_sizes/font_size = 25
 text = "Main Menu"
 
 [node name="quit_button" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dd7lr")
+theme_override_font_sizes/font_size = 25
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/resume_button" to="." method="_on_resume_button_pressed"]

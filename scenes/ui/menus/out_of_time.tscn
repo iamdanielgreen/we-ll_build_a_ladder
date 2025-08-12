@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cukihpfcauofe"]
+[gd_scene load_steps=3 format=3 uid="uid://cukihpfcauofe"]
 
 [ext_resource type="Script" uid="uid://jwpm6ak504mn" path="res://scripts/ui/01_menus/out_of_time.gd" id="1_jrr2x"]
+[ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_muua2"]
 
 [node name="OutOfTime" type="CanvasLayer"]
 script = ExtResource("1_jrr2x")
@@ -18,8 +19,9 @@ offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_muua2")
 theme_override_font_sizes/font_size = 75
-text = "We have run out of time."
+text = "We'll try again."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -41,15 +43,21 @@ size_flags_vertical = 4
 
 [node name="restart_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_muua2")
+theme_override_font_sizes/font_size = 25
 text = "Restart"
 
 [node name="main_menu_button" type="Button" parent="VBoxContainer"]
-visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_muua2")
+theme_override_font_sizes/font_size = 25
 text = "Main Menu"
 
 [node name="quit_button" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_muua2")
+theme_override_font_sizes/font_size = 25
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/restart_button" to="." method="_on_restart_button_pressed"]

@@ -31,7 +31,7 @@ func _on_resume_button_pressed() -> void:
 	pauseMenu()
 
 func _on_main_menu_button_pressed() -> void:
-	pass #TODO: RETURN TO MAIN MENU
+	get_tree().change_scene_to_file("res://scenes/ui/menus/main_menu.tscn")
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
