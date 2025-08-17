@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgl8db0fiq8i8"
-path="res://.godot/imported/switch_buttons_right_outline.svg-d92391489c48b7e8eada117ffcd20560.ctex"
+uid="uid://e8jppldsvg8o"
+path="res://.godot/imported/keyboard_arrow_up.svg-8dd2df32bd967e8cabaf849e14e32ea7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/buttons/switch_buttons_right_outline.svg"
-dest_files=["res://.godot/imported/switch_buttons_right_outline.svg-d92391489c48b7e8eada117ffcd20560.ctex"]
+source_file="res://assets/sprites/ui/keyboard/keyboard_arrow_up.svg"
+dest_files=["res://.godot/imported/keyboard_arrow_up.svg-8dd2df32bd967e8cabaf849e14e32ea7.ctex"]
 
 [params]
 

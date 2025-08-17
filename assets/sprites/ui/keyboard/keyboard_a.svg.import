@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8jejur1o2v5b"
-path="res://.godot/imported/switch_dpad_up_outline.svg-121bdf5f6bb36f75ea5676ac18e5e177.ctex"
+uid="uid://byfr1h3w6sgm0"
+path="res://.godot/imported/keyboard_a.svg-fcee6668a9548ac6a74895e48a959b16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/dpad/switch_dpad_up_outline.svg"
-dest_files=["res://.godot/imported/switch_dpad_up_outline.svg-121bdf5f6bb36f75ea5676ac18e5e177.ctex"]
+source_file="res://assets/sprites/ui/keyboard/keyboard_a.svg"
+dest_files=["res://.godot/imported/keyboard_a.svg-fcee6668a9548ac6a74895e48a959b16.ctex"]
 
 [params]
 

@@ -1,18 +1,21 @@
+# TUTORIAL 02: "WE'LL SHARE SILENCE"
+
 extends Node2D
 
 @onready var countdown_timer: CanvasLayer = $UI/CountdownTimer
 @onready var level_title: Label = $UI/LevelTitle/TextLabels/we_share_silence_text
 #NOTE: THIS NEEDS TO BE UPDATED
-#@onready var tutorial_prompt: Label = $UI/TutorialPrompts/TextLabels/down_action_button_text
+@onready var tutorial_text: Label = $UI/TutorialPrompts/text_labels/nothing_text
 @onready var player_left: CharacterBody2D = $PlayerLeft
 @onready var player_right: CharacterBody2D = $PlayerRight
-@onready var level_win_screen: CanvasLayer = $UI/LevelWin
+@onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
 @onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
 
 var player_left_win = false
 var player_right_win = false
 
-var silence_time: float = 5.0  #time does not like being set above 59.999
+var silence_time: float = 5.0  
+var tutorial_time: float = 0.0
 
 #TODO Does this work?
 var tutorial_condition = true
@@ -52,28 +55,36 @@ func _process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("PL_jump"):
 		silence_time = 5.0
+		tutorial_prompt()
 		print("Player Left has reset the timer.")
 	elif Input.is_action_just_pressed("PL_action"):
 		silence_time = 5.0
+		tutorial_prompt()
 		print("PL HONK.")
 	elif Input.is_action_just_pressed("PL_left"):
 		silence_time = 5.0
+		tutorial_prompt()
 		print("Player Left moved left.")
 	elif Input.is_action_just_pressed("PL_right"):
 		silence_time = 5.0
+		tutorial_prompt()
 		print("Player Left moved right.")
 		
 	if Input.is_action_just_pressed("PR_jump"):
 		silence_time = 5.0
+		tutorial_prompt()
 		print("Player Right has reset the timer.")
 	elif Input.is_action_just_pressed("PR_action"):
 		silence_time = 5.0
+		tutorial_prompt()
 		print("PR HONK.")
 	elif Input.is_action_just_pressed("PR_left"):
 		silence_time = 5.0
+		tutorial_prompt()
 		print("Player Right moved left.")
 	elif Input.is_action_just_pressed("PL_right"):
 		silence_time = 5.0
+		tutorial_prompt()
 		print("Player Right moved right.")
 	
 	if GameManager.holding_hands:
@@ -110,9 +121,6 @@ func levelEnd():#
 	get_tree().paused = true
 	
 	
-	
-	
-	
 	if countdown_timer.time > 1.5:
 		await  get_tree().create_timer(1.0).timeout
 		countdown_timer.stop_timer()
@@ -120,7 +128,7 @@ func levelEnd():#
 		level_win_screen.show()
 		next_level_button.grab_focus()
 		get_tree().paused = true
-	#countdown_timer.queue_free() #NOTE: 29/06/2025 - THIS CAUSES A CRASH. SO LET'S NOT USE IT.
+		#countdown_timer.queue_free() #NOTE: 29/06/2025 - THIS CAUSES A CRASH. SO LET'S NOT USE IT.
 		await get_tree().create_timer(0.25).timeout
 	else:
 		countdown_timer.stop_timer()
@@ -129,3 +137,18 @@ func levelEnd():#
 		next_level_button.grab_focus()
 		get_tree().paused = true
 	
+func tutorial_prompt():
+	#if tutorial_time == 0:
+		tutorial_text.visible = true
+		await get_tree().create_timer(2.0).timeout
+		tutorial_text.visible = false
+
+	
+	#
+	#if player does something
+	#show tutorial
+	#start tutorial_time
+	#if player does something within three seconds, don't show tutorial again
+
+
+#If the tutorial prompt is rendered visible

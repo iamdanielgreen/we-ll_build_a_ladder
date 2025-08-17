@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqvbkoxfcadfb"
-path="res://.godot/imported/switch_buttons_down_outline.svg-c44460e21ea6d0260ba4ccec944c126b.ctex"
+uid="uid://cuclleqiblhby"
+path="res://.godot/imported/switch_stick_l_horizontal.svg-0aec243d7e961ccb56bcb03e59d3009f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/buttons/switch_buttons_down_outline.svg"
-dest_files=["res://.godot/imported/switch_buttons_down_outline.svg-c44460e21ea6d0260ba4ccec944c126b.ctex"]
+source_file="res://assets/sprites/ui/movement/switch_stick_l_horizontal.svg"
+dest_files=["res://.godot/imported/switch_stick_l_horizontal.svg-0aec243d7e961ccb56bcb03e59d3009f.ctex"]
 
 [params]
 

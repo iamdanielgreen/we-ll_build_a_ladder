@@ -1,11 +1,16 @@
+# TUTORIAL 03: "CLIMB TO THE TOP"
+
 extends Node2D
 
 @onready var countdown_timer: CanvasLayer = $UI/CountdownTimer
 @onready var level_title: Label = $UI/LevelTitle/TextLabels/we_are_climbing_text
 @onready var player_left: CharacterBody2D = $PlayerLeft
 @onready var player_right: CharacterBody2D = $PlayerRight
-@onready var level_win_screen: CanvasLayer = $UI/LevelWin
+@onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
 @onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
+
+#@onready var credits_main_menu_button: Button = $UI/Credits_Screen/CreditsScreen_Buttons/Credits_MainMenu_Button
+
 
 var player_left_win = false
 var player_right_win = false
@@ -26,6 +31,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player_left_win and player_right_win:
 		win_condition = true
+		GameManager.demo_credits = true
 	
 	if win_condition:
 		levelEnd()

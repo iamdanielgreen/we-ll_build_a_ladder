@@ -76,3 +76,8 @@ func _on_test_macguffin_body_entered(body: Node2D) -> void:
 #CURRENT SCENE = GET CURRENT SCENE FILE
 #IF CURRENT SCENE = WE'LL SHARE SILENCE
 # 
+
+# NOTE: A GLOBAL TO LOAD A CREDITS SCREEN
+# When the win condition on level 3 occurs, set a global for the menu to true.
+# This global, if true, displays the credits screen - script you'll need to add in the main menu script.
+# Clicking the Main Menu or Feedback button in the credits menu turns the global to false.

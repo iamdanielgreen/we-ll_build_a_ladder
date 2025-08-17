@@ -1,9 +1,13 @@
+# GAMEMANAGER SCRIPT
+
 extends Node
 
 var PL_holdhands = false
 var PR_holdhands = false
 var player_in_range = false
 var holding_hands = false
+
+var demo_credits = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

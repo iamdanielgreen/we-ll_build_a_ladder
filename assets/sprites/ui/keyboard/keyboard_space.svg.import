@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv0kd4pkj0tnv"
-path="res://.godot/imported/switch_buttons_horizontal_outline.svg-0c58d0df39677f37c2eb038b222151c3.ctex"
+uid="uid://d4ly5y2gd3c3k"
+path="res://.godot/imported/keyboard_space.svg-2c1389117752d94aaec37be644e9ff53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/buttons/switch_buttons_horizontal_outline.svg"
-dest_files=["res://.godot/imported/switch_buttons_horizontal_outline.svg-0c58d0df39677f37c2eb038b222151c3.ctex"]
+source_file="res://assets/sprites/ui/keyboard/keyboard_space.svg"
+dest_files=["res://.godot/imported/keyboard_space.svg-2c1389117752d94aaec37be644e9ff53.ctex"]
 
 [params]
 

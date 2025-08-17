@@ -135,7 +135,7 @@ visible = false
 [node name="OutOfTime" parent="UI" instance=ExtResource("8_ro4gk")]
 visible = false
 
-[node name="LevelWin" parent="UI" instance=ExtResource("9_we5ao")]
+[node name="LevelWinMenu" parent="UI" instance=ExtResource("9_we5ao")]
 visible = false
 
 [node name="TutorialPrompts" parent="UI" instance=ExtResource("10_0m7l0")]

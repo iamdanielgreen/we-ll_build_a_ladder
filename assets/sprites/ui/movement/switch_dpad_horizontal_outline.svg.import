@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uh0pqehxmqt1"
-path="res://.godot/imported/switch_dpad_vertical_outline.svg-17e1374f6d4559a39f7f17566256ead1.ctex"
+uid="uid://c03bqkc7fiv4v"
+path="res://.godot/imported/switch_dpad_horizontal_outline.svg-c240035278475de011164b9cdbc6af90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/dpad/switch_dpad_vertical_outline.svg"
-dest_files=["res://.godot/imported/switch_dpad_vertical_outline.svg-17e1374f6d4559a39f7f17566256ead1.ctex"]
+source_file="res://assets/sprites/ui/movement/switch_dpad_horizontal_outline.svg"
+dest_files=["res://.godot/imported/switch_dpad_horizontal_outline.svg-c240035278475de011164b9cdbc6af90.ctex"]
 
 [params]
 
