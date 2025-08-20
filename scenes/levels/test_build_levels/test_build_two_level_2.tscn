@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://dbemkax3bnmot"]
+[gd_scene load_steps=14 format=4 uid="uid://dbemkax3bnmot"]
 
 [ext_resource type="Script" uid="uid://c0yi55iaarjp7" path="res://scripts/levels/test_build_levels/test_build_two_level_2.gd" id="1_vgtd0"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_rx7ye"]
 [ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/player_left.tscn" id="2_v4iws"]
 [ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/player_right.tscn" id="3_ndfqy"]
 [ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="4_3wp0q"]
@@ -100,15 +101,16 @@ script = ExtResource("1_vgtd0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+script = ExtResource("2_rx7ye")
 
 [node name="Players" type="Node" parent="."]
 
 [node name="PlayerLeft" parent="." instance=ExtResource("2_v4iws")]
 z_index = 1
-position = Vector2(-174, 96)
+position = Vector2(-90, 96)
 
 [node name="PlayerRight" parent="." instance=ExtResource("3_ndfqy")]
-position = Vector2(174, 96)
+position = Vector2(90, 96)
 
 [node name="TileLayers" type="Node" parent="."]
 

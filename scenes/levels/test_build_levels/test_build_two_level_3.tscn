@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://couyspq32p6s4"]
+[gd_scene load_steps=15 format=4 uid="uid://couyspq32p6s4"]
 
 [ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="1_h8o7y"]
 [ext_resource type="Script" uid="uid://42v620v8vc7n" path="res://scripts/levels/test_build_levels/test_build_two_level_3.gd" id="1_qabee"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_1avj2"]
 [ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/player_left.tscn" id="2_2fliv"]
 [ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/player_right.tscn" id="3_0k1se"]
 [ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="4_kjuh2"]
@@ -101,6 +102,7 @@ script = ExtResource("1_qabee")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+script = ExtResource("2_1avj2")
 
 [node name="Players" type="Node" parent="."]
 

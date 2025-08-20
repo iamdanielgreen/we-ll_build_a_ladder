@@ -8,6 +8,7 @@ extends Control
 @onready var credits_feedback_button: Button = $Credits_Screen/CreditsScreen_Buttons/Credits_Feedback_Button
 @onready var feedback_button: Button = $TitleScreen/MainMenuButtons/Feedback_Button
 @onready var feedback_main_menu_button: Button = $PlaytestFeedback_Screen/FeedbackGroup/Feedback_MainMenu_button
+@onready var controls_main_menu_button: Button = $Controls_Screen/Controls_Main_Menu_Button
 @onready var quit_button: Button = $TitleScreen/MainMenuButtons/Quit_Button
 
 @onready var wip_continue_button: Button = $WIP_screen/VBoxContainer/wipContinueButton
@@ -31,7 +32,12 @@ func _on_start_game_button_pressed() -> void:
 	
 func _on_wip_continue_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/test_build_levels/test_build_two_level_1.tscn")
-		
+	
+func _on_controls_button_pressed() -> void:
+	$TitleScreen.hide()
+	$Controls_Screen.show()
+	controls_main_menu_button.grab_focus()
+	
 func _on_credits_button_pressed() -> void:
 	$TitleScreen.hide()
 	$Credits_Screen.show()
@@ -58,6 +64,11 @@ func _on_feedback_main_menu_button_pressed() -> void:
 	$PlaytestFeedback_Screen.hide()
 	$TitleScreen.show()
 	start_game_button.grab_focus()
-	
+
+func _on_controls_main_menu_button_pressed() -> void:
+	$Controls_Screen.hide()
+	$TitleScreen.show()
+	start_game_button.grab_focus()
+
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
