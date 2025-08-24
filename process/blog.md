@@ -1,3 +1,54 @@
+# Original level title ideas and early thoughts. - 10/05/2025
+
+[Written on a phone on the way to, during and maybe even after a Grace Petrie gig.]
+
+We Build A Ladder
+We Fix A Fence
+We Carry A Drink
+We Have A Picnic
+We Make A Fire
+We Climb A Mountain - must pick up other player otherwise it doesn't count
+We Surf A Crowd
+We Raise A Glass
+We Climb A Tree
+We Launch A Rocket
+We Dance A Tango
+We Make A Sandwich
+
+Keywords denote type of action, and how the player completes the challenge?
+- maybe not exactly this, but some kind of warioware like hint?
+
+# More notes after a temporary freakout about changing the whole project to being a 3D game. - Let's say this was 19/06/2025
+
+We Move A Piano
+We take a walk - protest, but slowly 
+
+A BUTTON FOR HOLDING HANDS
+
+# 22/06/2025
+
+We share silence - players do nothing
+We look after each other - one player must hold the other player's hand to cheer them up
+We dance together - rhythm game, synchronised?
+
+- THE ACTION BUTTON ALWAYS DOES SOMETHING THAT HELPS THE PLAYER
+
+We Climb A Tree - climb parts of a tree to collect fruit?
+- - we pick blackberries
+
+# For the To-Do List - 21/07/2025
+
+TODO
+- add prompt after 3 seconds saying to press down action button
+-- which needs to be a Kenney icon, or one of your own design
+--- with extra frames, just like penny and wario taught you
+
+- Add button that allows player to move to next level
+
+ALL THE LITTLE GUYS SHOULD BE IN THE PROTEST MARCH.
+ALL THE LITTLE GUYS ARE TAKING CARE OF EACH OTHER.
+ALL THE LITTLE GUYS NEED TO BE IN THE COVER ART.
+
 # I don't have time to write this now (Quick thoughts on the timer) - 06/08/2025, 14:00 + 18:16
 
 You've been having *thoughts* about the timer. Mostly, why? Why the timer? How long is the timer? And finally, and simply, *Does the timer need to be there at all?* In the playtest that happened the other week on campus, the majority present agreed that it did - based around a vague idea that this is part of the Warioware/microgame schtick. Add an option to extend or remove the timer for those who want a more chill time, was the thought in the room.
