@@ -4,4 +4,4 @@ In the game, players are presented with different characters facing small proble
 
 *We'll Build A Ladder* is designed to be played by two people, sitting next to each other. You don't need to know each other, but you will need to communicate with each other. 
 
-No one "wins" this game, unless we win together.
+No one *wins* this game, unless we win together.
