@@ -1,10 +1,10 @@
-# TEST BUILD TWO, TUTORIAL 01: "WE JUMP FOR JOY"
+# TUTORIAL 01: "WE'LL MAKE A MOVEMENT"
 
 extends Node2D
 
 @onready var countdown_timer: CanvasLayer = $UI/CountdownTimer
-@onready var level_title: Label = $UI/LevelTitle/TextLabels/we_jump_for_joy_text
-@onready var tutorial_text: Node = $UI/TutorialPrompts/text_labels/jump_text
+@onready var level_title: Label = $"UI/LevelTitle/TextLabels/we-ll_make_a_movement"
+@onready var tutorial_text: Node = $UI/TutorialPrompts/text_labels/move_text
 
 @onready var player_left: CharacterBody2D = $Players/PlayerLeft
 @onready var player_right: CharacterBody2D = $Players/PlayerRight
@@ -29,14 +29,14 @@ func _process(delta: float) -> void:
 	if win_condition:
 		levelEnd()
 		
-	if Input.is_action_just_pressed("PL_jump"):
+	if Input.is_action_just_pressed("PL_left") or Input.is_action_just_pressed("PL_right"):
 		player_left_win = true
 		if tutorial_text.visible == true:
 			tutorial_text.visible = false
 		else:
 			pass
 		
-	if Input.is_action_just_pressed("PR_jump"):
+	if Input.is_action_just_pressed("PR_left") or Input.is_action_just_pressed("PR_right"):
 		player_right_win = true
 		if tutorial_text.visible == true:
 			tutorial_text.visible = false

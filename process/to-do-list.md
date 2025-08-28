@@ -29,9 +29,11 @@
 - Check Brackeys tutorial about jumping through platforms in a one-way fashion (for "We'll Climb a Tree") (Added 18/08/2025)
 
 - Disable timer (Added 20/08/2025)
-- Implement final bits of tutorial text (Added 20/08/2025)
-- - Move
-- - Action
+~~- Implement final bits of tutorial text (Added 20/08/2025)~~ (Implemented as of 27/08/2025)
+~~- - Move~~ (Properly implemented as of 24/08/2025)
+~~- - Action~~ (Properly implemented as of 27/08/2025)
 
 - Make concept art based on the notebook drawings. (Added 20/08/2025)
 - Complete the Scene Manager Tutorial. (Added 20/08/2025)
+
+- Add world boundaries to levels. (Added 25/08/2025)

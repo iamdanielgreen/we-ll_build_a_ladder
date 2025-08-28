@@ -1,11 +1,13 @@
-# TUTORIAL 03: "CLIMB TO THE TOP"
+# TEST BUILD TWO, TUTORIAL 03: "WE'LL CLIMB CLIMB TO THE TOP"
 
 extends Node2D
 
 @onready var countdown_timer: CanvasLayer = $UI/CountdownTimer
 @onready var level_title: Label = $UI/LevelTitle/TextLabels/we_are_climbing_text
-@onready var player_left: CharacterBody2D = $PlayerLeft
-@onready var player_right: CharacterBody2D = $PlayerRight
+
+@onready var player_left: CharacterBody2D = $Players/PlayerLeft
+@onready var player_right: CharacterBody2D = $Players/PlayerRight
+
 @onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
 @onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
 

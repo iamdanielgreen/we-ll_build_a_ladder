@@ -1,19 +1,24 @@
-# TEST BUILD TWO, TUTORIAL 01: "WE JUMP FOR JOY"
+# TUTORIAL 03: "WE'LL TAKE ACTION"
 
 extends Node2D
 
 @onready var countdown_timer: CanvasLayer = $UI/CountdownTimer
-@onready var level_title: Label = $UI/LevelTitle/TextLabels/we_jump_for_joy_text
-@onready var tutorial_text: Node = $UI/TutorialPrompts/text_labels/jump_text
+@onready var level_title: Label = $"UI/LevelTitle/TextLabels/we-ll_take_action"
+@onready var tutorial_text: Node = $UI/TutorialPrompts/text_labels/action_text
 
 @onready var player_left: CharacterBody2D = $Players/PlayerLeft
+@onready var PL_sprite = $Players/PlayerLeft/AnimatedSprite2D
 @onready var player_right: CharacterBody2D = $Players/PlayerRight
+@onready var PR_sprite = $Players/PlayerRight/AnimatedSprite2D
 
 @onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
 @onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
+@onready var yeah_test: AudioStreamPlayer = $Audio/YeahTest
+@onready var clapping_test: AudioStreamPlayer = $Audio/ClappingTest
 
-var player_left_win = false
-var player_right_win = false
+#NOTE: DO THESE DO ANYTHING HERE?
+#var player_left_win = false
+#var player_right_win = false
 
 var tutorial_condition = true
 var win_condition = false 
@@ -23,25 +28,39 @@ func _ready() -> void:
 	tutorial_prompt()
 
 func _process(delta: float) -> void:
-	if player_left_win and player_right_win:
+	#if player_left_win and player_right_win:
+	if Input.is_action_pressed("PL_action") and Input.is_action_pressed("PR_action"):
 		win_condition = true
 	
+	#if win_condition:
+		#if clapping_test.playing:
+			#await clapping_test.finished
+			#levelEnd()
+		#else:
+			#clapping_test.play()
+			
 	if win_condition:
 		levelEnd()
 		
-	if Input.is_action_just_pressed("PL_jump"):
-		player_left_win = true
+	
+	if Input.is_action_pressed("PL_action"):
+		PL_sprite.play("idle_hands")
+		#player_left_win = true
 		if tutorial_text.visible == true:
 			tutorial_text.visible = false
 		else:
 			pass
 		
-	if Input.is_action_just_pressed("PR_jump"):
-		player_right_win = true
+	if Input.is_action_pressed("PR_action"):
+		PR_sprite.play("idle_hands")
+		#player_right_win = true
 		if tutorial_text.visible == true:
 			tutorial_text.visible = false
 		else:
 			pass
+	
+	if Input.is_action_just_pressed("PL_action") or Input.is_action_just_pressed("PR_action"):
+		yeah_test.play()
 
 func levelStart():
 	level_title.visible = true
@@ -64,6 +83,11 @@ func tutorial_prompt():
 		pass
 	
 func levelEnd():
+	if clapping_test.playing:
+		await clapping_test.finished
+	else:
+		clapping_test.play()
+		
 	if tutorial_text.visible == true:
 		tutorial_text.visible = false
 	else:
@@ -75,6 +99,7 @@ func levelEnd():
 		countdown_timer.hide()
 		level_win_screen.show()
 		next_level_button.grab_focus()
+		clapping_test.stop()
 		get_tree().paused = true
 	#countdown_timer.queue_free() #NOTE: 29/06/2025 - THIS CAUSES A CRASH. SO LET'S NOT USE IT.
 		await get_tree().create_timer(0.25).timeout
@@ -83,4 +108,5 @@ func levelEnd():
 		countdown_timer.hide()
 		level_win_screen.show()
 		next_level_button.grab_focus()
+		clapping_test.stop()
 		get_tree().paused = true

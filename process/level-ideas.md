@@ -7,6 +7,8 @@
 **(06/08/2025, 18:39)** The two players are on a platform. When the inputs to move_left or move_right is pressed, the level is solved.
 - DESIGN NOTE: Is this really needed? It's a cute bit, but is it too obvious?
 
+**(25/08/2025, 09:00)** Began prototyping level.
+
 ### We'll Jump For Joy
 
 **(17/07/2025, based on notebook notes)** The two players are on a platform. When they both press the jump button, the level is solved. They do not have to do this at the same time.
@@ -38,6 +40,8 @@ The two players appear on screen. They are in a white void. All they have to so 
 **(31/07/2025, 11:49)** Everything the player does creates sound - jumping, walking, pressing the action button. Even holding hands emits an "Awww" in the background. The point is to simply remain still (or perhaps, if holding hands, the timer only ticks down after the "Awww" sound stops playing).
 
 **(05/08/2025, 17:59)** As of last night, this level has been prototyped, though currently works independent of the main project (ie, level has not been attached to main sequence). There is currently a bug that *can* occur when the level resolves (current theory is that this has something to do with receiving inputs *after* the level is technically stopped), but I can't reliably recreate it using this method.
+
+**(25/08/2025, 09:01)** This level is currently an outlier compared to the rest of the game. There is no other level that uses the mechanic of taking *no action* as an action. I still like what this represents (even if it blurs the lines of what the game itself is trying to communicate), so I would like to keep it, but perhaps this isn't a tutorial level - perhaps it just sits somewhere towards the end of the game, as a curveball to the players.
 
 
 ## Game Levels
@@ -103,3 +107,13 @@ One player is a pot plant, the other is the sun. The two must line up, at which 
 - DESIGN NOTE: One of the players is a weightlifter, who is perpetually holding a set of barbells.
 
 **(18:07)** You've thought this a lot over the course of the day, but this is essentially a retooling of "prototype01"
+
+### We'll Stand Together
+
+**(25/08/2025, 08:48)** One player is on the side of screen, surrounded by nondescript characters that are making them sad (tears are seen dripping down their face). The other player walks out and stretches out their hand towards them. When the other player takes it, the level is solved.
+
+### We'll Dream Big Dreams
+
+**(26/08/2025, 11:56)** This is an [Action] level. The two players lie next to each other, sleeping. Above them a thought bubble appears, filled with "zzzz"* (because, you know, they're *sleeping*). As the player presses the Action button, the bubble gets larger (achieved by scaling the sprite in-engine). When the bubble fills the screen, and it collides with an invisible object that sets each player's win condition to TRUE.  If both players have a TRUE win condition, the level is solved.
+
+**It would be nice if a little animation could be playing that denotes a more complex interiority, but for the purposes of time I'll settle for "zzzz"*

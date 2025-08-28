@@ -1,4 +1,4 @@
-# TUTORIAL 02: "WE'LL SHARE SILENCE"
+# TEST BUILD TWO, TUTORIAL 02: "WE'LL SHARE SILENCE"
 
 extends Node2D
 
@@ -6,8 +6,10 @@ extends Node2D
 @onready var level_title: Label = $UI/LevelTitle/TextLabels/we_share_silence_text
 #NOTE: THIS NEEDS TO BE UPDATED
 @onready var tutorial_text: Label = $UI/TutorialPrompts/text_labels/nothing_text
-@onready var player_left: CharacterBody2D = $PlayerLeft
-@onready var player_right: CharacterBody2D = $PlayerRight
+
+@onready var player_left: CharacterBody2D = $Players/PlayerLeft
+@onready var player_right: CharacterBody2D = $Players/PlayerRight
+
 @onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
 @onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
 

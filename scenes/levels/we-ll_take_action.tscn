@@ -1,11 +1,14 @@
-[gd_scene load_steps=14 format=4 uid="uid://cy1kib77f2dnj"]
+[gd_scene load_steps=17 format=4 uid="uid://dvxghh7485ldo"]
 
-[ext_resource type="Script" uid="uid://br5oc2wvcqgui" path="res://scripts/levels/test_build_levels/test_build_two_level_1.gd" id="1_cay5k"]
+[ext_resource type="Script" uid="uid://b02m665ucturl" path="res://scripts/levels/we-ll_take_action.gd" id="1_2wvm0"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_eetnp"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/levels/world_boundaries.tscn" id="3_eo1m5"]
 [ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/player_left.tscn" id="3_r6lj6"]
 [ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/player_right.tscn" id="4_btup7"]
 [ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="5_24y4b"]
+[ext_resource type="AudioStream" uid="uid://cjyo70i83hhv1" path="res://assets/audio/effects/Yeah_Chorus_of_One.wav" id="5_c15c2"]
 [ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="6_ehxkv"]
+[ext_resource type="AudioStream" uid="uid://orj532qlpjly" path="res://assets/audio/effects/ClappingTest.wav" id="7_am435"]
 [ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="7_tb2fk"]
 [ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="8_nqckt"]
 [ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="9_kq34g"]
@@ -97,19 +100,21 @@ physics_layer_1/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_2fliv")
 
 [node name="we-ll_take_action" type="Node2D"]
-script = ExtResource("1_cay5k")
+script = ExtResource("1_2wvm0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 script = ExtResource("2_eetnp")
 
+[node name="WorldBoundaries" parent="." instance=ExtResource("3_eo1m5")]
+
 [node name="Players" type="Node" parent="."]
 
-[node name="PlayerLeft" parent="." instance=ExtResource("3_r6lj6")]
+[node name="PlayerLeft" parent="Players" instance=ExtResource("3_r6lj6")]
 z_index = 1
 position = Vector2(-174, 96)
 
-[node name="PlayerRight" parent="." instance=ExtResource("4_btup7")]
+[node name="PlayerRight" parent="Players" instance=ExtResource("4_btup7")]
 position = Vector2(174, 96)
 
 [node name="TileLayers" type="Node" parent="."]
@@ -123,6 +128,14 @@ tile_set = SubResource("TileSet_0k1se")
 z_index = -4
 tile_map_data = PackedByteArray("AADy/wcAAgADAAAAAADz/wcAAgABAAAAAAD0/wcAAgACAAAAAAD1/wcAAgADAAAAAAD2/wcAAgAEAAAAAAD3/wcAAgAFAAAAAAD4/wcAAgAGAAAAAAD5/wcAAgAAAAAAAAD6/wcAAgABAAAAAAD7/wcAAgACAAAAAAD8/wcAAgADAAAAAAD9/wcAAgAEAAAAAAD+/wcAAgAFAAAAAAD//wcAAgAGAAAAAAAAAAcAAgAAAAAAAAABAAcAAgABAAAAAAACAAcAAgACAAAAAAADAAcAAgADAAAAAAAEAAcAAgAEAAAAAAAFAAcAAgAFAAAAAAAGAAcAAgAGAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgABAAAAAAAJAAcAAgACAAAAAAAKAAcAAgADAAAAAAALAAcAAgAEAAAAAAAMAAcAAgAFAAAAAAANAAcAAgAEAAAAAADx/wcAAgAAAAAAAAAOAAcAAgAGAAAAAAA=")
 tile_set = SubResource("TileSet_0k1se")
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="YeahTest" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("5_c15c2")
+
+[node name="ClappingTest" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("7_am435")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

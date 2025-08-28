@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt7c7i6kfmkg1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_am435"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eo1m5"]
+normal = Vector2(0, 1)
+
+[node name="WorldBoundaries" type="StaticBody2D"]
+
+[node name="WorldBoundaryLeft" type="CollisionShape2D" parent="."]
+position = Vector2(-240, 0)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_am435")
+
+[node name="WorldBoundaryRight" type="CollisionShape2D" parent="."]
+position = Vector2(240, 0)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_eo1m5")
