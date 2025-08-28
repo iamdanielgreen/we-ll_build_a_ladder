@@ -36,4 +36,5 @@
 - Make concept art based on the notebook drawings. (Added 20/08/2025)
 - Complete the Scene Manager Tutorial. (Added 20/08/2025)
 
-- Add world boundaries to levels. (Added 25/08/2025)
+- In "We'll Take Action" as a placeholder have the action button trigger a state change to purple cats. (Added 25/08/2025)
+~~- Add world boundaries to levels. (Added 25/08/2025)~~ (Added 28/08/2025)

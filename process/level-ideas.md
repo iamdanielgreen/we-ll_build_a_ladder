@@ -116,4 +116,6 @@ One player is a pot plant, the other is the sun. The two must line up, at which 
 
 **(26/08/2025, 11:56)** This is an [Action] level. The two players lie next to each other, sleeping. Above them a thought bubble appears, filled with "zzzz"* (because, you know, they're *sleeping*). As the player presses the Action button, the bubble gets larger (achieved by scaling the sprite in-engine). When the bubble fills the screen, and it collides with an invisible object that sets each player's win condition to TRUE.  If both players have a TRUE win condition, the level is solved.
 
+**(19:18)** You thought it might be cute if this level used the purple background of the prototypes (or another dark colour), and the sleeping characters were in a white outline.
+
 **It would be nice if a little animation could be playing that denotes a more complex interiority, but for the purposes of time I'll settle for "zzzz"*
