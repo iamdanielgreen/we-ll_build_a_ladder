@@ -31,7 +31,8 @@ func _on_start_game_button_pressed() -> void:
 	#get_tree().change_scene_to_file("res://scenes/levels/test_build_levels/test_build_two_level_1.tscn")
 	
 func _on_wip_continue_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/test_build_levels/test_build_two_level_1.tscn")
+	GameManager.current_game_mode = GameManager.game_mode.TimerOff
+	get_tree().change_scene_to_file("res://scenes/levels/test_build_three_levels/test_build_three_level_1.tscn")
 	
 func _on_controls_button_pressed() -> void:
 	$TitleScreen.hide()

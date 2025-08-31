@@ -69,19 +69,24 @@ func levelEnd():
 	else:
 		pass
 	
-	
-	if countdown_timer.time > 1.5:
-		await get_tree().create_timer(1.0).timeout
-		countdown_timer.stop_timer()
-		countdown_timer.hide()
-		level_win_screen.show()
-		next_level_button.grab_focus()
-		get_tree().paused = true
+	if GameManager.current_game_mode == GameManager.game_mode.TimerOn:
+		if countdown_timer.time > 1.5:
+			await get_tree().create_timer(1.0).timeout
+			countdown_timer.stop_timer()
+			countdown_timer.hide()
+			level_win_screen.show()
+			next_level_button.grab_focus()
+			get_tree().paused = true
 	#countdown_timer.queue_free() #NOTE: 29/06/2025 - THIS CAUSES A CRASH. SO LET'S NOT USE IT.
-		await get_tree().create_timer(0.25).timeout
+			await get_tree().create_timer(0.25).timeout
+		else:
+			countdown_timer.stop_timer()
+			countdown_timer.hide()
+			level_win_screen.show()
+			next_level_button.grab_focus()
+			get_tree().paused = true
 	else:
-		countdown_timer.stop_timer()
-		countdown_timer.hide()
+		await get_tree().create_timer(1.0).timeout
 		level_win_screen.show()
 		next_level_button.grab_focus()
 		get_tree().paused = true

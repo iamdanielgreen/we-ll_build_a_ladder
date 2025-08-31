@@ -4,3 +4,4 @@
 - [Blog](./blog.md)
 - [Level Ideas](./level-ideas.md)
 - [To-Do List](./to-do-list.md)
+- [Known Bugs](./known-bugs.md)

@@ -2,6 +2,10 @@
 
 extends Node
 
+enum game_mode {TimerOn, TimerOff}
+
+var current_game_mode: game_mode
+
 var PL_holdhands = false
 var PR_holdhands = false
 var player_in_range = false

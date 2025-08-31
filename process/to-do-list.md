@@ -1,3 +1,5 @@
+# To-Do List
+
 - Adjust levelEnd for a quicker solve. (Added 05/08/2025)
 - DESIGN NOTE: Should the level be titled "We share a moment of silence"? ~~The tutorial prompt for this level could denote how long said moment is. (Added 05/08/2025)~~ (Tutorial Prompt now says "Something will come from 'Nothing'" - 20/08/2025)
 ~~- Add the dang button that moves to next level. Even if the final game doesn't need it. (Added 05/08/2025)~~ (Fully implemented in Test Build 02 - 20/08/2025)
@@ -38,3 +40,10 @@
 
 - In "We'll Take Action" as a placeholder have the action button trigger a state change to purple cats. (Added 25/08/2025)
 ~~- Add world boundaries to levels. (Added 25/08/2025)~~ (Added 28/08/2025)
+
+- Revise keyboard controls so that Player Left and Right can navigate the Main Menu. (Added 29/08/2025)
+~~- Add "Yeah Sound" to all button inputs on "We'll Share Silence" as placeholder (Added 29/08/2025)~~ [31/08/2025 - Not hugely necessary, prioritise new sounds instead.]
+- Add additional menu screen to turn timer on or off. (Added 29/08/2025)
+- Test Main Menu Button in "We'll Try Again" menu. (Added 29/08/2025)
+
+- Update credits (Added 31/08/2025)

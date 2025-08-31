@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 				PL_sprite.play("idle_hands")
 			else:
 				var current_scene_file = get_tree().current_scene.scene_file_path
-				if current_scene_file == "res://scenes/levels/test_build_levels/test_build_two_level_2.tscn":
+				if current_scene_file == "res://scenes/levels/test_build_three_levels/test_build_three_level_4.tscn":
 					PL_sprite.play("really_idle")
 				else:
 					PL_sprite.play("idle")

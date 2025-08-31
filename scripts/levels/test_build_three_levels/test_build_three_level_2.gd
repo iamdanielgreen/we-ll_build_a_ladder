@@ -1,10 +1,10 @@
-# TUTORIAL 01: "WE'LL MAKE A MOVEMENT"
+# TEST BUILD TWO, TUTORIAL 01: "WE JUMP FOR JOY"
 
 extends Node2D
 
 @onready var countdown_timer: CanvasLayer = $UI/CountdownTimer
-@onready var level_title: Label = $"UI/LevelTitle/TextLabels/we-ll_make_a_movement"
-@onready var tutorial_text: Node = $UI/TutorialPrompts/text_labels/move_text
+@onready var level_title: Label = $UI/LevelTitle/TextLabels/we_jump_for_joy_text
+@onready var tutorial_text: Node = $UI/TutorialPrompts/text_labels/jump_text
 
 @onready var player_left: CharacterBody2D = $Players/PlayerLeft
 @onready var player_right: CharacterBody2D = $Players/PlayerRight
@@ -29,14 +29,14 @@ func _process(delta: float) -> void:
 	if win_condition:
 		levelEnd()
 		
-	if Input.is_action_just_pressed("PL_left") or Input.is_action_just_pressed("PL_right"):
+	if Input.is_action_just_pressed("PL_jump"):
 		player_left_win = true
 		if tutorial_text.visible == true:
 			tutorial_text.visible = false
 		else:
 			pass
 		
-	if Input.is_action_just_pressed("PR_left") or Input.is_action_just_pressed("PR_right"):
+	if Input.is_action_just_pressed("PR_jump"):
 		player_right_win = true
 		if tutorial_text.visible == true:
 			tutorial_text.visible = false
@@ -69,19 +69,24 @@ func levelEnd():
 	else:
 		pass
 	
-	
-	if countdown_timer.time > 1.5:
-		await get_tree().create_timer(1.0).timeout
-		countdown_timer.stop_timer()
-		countdown_timer.hide()
-		level_win_screen.show()
-		next_level_button.grab_focus()
-		get_tree().paused = true
-	#countdown_timer.queue_free() #NOTE: 29/06/2025 - THIS CAUSES A CRASH. SO LET'S NOT USE IT.
-		await get_tree().create_timer(0.25).timeout
+	if GameManager.current_game_mode == GameManager.game_mode.TimerOn:
+		if countdown_timer.time > 1.5:
+			await get_tree().create_timer(1.0).timeout
+			countdown_timer.stop_timer()
+			countdown_timer.hide()
+			level_win_screen.show()
+			next_level_button.grab_focus()
+			get_tree().paused = true
+		#countdown_timer.queue_free() #NOTE: 29/06/2025 - THIS CAUSES A CRASH. SO LET'S NOT USE IT.
+			await get_tree().create_timer(0.25).timeout
+		else:
+			countdown_timer.stop_timer()
+			countdown_timer.hide()
+			level_win_screen.show()
+			next_level_button.grab_focus()
+			get_tree().paused = true
 	else:
-		countdown_timer.stop_timer()
-		countdown_timer.hide()
+		await get_tree().create_timer(1.0).timeout
 		level_win_screen.show()
 		next_level_button.grab_focus()
 		get_tree().paused = true

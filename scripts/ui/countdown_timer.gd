@@ -33,6 +33,8 @@ func _process(delta) -> void:
 	#if game_manager.current_game_mode == game_manager.game_mode.EndlessFight:
 		#queue_free()
 		
+	if GameManager.current_game_mode == GameManager.game_mode.TimerOff:
+		queue_free()
 		
 	if time <= 0:
 		stop_timer()
