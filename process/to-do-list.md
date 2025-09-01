@@ -48,3 +48,5 @@
 - Test Main Menu Button in "We'll Try Again" menu. (Added 29/08/2025)
 
 - Update credits (Added 31/08/2025)
+
+- Change "We Have Succeeded" text to black (for certain levels). (Added 01/09/2025)
