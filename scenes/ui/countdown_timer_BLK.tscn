@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq8qlq4ecrkft"]
+[gd_scene load_steps=2 format=3 uid="uid://cemxcmimw2erm"]
 
-[ext_resource type="Script" uid="uid://cxldbpt4v2pcq" path="res://scripts/ui/countdown_timer.gd" id="1_v2468"]
+[ext_resource type="Script" uid="uid://cxldbpt4v2pcq" path="res://scripts/ui/countdown_timer.gd" id="1_xggaw"]
 
 [node name="CountdownTimer" type="CanvasLayer"]
-script = ExtResource("1_v2468")
+script = ExtResource("1_xggaw")
 
 [node name="TimerDisplay" type="HBoxContainer" parent="."]
 anchors_preset = 1
@@ -15,6 +15,7 @@ grow_horizontal = 0
 
 [node name="Minutes" type="Label" parent="TimerDisplay"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 100
@@ -22,28 +23,24 @@ text = "00"
 
 [node name="Colon01" type="Label" parent="TimerDisplay"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = ":"
 
 [node name="Seconds" type="Label" parent="TimerDisplay"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = "00"
 
 [node name="Colon02" type="Label" parent="TimerDisplay"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = ":"
 
 [node name="Hundredths" type="Label" parent="TimerDisplay"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = "00"

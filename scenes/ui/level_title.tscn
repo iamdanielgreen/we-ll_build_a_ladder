@@ -7,7 +7,7 @@ process_mode = 3
 
 [node name="TextLabels" type="Node" parent="."]
 
-[node name="we_are_climbing_text" type="Label" parent="TextLabels"]
+[node name="we-ll_make_a_movement" type="Label" parent="TextLabels"]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -23,7 +23,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_a33bo")
 theme_override_font_sizes/font_size = 75
-text = "We'll climb to the top."
+text = "We'll Make A Movement"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -47,7 +47,7 @@ text = "We'll jump for joy."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="we_take_care_of_each_other_text" type="Label" parent="TextLabels"]
+[node name="we-ll_take_action" type="Label" parent="TextLabels"]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -57,6 +57,27 @@ anchor_bottom = 0.5
 offset_left = -300.5
 offset_top = -51.5
 offset_right = 300.5
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_a33bo")
+theme_override_font_sizes/font_size = 75
+text = "We'll Take Action"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="we_take_care_of_each_other_text" type="Label" parent="TextLabels"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -378.0
+offset_top = -51.5
+offset_right = 378.0
 offset_bottom = 51.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -88,7 +109,7 @@ text = "We'll share silence."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="we-ll_make_a_movement" type="Label" parent="TextLabels"]
+[node name="we_are_climbing_text" type="Label" parent="TextLabels"]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -104,26 +125,6 @@ grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_a33bo")
 theme_override_font_sizes/font_size = 75
-text = "We'll Make A Movement"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="we-ll_take_action" type="Label" parent="TextLabels"]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.5
-offset_top = -51.5
-offset_right = 300.5
-offset_bottom = 51.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("1_a33bo")
-theme_override_font_sizes/font_size = 75
-text = "We'll Take Action"
+text = "We'll climb to the top."
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -7,6 +7,7 @@
 
 - Levels end with a clapping noise when solved. (Added 06/08/205)
 - - [As of 20/08/2025] Clapping sounds recorded. Not yet implemented.
+- - - [31/08/2025 - Test version implemented within "We'll Take Action"/Test Build Three, Level 3]
 
 ~~- Check references + onreadys as these may have changed when moving Test Build files into a new folder (Added 08/08/2025)~~ (As a result of a build based on new levels existing, I think this is resolved - 20/08/2025)
 ~~- - Create new scripts/update script names for test_build_levels (Added 08/08/205)~~
@@ -30,7 +31,7 @@
 - - Nothing? (stop sign?)
 - Check Brackeys tutorial about jumping through platforms in a one-way fashion (for "We'll Climb a Tree") (Added 18/08/2025)
 
-- Disable timer (Added 20/08/2025)
+~~- Disable timer (Added 20/08/2025)~~ (Ability to remove timer possible since 29/08/2025)
 ~~- Implement final bits of tutorial text (Added 20/08/2025)~~ (Implemented as of 27/08/2025)
 ~~- - Move~~ (Properly implemented as of 24/08/2025)
 ~~- - Action~~ (Properly implemented as of 27/08/2025)
