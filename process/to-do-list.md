@@ -5,7 +5,7 @@
 ~~- Add the dang button that moves to next level. Even if the final game doesn't need it. (Added 05/08/2025)~~ (Fully implemented in Test Build 02 - 20/08/2025)
 ~~- Add a timer-free mode? (Added 05/08/2025)~~ (Priority is now to make the game timer-free generally, but it's an interesting thought exercise to have the version *with* the timer be the extra option. - 20/08/2025)
 
-- Levels end with a clapping noise when solved. (Added 06/08/205)
+- Levels end with a clapping noise when solved. (Added 06/08/2025)
 - - [As of 20/08/2025] Clapping sounds recorded. Not yet implemented.
 - - - [31/08/2025 - Test version implemented within "We'll Take Action"/Test Build Three, Level 3]
 
