@@ -14,6 +14,7 @@ extends Node2D
 @onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
 @onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
 @onready var yeah_test: AudioStreamPlayer = $Audio/YeahTest
+@onready var yeah_h: AudioStreamPlayer = $Audio/Yeah_H
 @onready var clapping_test: AudioStreamPlayer = $Audio/ClappingTest
 
 #NOTE: DO THESE DO ANYTHING HERE?
@@ -56,8 +57,11 @@ func _process(delta: float) -> void:
 		else:
 			pass
 	
-	if Input.is_action_just_pressed("PL_action") or Input.is_action_just_pressed("PR_action"):
+	if Input.is_action_just_pressed("PL_action"):
 		yeah_test.play()
+		
+	if Input.is_action_just_pressed("PR_action"):
+		yeah_h.play()
 
 func levelStart():
 	level_title.visible = true

@@ -1,4 +1,3 @@
-# PLAYER RIGHT
 extends CharacterBody2D
 
 @onready var PR_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -40,41 +39,27 @@ func _physics_process(delta: float) -> void:
 		PR_sprite.flip_h = true
 	
 	#HOLDING HANDS TEST
-	#if Input.is_action_pressed("PR_holdhands"):
-		#GameManager.PR_holdhands = true
-	#elif Input.is_action_just_released("PR_holdhands"):
-		#GameManager.PR_holdhands = false
+	if Input.is_action_pressed("PR_holdhands"):
+		GameManager.PR_holdhands = true
+	elif Input.is_action_just_released("PR_holdhands"):
+		GameManager.PR_holdhands = false
 	
 	#MOVEMENT
 	if is_on_floor():
 		if direction == 0.0:
-			if Input.is_action_pressed("PR_action"):
-				PR_sprite.play("action")
+			if GameManager.holding_hands: 
+				PR_sprite.play("idle_hands")
 			else:
-				PR_sprite.play("idle")
+				var current_scene_file = get_tree().current_scene.scene_file_path
+				if current_scene_file == "res://scenes/levels/test_build_three_levels/test_build_three_level_4.tscn":
+					PR_sprite.play("really_idle")
+				else:
+					PR_sprite.play("idle")
 		else:
-			if Input.is_action_pressed("PR_action"):
-				PR_sprite.play("action-walk")
+			if GameManager.holding_hands:
+				PR_sprite.play("run_hands")
 			else:
-				PR_sprite.play("walk")
-	
-	
-	# NOTE: PROTOTYPE PLAYER RIGHT SCRIPT
-	#if is_on_floor():
-		#if direction == 0.0:
-			#if GameManager.holding_hands: 
-				#PR_sprite.play("idle_hands")
-			#else:
-				#var current_scene_file = get_tree().current_scene.scene_file_path
-				#if current_scene_file == "res://scenes/levels/test_build_three_levels/test_build_three_level_4.tscn":
-					#PR_sprite.play("really_idle")
-				#else:
-					#PR_sprite.play("idle")
-		#else:
-			#if GameManager.holding_hands:
-				#PR_sprite.play("run_hands")
-			#else:
-				#PR_sprite.play("run")
+				PR_sprite.play("run")
 
 	move_and_slide()
 

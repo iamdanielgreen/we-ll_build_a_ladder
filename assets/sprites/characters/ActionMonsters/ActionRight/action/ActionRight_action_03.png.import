@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba2df31qqkdrk"
-path="res://.godot/imported/bg_notebook01.png-63dc3e9ba7ca90ae8ee48b21bed2caea.ctex"
+uid="uid://di3s4wij4l6cf"
+path="res://.godot/imported/ActionRight_action_03.png-27b9525cdab8c077b5687069c9acbe8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/backgrounds/bg_notebook01.png"
-dest_files=["res://.godot/imported/bg_notebook01.png-63dc3e9ba7ca90ae8ee48b21bed2caea.ctex"]
+source_file="res://assets/sprites/characters/ActionMonsters/ActionRight/action/ActionRight_action_03.png"
+dest_files=["res://.godot/imported/ActionRight_action_03.png-27b9525cdab8c077b5687069c9acbe8f.ctex"]
 
 [params]
 

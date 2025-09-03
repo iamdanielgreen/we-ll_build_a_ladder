@@ -90,31 +90,30 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_la24y"]
-radius = 8.0
-height = 26.0
+radius = 11.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_knelu"]
-radius = 11.0
+radius = 9.0
+height = 34.0
 
 [node name="PlayerLeft" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_knelu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_s8x1j")
 animation = &"action"
 autoplay = "idle"
-frame_progress = 0.525078
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_la24y")
 
 [node name="HoldingHandsCollider" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HoldingHandsCollider"]
-position = Vector2(0, 4)
+position = Vector2(0, 3)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_knelu")
 debug_color = Color(1, 1, 0, 0.419608)

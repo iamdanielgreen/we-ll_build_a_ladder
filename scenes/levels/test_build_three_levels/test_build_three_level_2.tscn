@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://crhfhgobujt15" path="res://scripts/levels/test_build_three_levels/test_build_three_level_2.gd" id="1_48d6a"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_pulri"]
 [ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/levels/world_boundaries.tscn" id="3_oteqy"]
-[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/prototype_player_left.tscn" id="4_73a68"]
+[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/prototypes/prototype_player_left.tscn" id="4_73a68"]
 [ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/player_right.tscn" id="5_kccjc"]
 [ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="6_i87qs"]
 [ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="7_r7o8i"]
