@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameManager="*res://scripts/gameManager.gd"
 
 [dialogic]
@@ -36,10 +35,6 @@ window/stretch/mode="viewport"
 [editor]
 
 movie_writer/movie_file="C:/Users/iamda/Documents/00_Projects/2025/01_Games/03_We'll Build A Ladder/Ephemera/Video Clips/WBAL_Gameplay_Test.avi"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [global_group]
 

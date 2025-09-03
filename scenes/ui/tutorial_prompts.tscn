@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://w1n1spgbj0tv"]
+[gd_scene load_steps=6 format=3 uid="uid://w1n1spgbj0tv"]
 
 [ext_resource type="Texture2D" uid="uid://bqvbkoxfcadfb" path="res://assets/sprites/ui/actions/switch_buttons_down_outline.svg" id="1_pwi2a"]
 [ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_txs6r"]
-[ext_resource type="Texture2D" uid="uid://dev7f1lp2fomy" path="res://assets/sprites/ui/actions/switch_buttons_left_outline_blk.svg" id="3_4w37e"]
 [ext_resource type="Texture2D" uid="uid://i88mc745nn0w" path="res://assets/sprites/ui/actions/switch_buttons_left_outline.svg" id="3_rcqsf"]
 [ext_resource type="Texture2D" uid="uid://c03bqkc7fiv4v" path="res://assets/sprites/ui/movement/switch_dpad_horizontal_outline.svg" id="4_4w37e"]
 [ext_resource type="Texture2D" uid="uid://cuclleqiblhby" path="res://assets/sprites/ui/movement/switch_stick_l_horizontal.svg" id="5_3x2rw"]
@@ -56,7 +55,6 @@ offset_right = 161.0
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_txs6r")
 theme_override_font_sizes/font_size = 75
 text = "Action"
@@ -67,7 +65,7 @@ vertical_alignment = 1
 texture_filter = 2
 position = Vector2(-44.5, 24.5)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("3_4w37e")
+texture = ExtResource("3_rcqsf")
 
 [node name="nothing_text" type="Label" parent="text_labels"]
 visible = false

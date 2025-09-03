@@ -1,5 +1,3 @@
-# PLAYER LEFT SCRIPT (CURRENTLY TUNED FOR "WE'LL TAKE ACTION")
-
 extends CharacterBody2D
 
 @onready var PL_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -39,46 +37,27 @@ func _physics_process(delta: float) -> void:
 		PL_sprite.flip_h = true
 	
 	#HOLDING HANDS TEST
-	#if Input.is_action_pressed("PL_holdhands"):
-		#GameManager.PL_holdhands = true
-	#elif Input.is_action_just_released("PL_holdhands"):
-		#GameManager.PL_holdhands = false
+	if Input.is_action_pressed("PL_holdhands"):
+		GameManager.PL_holdhands = true
+	elif Input.is_action_just_released("PL_holdhands"):
+		GameManager.PL_holdhands = false
 		
 	#MOVEMENT
 	if is_on_floor():
 		if direction == 0.0:
-			if Input.is_action_pressed("PL_action"):
-				PL_sprite.play("action")
+			if GameManager.holding_hands:
+				PL_sprite.play("idle_hands")
 			else:
-				PL_sprite.play("idle")
+				var current_scene_file = get_tree().current_scene.scene_file_path
+				if current_scene_file == "res://scenes/levels/test_build_three_levels/test_build_three_level_4.tscn":
+					PL_sprite.play("really_idle")
+				else:
+					PL_sprite.play("idle")
 		else:
-			if Input.is_action_pressed("PL_action"):
-				PL_sprite.play("action-walk")
+			if GameManager.holding_hands:
+				PL_sprite.play("run_hands")
 			else:
-				PL_sprite.play("walk")
-			
-			
-			
-		
-
-	
-	# NOTE: PROTOTYPE PLAYER LEFT SCRIPT
-	#if is_on_floor():
-		#if direction == 0.0:
-			##IF PLAYER LEFT STARTS CAUSING CRASHES. THIS IS PROBABLY WHY.
-			#if GameManager.holding_hands:
-				#PL_sprite.play("idle_hands")
-			#else:
-				#var current_scene_file = get_tree().current_scene.scene_file_path
-				#if current_scene_file == "res://scenes/levels/test_build_three_levels/test_build_three_level_4.tscn":
-					#PL_sprite.play("really_idle")
-				#else:
-					#PL_sprite.play("idle")
-		#else:
-			#if GameManager.holding_hands:
-				#PL_sprite.play("run_hands")
-			#else:
-				#PL_sprite.play("run")
+				PL_sprite.play("run")
 
 	move_and_slide()
 
