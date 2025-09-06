@@ -106,7 +106,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_a33bo")
 theme_override_font_sizes/font_size = 75
-text = "We'll share silence."
+text = "We'll share silence"
 horizontal_alignment = 1
 vertical_alignment = 1
 

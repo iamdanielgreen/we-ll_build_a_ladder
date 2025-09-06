@@ -25,6 +25,7 @@ var tutorial_condition = true
 var win_condition = false 
 
 func _ready() -> void:
+	GameManager.current_game_mode = GameManager.game_mode.TimerOff
 	levelStart()
 	tutorial_prompt()
 

@@ -81,3 +81,6 @@ func _on_test_macguffin_body_entered(body: Node2D) -> void:
 # When the win condition on level 3 occurs, set a global for the menu to true.
 # This global, if true, displays the credits screen - script you'll need to add in the main menu script.
 # Clicking the Main Menu or Feedback button in the credits menu turns the global to false.
+
+# NOTE: HOW TO HANDLE SILENCEGUYS' ACTION-WALK ON "WE'LL SHARE SILENCE", 06/09/2025, 17:56
+#  Have a check that lets you play the action sound first, then the footsteps, then resets the check when they release the action button.

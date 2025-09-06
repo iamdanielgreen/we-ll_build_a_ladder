@@ -29,7 +29,7 @@
 - - Action 
 - - Hand holding (hand shake)
 - - Nothing? (stop sign?)
-- Check Brackeys tutorial about jumping through platforms in a one-way fashion (for "We'll Climb a Tree") (Added 18/08/2025)
+~~- Check Brackeys tutorial about jumping through platforms in a one-way fashion (for "We'll Climb a Tree") (Added 18/08/2025)~~ [06/09/2025, 17:45 - You did this at some point over the last week. You set a CollisionShape2D to have One Way Collison. You tick a box. That's it.]
 
 ~~- Disable timer (Added 20/08/2025)~~ (Ability to remove timer possible since 29/08/2025)
 ~~- Implement final bits of tutorial text (Added 20/08/2025)~~ (Implemented as of 27/08/2025)
@@ -40,7 +40,7 @@
 - Complete the Scene Manager Tutorial. (Added 20/08/2025)
 
 - In "We'll Take Action" as a placeholder have the action button trigger a state change to purple cats. (Added 25/08/2025)
-~~- Add world boundaries to levels. (Added 25/08/2025)~~ (Added 28/08/2025)
+~~- Add world boundaries to levels. (Added 25/08/2025)~~ [Implemented as of 28/08/2025]
 
 - Revise keyboard controls so that Player Left and Right can navigate the Main Menu. (Added 29/08/2025)
 ~~- Add "Yeah Sound" to all button inputs on "We'll Share Silence" as placeholder (Added 29/08/2025)~~ [31/08/2025 - Not hugely necessary, prioritise new sounds instead.]
@@ -50,3 +50,8 @@
 - Update credits (Added 31/08/2025)
 
 - Change "We Have Succeeded" text to black (for certain levels). (Added 01/09/2025)
+
+- Work out how to deal with the "action-walk" in "We'll Share Silence" will require playing two sounds, and you don't necessarily want this to loop. (Added 06/09/2025)
+- - You have notes in "ricky_script.gd" about this.
+
+- "We'll Try Again" text label in "OutOfTime.tscn" needs outline, or to be set to black. (Added 06/09/2025)

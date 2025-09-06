@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://di44klmajis31"]
+
+[ext_resource type="Script" uid="uid://dmlfabuhln6j8" path="res://scripts/players/00-prototypes/player_hands.gd" id="1_p7j8e"]
+[ext_resource type="Texture2D" uid="uid://cvytsbfqpfsbd" path="res://assets/sprites/00_placeholders/Fighter_Cats_Tileset.png" id="2_uebca"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1t6c"]
+atlas = ExtResource("2_uebca")
+region = Rect2(48, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bfuu"]
+atlas = ExtResource("2_uebca")
+region = Rect2(32, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya06h"]
+atlas = ExtResource("2_uebca")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khftg"]
+atlas = ExtResource("2_uebca")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh7xx"]
+atlas = ExtResource("2_uebca")
+region = Rect2(0, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2pf2"]
+atlas = ExtResource("2_uebca")
+region = Rect2(16, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt0ji"]
+atlas = ExtResource("2_uebca")
+region = Rect2(32, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc17d"]
+atlas = ExtResource("2_uebca")
+region = Rect2(48, 96, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8x1j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1t6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bfuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya06h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khftg")
+}],
+"loop": true,
+"name": &"idle_hands",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh7xx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2pf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt0ji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wc17d")
+}],
+"loop": true,
+"name": &"run_hands",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_la24y"]
+radius = 7.0
+height = 18.0
+
+[node name="PlayerHands" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_p7j8e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_s8x1j")
+animation = &"idle_hands"
+autoplay = "idle_hands"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_la24y")
