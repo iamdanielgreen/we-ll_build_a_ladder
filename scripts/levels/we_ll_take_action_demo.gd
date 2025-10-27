@@ -13,8 +13,9 @@ extends Node2D
 
 @onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
 @onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
-@onready var yeah_test: AudioStreamPlayer = $Audio/YeahTest
-@onready var yeah_h: AudioStreamPlayer = $Audio/Yeah_H
+@onready var yeah: AudioStreamPlayer = $Audio/YeahChorus
+@onready var yeah_shorter: AudioStreamPlayer = $"Audio/YeahChorus-shorter"
+
 @onready var clapping_test: AudioStreamPlayer = $Audio/ClappingTest
 
 #NOTE: DO THESE DO ANYTHING HERE?
@@ -25,7 +26,8 @@ var tutorial_condition = true
 var win_condition = false 
 
 func _ready() -> void:
-	GameManager.current_game_mode = GameManager.game_mode.TimerOff
+	# NOTE: USE SCRIPT BELOW TO TEST LEVEL WITHOUT TIMER.
+	#GameManager.current_game_mode = GameManager.game_mode.TimerOff
 	levelStart()
 	tutorial_prompt()
 
@@ -59,10 +61,11 @@ func _process(delta: float) -> void:
 			pass
 	
 	if Input.is_action_just_pressed("PL_action"):
-		yeah_test.play()
+		yeah.play()
 		
 	if Input.is_action_just_pressed("PR_action"):
-		yeah_h.play()
+		yeah_shorter.play()
+		#yeah_h.play()
 
 func levelStart():
 	level_title.visible = true

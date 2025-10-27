@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://w1n1spgbj0tv"]
+[gd_scene load_steps=7 format=3 uid="uid://w1n1spgbj0tv"]
 
-[ext_resource type="Texture2D" uid="uid://bqvbkoxfcadfb" path="res://assets/sprites/ui/actions/switch_buttons_down_outline.svg" id="1_pwi2a"]
+[ext_resource type="Texture2D" uid="uid://bh0x4hnu0q28r" path="res://assets/sprites/ui/actions/switch_buttons_down_outline_blk.png" id="2_4w37e"]
 [ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_txs6r"]
+[ext_resource type="Texture2D" uid="uid://dev7f1lp2fomy" path="res://assets/sprites/ui/actions/switch_buttons_left_outline_blk.svg" id="3_4w37e"]
 [ext_resource type="Texture2D" uid="uid://i88mc745nn0w" path="res://assets/sprites/ui/actions/switch_buttons_left_outline.svg" id="3_rcqsf"]
-[ext_resource type="Texture2D" uid="uid://c03bqkc7fiv4v" path="res://assets/sprites/ui/movement/switch_dpad_horizontal_outline.svg" id="4_4w37e"]
-[ext_resource type="Texture2D" uid="uid://cuclleqiblhby" path="res://assets/sprites/ui/movement/switch_stick_l_horizontal.svg" id="5_3x2rw"]
+[ext_resource type="Texture2D" uid="uid://bn66yvw27yhko" path="res://assets/sprites/ui/movement/switch_dpad_horizontal_outline_blk.png" id="4_4w37e"]
+[ext_resource type="Texture2D" uid="uid://t7tqfehnh6ot" path="res://assets/sprites/ui/movement/switch_stick_l_horizontal_blk.png" id="5_3x2rw"]
 
 [node name="tutorial_prompts" type="Control"]
 layout_mode = 3
@@ -29,6 +30,7 @@ offset_right = 60.5
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_txs6r")
 theme_override_font_sizes/font_size = 75
 text = "Jump"
@@ -38,8 +40,8 @@ vertical_alignment = 1
 [node name="down_action_button_icon" type="Sprite2D" parent="text_labels/jump_text"]
 texture_filter = 2
 position = Vector2(-44.5, 24.5)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_pwi2a")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_4w37e")
 
 [node name="action_text" type="Label" parent="text_labels"]
 visible = false
@@ -55,6 +57,8 @@ offset_right = 161.0
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_txs6r")
 theme_override_font_sizes/font_size = 75
 text = "Action"
@@ -65,7 +69,7 @@ vertical_alignment = 1
 texture_filter = 2
 position = Vector2(-44.5, 24.5)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("3_rcqsf")
+texture = ExtResource("3_4w37e")
 
 [node name="nothing_text" type="Label" parent="text_labels"]
 visible = false
@@ -100,6 +104,7 @@ offset_right = 209.0
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_txs6r")
 theme_override_font_sizes/font_size = 75
 text = "Move"
@@ -109,7 +114,7 @@ vertical_alignment = 1
 [node name="dpad_movement_h_icon" type="Sprite2D" parent="text_labels/move_text"]
 texture_filter = 2
 position = Vector2(-202.5, 24.5)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("4_4w37e")
 
 [node name="slash_text" type="Label" parent="text_labels/move_text"]
@@ -125,6 +130,7 @@ offset_right = -179.0
 offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_txs6r")
 theme_override_font_sizes/font_size = 75
 text = "/"
@@ -134,7 +140,7 @@ vertical_alignment = 1
 [node name="left_analogue_stick_h_icon" type="Sprite2D" parent="text_labels/move_text"]
 texture_filter = 2
 position = Vector2(-52.5, 24.5)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("5_3x2rw")
 
 [node name="left_action_button_icon" type="Sprite2D" parent="text_labels/move_text/left_analogue_stick_h_icon"]

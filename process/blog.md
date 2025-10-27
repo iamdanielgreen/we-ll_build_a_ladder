@@ -64,3 +64,23 @@ In talking about the level "We'll Share Silence", my partner and I have been in 
 On a train this morning, I brought this topic up again. Because, increasingly, the words "*maybe the timer has to go*" have been circling around my brain. In talking about this, I outlined the points above. I talked about what the game wants to *be*, and who it might be *for*, and whether the time pressure really serves the greater point here. I genuinely don't know the answer to this. Which all told means I probably should test both scenarios and see which feels better. 
 
 But for now, I'm going to quickly work on the prototype level I was supposed to be working on before I started writing this.
+
+## A note about notes - 03/10/2025, 17:41
+
+Contained within several tabs in my copy of Notepad is a text file called "working _notes_20250904.txt". Within this document are notes I've taken between September 7-22 whilst working on the final stages of *We'll Build A Ladder* as I got the game's exhibition build into shape. 
+
+For most of the process of making this game, I was proud of myself for the level to which I was able to maintain my documentation process: keeping track of things I'd done on any given day, and then making the occasional sidenote on why I'd made a particular decision. [It wasn't the refined process I had in mind](https://www.materializing.design/mdm), but it was a process that was working for me. And this was the greater prize, right? Well, yes, until at some point around the 9th of September when all of this went out the door. At this time, it's clear with the benefit of hindsight that Past Me was feeling the pressure of a looming deadline. 
+
+Looking back even three weeks later, between spelling mistakes and syntactical weirdness, there are all-caps messages to myself such as "NOT THAT IT MATTERS" ("IT" being a tweak to an animation on the GrowLeft character in the level "We'll Grow Together") or "IT'S A LOW PRIORITY" (in this case, referring to a tweak on *how* an animation triggers on the GrowRight character). At some point on the 11th of September, there's just a straight-up block of pseudocode that I was trying to work through whilst prototyping a new level the day before the showcase opened. This was definitely A Choice. It did not pay off.
+
+Since the final submission of the project, and its associated paper roughly a week later, I have been diligently telling myself that I will go back and tidy these notes. Once this happened I could make a *final* commit, and put a pin on the game as it stood at the time of the showcase. Then I could go back and work on it further. But there's been all kinds of excuses to not do this - like getting a cold, or starting a new job, or losing a week of my life to Silksong. And all of these are necessary, and maybe even valid after the completion of A Big Thing. But after realising earlier this week that I was prioritising updating my LinkedIn profile rather than work through these notes, I had to admit that maybe *I just didn't want to*. 
+
+Whether this lack of motivation was a result of being unwilling to deal with not having a rolling deadline over my head, or some other anxiety over now needing this project to be entirely-self driven, I'm not quite sure. A more resonant thought lies in general unease over how hot the project came in, and how much I had to cut in order to make the showcase build exist. I am self-aware enough to know that these notes (and, by extension, entries like this), are conversations with myself. What occurs to me whilst reading back those notes is just how tired those two people are. 
+
+In the midst of trying to make ground, seeing time lost on features or entire levels that didn't work out stings a little. Not enough to be actually embarrassed by this, but enough to want to warn my past-self about the dangers of avoiding clearly-marked tangents that didn't serve the final product. And now I sit here getting extremely self-referential, whilst another time skip has occurred.
+
+It's been three weeks. While I'd like to properly post-mortem the point at which *We'll Build A Ladder* currently exists, I think that come later. But if I otherwise don't say it; I'm pleased with how the game turned out, I was very happy with the reaction to it, and I even look forward to working on it further. Right now, I've run out of reasons to avoid going through the notes.
+
+## A note about a note about notes - 27/10/2025, 18:09
+
+I have just now finished working through the notes. I am now about to make the commit, then I'm going to make a salad. But I now have a framework to keep going, and I look forward to finally getting to this (hopefully) later this week.

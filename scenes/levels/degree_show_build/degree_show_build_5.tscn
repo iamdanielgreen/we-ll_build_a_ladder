@@ -1,0 +1,105 @@
+[gd_scene load_steps=22 format=3 uid="uid://cox836lh3vfg2"]
+
+[ext_resource type="Script" uid="uid://dhp0t16j4rrkv" path="res://scripts/levels/we-ll_share_silence.gd" id="1_djfnm"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_c8ppb"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_6ghk4"]
+[ext_resource type="Texture2D" uid="uid://dhaioof0sqniy" path="res://assets/sprites/backgrounds/bg_blue_watercolour.png" id="4_81osd"]
+[ext_resource type="Texture2D" uid="uid://b8peiqxr5ba3f" path="res://assets/sprites/backgrounds/bg_we-ll_take_action.png" id="5_k35xy"]
+[ext_resource type="PackedScene" uid="uid://b7pk56axhngch" path="res://scenes/players/00_silence/SilenceLeft.tscn" id="6_fe3k1"]
+[ext_resource type="PackedScene" uid="uid://cmsn6hgpxj6dx" path="res://scenes/players/00_silence/SilenceRight.tscn" id="7_8cei6"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="8_8v2ls"]
+[ext_resource type="AudioStream" uid="uid://dymm4n5qvgn1v" path="res://assets/audio/effects/silence_guys/sl_action.wav" id="8_udma7"]
+[ext_resource type="AudioStream" uid="uid://3h7hoktc0ryi" path="res://assets/audio/effects/silence_guys/sl_jump.wav" id="9_bgy0v"]
+[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="9_jrkx2"]
+[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="10_6v5mn"]
+[ext_resource type="AudioStream" uid="uid://c0cmabtxb2gxs" path="res://assets/audio/effects/silence_guys/sl_walk.wav" id="10_8akpl"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="11_l5vug"]
+[ext_resource type="AudioStream" uid="uid://dljsx7jgo73mm" path="res://assets/audio/effects/silence_guys/sr_action.wav" id="11_vqajs"]
+[ext_resource type="AudioStream" uid="uid://wypu27o5swxt" path="res://assets/audio/effects/silence_guys/sr_jump.wav" id="12_5vx48"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="12_7ediq"]
+[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="13_plhg2"]
+[ext_resource type="AudioStream" uid="uid://tdi22l2cm1my" path="res://assets/audio/effects/silence_guys/sr_walk.wav" id="13_qbm6l"]
+[ext_resource type="AudioStream" uid="uid://orj532qlpjly" path="res://assets/audio/effects/ClappingTest.wav" id="14_ebp4e"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwyg6"]
+
+[node name="degree_show_build_5" type="Node2D"]
+script = ExtResource("1_djfnm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+script = ExtResource("2_c8ppb")
+
+[node name="WorldBoundaries" parent="." instance=ExtResource("3_6ghk4")]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0, 114)
+shape = SubResource("WorldBoundaryShape2D_wwyg6")
+
+[node name="LevelAssets" type="Node" parent="."]
+
+[node name="bgBlue" type="Sprite2D" parent="LevelAssets"]
+z_index = -10
+scale = Vector2(0.25, 0.258)
+texture = ExtResource("4_81osd")
+
+[node name="bgNotebook" type="Sprite2D" parent="LevelAssets"]
+visible = false
+z_index = -10
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_k35xy")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="SilenceLeft" parent="Players" instance=ExtResource("6_fe3k1")]
+position = Vector2(-174, 88)
+
+[node name="SilenceRight" parent="Players" instance=ExtResource("7_8cei6")]
+position = Vector2(174, 88)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="SilenceGuys" type="Node" parent="Audio"]
+
+[node name="SlAction" type="AudioStreamPlayer" parent="Audio/SilenceGuys"]
+stream = ExtResource("8_udma7")
+
+[node name="SlJump" type="AudioStreamPlayer" parent="Audio/SilenceGuys"]
+stream = ExtResource("9_bgy0v")
+
+[node name="SlWalk" type="AudioStreamPlayer" parent="Audio/SilenceGuys"]
+stream = ExtResource("10_8akpl")
+
+[node name="SrAction" type="AudioStreamPlayer" parent="Audio/SilenceGuys"]
+stream = ExtResource("11_vqajs")
+
+[node name="SrJump" type="AudioStreamPlayer" parent="Audio/SilenceGuys"]
+stream = ExtResource("12_5vx48")
+
+[node name="SrWalk" type="AudioStreamPlayer" parent="Audio/SilenceGuys"]
+stream = ExtResource("13_qbm6l")
+
+[node name="ClappingTest" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("14_ebp4e")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("8_8v2ls")]
+visible = false
+
+[node name="LevelTitle" parent="UI" instance=ExtResource("9_jrkx2")]
+visible = false
+
+[node name="CountdownTimer" parent="UI" instance=ExtResource("10_6v5mn")]
+visible = false
+
+[node name="OutOfTime" parent="UI" instance=ExtResource("11_l5vug")]
+visible = false
+
+[node name="LevelWinMenu" parent="UI" instance=ExtResource("12_7ediq")]
+visible = false
+
+[node name="TutorialPrompts" parent="UI" instance=ExtResource("13_plhg2")]
+visible = false

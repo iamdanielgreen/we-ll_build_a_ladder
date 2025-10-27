@@ -6,6 +6,9 @@ enum game_mode {TimerOn, TimerOff}
 
 var current_game_mode: game_mode
 
+var happy_plant = false
+var ladder_hit = false
+
 var PL_holdhands = false
 var PR_holdhands = false
 var player_in_range = false
@@ -25,5 +28,6 @@ func _process(delta: float) -> void:
 	else:
 		holding_hands = false	
 	
+	# NOTE: DISABLE FOR WEBGL BUILDS.
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()

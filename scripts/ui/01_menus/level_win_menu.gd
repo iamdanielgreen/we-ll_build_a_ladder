@@ -1,17 +1,25 @@
-#THIS IS "LEVEL_WIN_MENU.GD"
+# THIS IS "LEVEL_WIN_MENU.GD". THIS SCRIPT INCORPORATES CODE FROM @nonomiyo - 
+# https://forum.godotengine.org/t/how-to-enable-disable-an-audiostreamplayer2d/26121/2
 
 extends CanvasLayer
 
 @onready var next_level_button: Button = $LevelWinMenu_Buttons/next_level_button
 
-const FILE_BEGIN = "res://scenes/levels/test_build_three_levels/test_build_three_level_"
+
+#const FILE_BEGIN = "res://scenes/levels/test_build_three_levels/test_build_three_level_"
+
+# NOTE: DEACTIVATE BELOW CONST WHEN NOT TESTING VIDEO.
+const FILE_BEGIN = "res://scenes/levels/degree_show_build/degree_show_build_"
 
 func _on_next_level_button_pressed() -> void:
 	var current_scene_file = get_tree().current_scene.scene_file_path
 	var next_level_number = current_scene_file.to_int() + 1
 	var next_level_path = FILE_BEGIN + str(next_level_number) + ".tscn"
 	#CHECKS IF THIS IS LEVEL 3(OR 5 NOW), AND THUS MOVES ON TO CREDITS SCREEN. OTHERWISE NEXT LEVEL.
-	if current_scene_file == "res://scenes/levels/test_build_three_levels/test_build_three_level_5.tscn":
+	if current_scene_file == "res://scenes/levels/degree_show_build/degree_show_build_5.tscn":
+		
+		# NOTE: PLAYS SOUNDTRACK IF THE "THE END" THING DOESN'T WORK
+		get_node("/root/AudioPlayer").playing = true
 		get_tree().change_scene_to_file("res://scenes/ui/menus/main_menu.tscn")
 		
 	else:

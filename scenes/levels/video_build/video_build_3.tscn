@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://bm1ivbm07toqu"]
+
+[ext_resource type="Script" uid="uid://dhp0t16j4rrkv" path="res://scripts/levels/we-ll_share_silence.gd" id="1_7kmxh"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_x8c1a"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_xcawo"]
+[ext_resource type="Texture2D" uid="uid://dhaioof0sqniy" path="res://assets/sprites/backgrounds/bg_blue_watercolour.png" id="4_uh27g"]
+[ext_resource type="Texture2D" uid="uid://b8peiqxr5ba3f" path="res://assets/sprites/backgrounds/bg_we-ll_take_action.png" id="5_6rqsr"]
+[ext_resource type="PackedScene" uid="uid://b7pk56axhngch" path="res://scenes/players/00_silence/SilenceLeft.tscn" id="6_pnnv7"]
+[ext_resource type="PackedScene" uid="uid://cmsn6hgpxj6dx" path="res://scenes/players/00_silence/SilenceRight.tscn" id="7_x4wnk"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="8_88eov"]
+[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="9_b67yo"]
+[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="10_sy3d6"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="11_f78jd"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="12_0cgj5"]
+[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="13_dnlln"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwyg6"]
+
+[node name="we-ll_share_silence" type="Node2D"]
+script = ExtResource("1_7kmxh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+script = ExtResource("2_x8c1a")
+
+[node name="WorldBoundaries" parent="." instance=ExtResource("3_xcawo")]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0, 114)
+shape = SubResource("WorldBoundaryShape2D_wwyg6")
+
+[node name="LevelAssets" type="Node" parent="."]
+
+[node name="bgBlue" type="Sprite2D" parent="LevelAssets"]
+z_index = -10
+scale = Vector2(0.25, 0.258)
+texture = ExtResource("4_uh27g")
+
+[node name="bgNotebook" type="Sprite2D" parent="LevelAssets"]
+visible = false
+z_index = -10
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_6rqsr")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="SilenceLeft" parent="Players" instance=ExtResource("6_pnnv7")]
+position = Vector2(-174, 88)
+
+[node name="SilenceRight" parent="Players" instance=ExtResource("7_x4wnk")]
+position = Vector2(174, 88)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("8_88eov")]
+visible = false
+
+[node name="LevelTitle" parent="UI" instance=ExtResource("9_b67yo")]
+visible = false
+
+[node name="CountdownTimer" parent="UI" instance=ExtResource("10_sy3d6")]
+visible = false
+
+[node name="OutOfTime" parent="UI" instance=ExtResource("11_f78jd")]
+visible = false
+
+[node name="LevelWinMenu" parent="UI" instance=ExtResource("12_0cgj5")]
+visible = false
+
+[node name="TutorialPrompts" parent="UI" instance=ExtResource("13_dnlln")]
+visible = false

@@ -97,10 +97,12 @@ Moved to Tutorial Levels.
 
 ### "We'll Grow Togehter"
 
-**(31/07/2025, 12:XX)**
-
-One player is a pot plant, the other is the sun. The two must line up, at which point the sun will shine light on the plant. At this point, the players win/the level is solved.
+**(31/07/2025, 12:XX)** One player is a pot plant, the other is the sun. The two must line up, at which point the sun will shine light on the plant. At this point, the players win/the level is solved.
 - Holding Hands: With both players pressing the Hands input, the plant will grow taller as the light shines on them.
+
+**(07/09/2025, 13:35)** Level roughly prototyped using repurposed layout and assets from "We'll Take Action". Needs timing mechanic from "We'll Share Silence" to create win condition, but in principle fairly straightforward to execute. 
+
+NOTE: If *holding hands* is implemented in this level, obviously there's no logical way these two characters physically touch, so the Holding Hands Collider is moot. Could still have conditional state change (like hearts over their heads?) that signals to players that this ability still works.
 
 ### "We'll Take The Win"
 

@@ -1,13 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://budur0sxlnwgt"]
+[gd_scene load_steps=15 format=3 uid="uid://budur0sxlnwgt"]
 
 [ext_resource type="Script" uid="uid://dhp0t16j4rrkv" path="res://scripts/levels/we-ll_share_silence.gd" id="1_ec4u6"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_xy0ea"]
-[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/levels/world_boundaries.tscn" id="3_fhygl"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_fhygl"]
+[ext_resource type="Texture2D" uid="uid://dhaioof0sqniy" path="res://assets/sprites/backgrounds/bg_blue_watercolour.png" id="4_voq76"]
 [ext_resource type="Texture2D" uid="uid://b8peiqxr5ba3f" path="res://assets/sprites/backgrounds/bg_we-ll_take_action.png" id="6_tvwt8"]
-[ext_resource type="PackedScene" uid="uid://cmsn6hgpxj6dx" path="res://scenes/players/00-silence/SilenceRight.tscn" id="12_ec4u6"]
+[ext_resource type="PackedScene" uid="uid://cmsn6hgpxj6dx" path="res://scenes/players/00_silence/SilenceRight.tscn" id="12_ec4u6"]
 [ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="12_rjdij"]
 [ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="13_rke3y"]
-[ext_resource type="PackedScene" uid="uid://b7pk56axhngch" path="res://scenes/players/00-silence/SilenceLeft.tscn" id="13_voq76"]
+[ext_resource type="PackedScene" uid="uid://b7pk56axhngch" path="res://scenes/players/00_silence/SilenceLeft.tscn" id="13_voq76"]
 [ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="14_y3hli"]
 [ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="15_nrttl"]
 [ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="16_dhdju"]
@@ -32,7 +33,13 @@ shape = SubResource("WorldBoundaryShape2D_wwyg6")
 
 [node name="LevelAssets" type="Node" parent="."]
 
+[node name="bgBlue" type="Sprite2D" parent="LevelAssets"]
+z_index = -10
+scale = Vector2(0.25, 0.258)
+texture = ExtResource("4_voq76")
+
 [node name="bgNotebook" type="Sprite2D" parent="LevelAssets"]
+visible = false
 z_index = -10
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_tvwt8")

@@ -1,0 +1,142 @@
+[gd_scene load_steps=23 format=3 uid="uid://cfi6ymy3rgnn1"]
+
+[ext_resource type="Script" uid="uid://bvu602jkutehr" path="res://scripts/players/00-grow/grow_right.gd" id="1_781r8"]
+[ext_resource type="Texture2D" uid="uid://7mappx240va2" path="res://assets/sprites/characters/00_grow/GrowRight/action/GrowRight_action_01.png" id="2_781r8"]
+[ext_resource type="Texture2D" uid="uid://cbpnmv775hxwf" path="res://assets/sprites/characters/00_grow/GrowRight/action/GrowRight_action_02.png" id="3_ub0lv"]
+[ext_resource type="Texture2D" uid="uid://drw6p42dblrh0" path="res://assets/sprites/characters/00_grow/GrowRight/action/GrowRight_action_03.png" id="4_ht6wl"]
+[ext_resource type="Texture2D" uid="uid://c7jnfptr14qyf" path="res://assets/sprites/characters/00_grow/GrowRight/action/GrowRight_action_04.png" id="5_0tx77"]
+[ext_resource type="Texture2D" uid="uid://0oa0lolktyk6" path="res://assets/sprites/characters/00_grow/GrowRight/idle/GrowRight_idle_01.png" id="6_781r8"]
+[ext_resource type="Texture2D" uid="uid://dt5pmlj7xmhsh" path="res://assets/sprites/characters/00_grow/GrowRight/idle/GrowRight_idle_02.png" id="7_ub0lv"]
+[ext_resource type="Texture2D" uid="uid://0awd64jkcub0" path="res://assets/sprites/characters/00_grow/GrowRight/idle/GrowRight_idle_03.png" id="8_ht6wl"]
+[ext_resource type="Texture2D" uid="uid://di4ye8xravl4o" path="res://assets/sprites/characters/00_grow/GrowRight/idle/GrowRight_idle_04.png" id="9_0tx77"]
+[ext_resource type="Texture2D" uid="uid://b4j6ivusfl0d1" path="res://assets/sprites/characters/00_grow/GrowRight/no-jump/GrowRight_no-jump_01.png" id="10_tewbu"]
+[ext_resource type="Texture2D" uid="uid://da65i31rcsbjs" path="res://assets/sprites/characters/00_grow/GrowRight/no-jump/GrowRight_no-jump_02.png" id="11_4fgf8"]
+[ext_resource type="Texture2D" uid="uid://y5x0vgyaruf" path="res://assets/sprites/characters/00_grow/GrowRight/no-jump/GrowRight_no-jump_03.png" id="12_sf4ll"]
+[ext_resource type="Texture2D" uid="uid://c21dkdden66qa" path="res://assets/sprites/characters/00_grow/GrowRight/no-jump/GrowRight_no-jump_04.png" id="13_0nu7l"]
+[ext_resource type="Texture2D" uid="uid://b7iq3t2lph7ih" path="res://assets/sprites/characters/00_grow/GrowRight/win/GrowRight_win_01.png" id="14_jn3ax"]
+[ext_resource type="Texture2D" uid="uid://ciabarjjvcf5" path="res://assets/sprites/characters/00_grow/GrowRight/win/GrowRight_win_02.png" id="15_6acrd"]
+[ext_resource type="Texture2D" uid="uid://dgkryow6mwgp7" path="res://assets/sprites/characters/00_grow/GrowRight/win/GrowRight_win_03.png" id="16_tgajq"]
+[ext_resource type="Texture2D" uid="uid://bvouhpvd5lt4o" path="res://assets/sprites/characters/00_grow/GrowRight/win/GrowRight_win_04.png" id="17_yppky"]
+[ext_resource type="Texture2D" uid="uid://b5pwoe3wgr1gr" path="res://assets/sprites/characters/00_grow/GrowRight/sunbeam.png" id="18_ub0lv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8x1j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_781r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ub0lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ht6wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0tx77")
+}],
+"loop": true,
+"name": &"action",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_781r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ub0lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ht6wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0tx77")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_tewbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4fgf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sf4ll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0nu7l")
+}],
+"loop": true,
+"name": &"no-jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_jn3ax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6acrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tgajq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yppky")
+}],
+"loop": true,
+"name": &"win",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tewbu"]
+radius = 18.0
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4fgf8"]
+height = 42.0
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_781r8"]
+points = PackedVector2Array(11.0001, 16, 16, -7.00006, 206, -7.00075, 206, 97.9993)
+
+[node name="GrowRight" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_781r8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_s8x1j")
+animation = &"win"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_tewbu")
+
+[node name="HoldingHandsCollider" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoldingHandsCollider"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_4fgf8")
+debug_color = Color(1, 1, 0, 0.419608)
+
+[node name="SunbeamSprite" type="Sprite2D" parent="."]
+position = Vector2(-49, 119)
+scale = Vector2(0.246369, 0.246369)
+texture = ExtResource("18_ub0lv")
+
+[node name="SunbeamCollider" type="Area2D" parent="SunbeamSprite"]
+z_index = -1
+position = Vector2(198.888, -483.015)
+scale = Vector2(4.05895, 4.05895)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SunbeamSprite/SunbeamCollider"]
+position = Vector2(-3, 4.00001)
+rotation = 1.5708
+shape = SubResource("ConvexPolygonShape2D_781r8")
+debug_color = Color(0, 1, 0, 0.419608)
+
+[connection signal="area_shape_entered" from="HoldingHandsCollider" to="." method="_on_holding_hands_collider_area_shape_entered"]
+[connection signal="area_shape_exited" from="HoldingHandsCollider" to="." method="_on_holding_hands_collider_area_shape_exited"]
+[connection signal="area_shape_entered" from="SunbeamSprite/SunbeamCollider" to="." method="_on_sunbeam_collider_area_shape_entered"]
+[connection signal="area_shape_exited" from="SunbeamSprite/SunbeamCollider" to="." method="_on_sunbeam_collider_area_shape_exited"]

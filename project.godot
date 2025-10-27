@@ -14,12 +14,13 @@ config/name="We'll Build A Ladder"
 run/main_scene="uid://c0gul5vt2ly3f"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="WBAL_Screenshots"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*res://scripts/gameManager.gd"
+AudioPlayer="*res://scenes/tools/audio_player.tscn"
 
 [dialogic]
 
@@ -30,6 +31,7 @@ directories/dtl_directory={}
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=4
 window/stretch/mode="viewport"
 
 [editor]
@@ -39,6 +41,7 @@ movie_writer/movie_file="C:/Users/iamda/Documents/00_Projects/2025/01_Games/03_W
 [global_group]
 
 player=""
+ladder=""
 
 [input]
 

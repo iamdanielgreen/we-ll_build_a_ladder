@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="1_h8o7y"]
 [ext_resource type="Script" uid="uid://s4ra4ydd3771" path="res://scripts/levels/prototypes/level_00_prototype_01.gd" id="1_xkn13"]
-[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00-prototypes/prototype_player_left.tscn" id="2_2fliv"]
-[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03-action/player_right.tscn" id="3_0k1se"]
+[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="2_2fliv"]
+[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="3_0k1se"]
 [ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="4_kjuh2"]
 [ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="5_t17a0"]
 [ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="5_wh6nh"]

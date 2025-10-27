@@ -1,9 +1,6 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://j04os3ihjjy0"]
-
-[ext_resource type="Texture2D" uid="uid://bqk4xfltmcw55" path="res://assets/sprites/backgrounds/spritesheet-backgrounds-default.png" id="1_qaxh6"]
+[gd_resource type="TileSet" load_steps=2 format=3 uid="uid://j04os3ihjjy0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qdpw"]
-texture = ExtResource("1_qaxh6")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 1:0/0 = 0

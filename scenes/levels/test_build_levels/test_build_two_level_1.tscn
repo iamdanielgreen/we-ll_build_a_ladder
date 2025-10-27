@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=4 uid="uid://ssqpp0b8tscv"]
 
 [ext_resource type="Script" uid="uid://br5oc2wvcqgui" path="res://scripts/levels/test_build_levels/test_build_two_level_1.gd" id="1_y52h7"]
-[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00-prototypes/prototype_player_left.tscn" id="2_relnk"]
+[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="2_relnk"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_utihk"]
-[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03-action/player_right.tscn" id="3_skayv"]
-[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/levels/world_boundaries.tscn" id="3_unjc0"]
+[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="3_skayv"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_unjc0"]
 [ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="4_xjulm"]
 [ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="5_24kf5"]
 [ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="6_d8ajx"]

@@ -1,0 +1,76 @@
+[gd_scene load_steps=15 format=3 uid="uid://dmi5r1hcitroa"]
+
+[ext_resource type="Script" uid="uid://dfux6eg35hbir" path="res://scripts/levels/we_ll_grow_together.gd" id="1_ngfpn"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_2yxfg"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_vbqr5"]
+[ext_resource type="PackedScene" uid="uid://ben87c24jeg5e" path="res://scenes/players/00_grow/grow_left.tscn" id="4_quvyx"]
+[ext_resource type="PackedScene" uid="uid://cfi6ymy3rgnn1" path="res://scenes/players/00_grow/grow_right.tscn" id="5_lobmv"]
+[ext_resource type="Texture2D" uid="uid://b8peiqxr5ba3f" path="res://assets/sprites/backgrounds/bg_we-ll_take_action.png" id="6_16w1s"]
+[ext_resource type="Texture2D" uid="uid://bgt8kfvkw6edo" path="res://assets/sprites/backgrounds/bg_grass.png" id="7_3hxo0"]
+[ext_resource type="AudioStream" uid="uid://orj532qlpjly" path="res://assets/audio/effects/ClappingTest.wav" id="10_ar7uc"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="11_tn423"]
+[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="12_xe4vs"]
+[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="13_yx3gc"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="14_aocfg"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="15_hr74a"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wwyg6"]
+
+[node name="we-ll_grow_together" type="Node2D"]
+script = ExtResource("1_ngfpn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+script = ExtResource("2_2yxfg")
+
+[node name="WorldBoundaries" parent="." instance=ExtResource("3_vbqr5")]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0, 114)
+shape = SubResource("WorldBoundaryShape2D_wwyg6")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="GrowLeft" parent="Players" instance=ExtResource("4_quvyx")]
+position = Vector2(-174, 95)
+
+[node name="GrowRight" parent="Players" instance=ExtResource("5_lobmv")]
+position = Vector2(174, -83)
+
+[node name="LevelAssets" type="Node" parent="."]
+
+[node name="bgNotebook" type="Sprite2D" parent="LevelAssets"]
+visible = false
+z_index = -10
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_16w1s")
+
+[node name="bgGrass" type="Sprite2D" parent="LevelAssets"]
+z_index = -10
+position = Vector2(1.14441e-05, -5.96046e-08)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_3hxo0")
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="ClappingTest" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("10_ar7uc")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("11_tn423")]
+visible = false
+
+[node name="LevelTitle" parent="UI" instance=ExtResource("12_xe4vs")]
+visible = false
+
+[node name="CountdownTimer" parent="UI" instance=ExtResource("13_yx3gc")]
+visible = false
+
+[node name="OutOfTime" parent="UI" instance=ExtResource("14_aocfg")]
+visible = false
+
+[node name="LevelWinMenu" parent="UI" instance=ExtResource("15_hr74a")]
+visible = false

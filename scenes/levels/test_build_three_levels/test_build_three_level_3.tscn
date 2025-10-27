@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dwda345fidb8e" path="res://scripts/levels/test_build_three_levels/test_build_three_level_3.gd" id="1_17dtm"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_eetnp"]
-[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/levels/world_boundaries.tscn" id="3_eo1m5"]
-[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00-prototypes/prototype_player_left.tscn" id="3_r6lj6"]
-[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03-action/player_right.tscn" id="4_btup7"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_eo1m5"]
+[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="3_r6lj6"]
+[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="4_btup7"]
 [ext_resource type="AudioStream" uid="uid://cjyo70i83hhv1" path="res://assets/audio/effects/Yeah_Chorus_of_One.wav" id="5_c15c2"]
 [ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="6_ehxkv"]
 [ext_resource type="AudioStream" uid="uid://orj532qlpjly" path="res://assets/audio/effects/ClappingTest.wav" id="7_am435"]
