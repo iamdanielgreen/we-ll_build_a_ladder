@@ -60,8 +60,10 @@ The two players appear on screen. They are in a white void. All they have to so 
 ### We'll Raise A Glass
 ### We'll Climb A Tree
 
-**(30/07/2025, 17:45)** The two players appear as a lemon and a lime. A tree appears on screen, with branches acting as steps that allow them to climb the tree. Once they reach the top of the tree, the arms and legs of the lemon and lime disappear, leaving only the two fruits hanging out in the tree, with smiles on their faces. If both players are in the tree when the timer runs out, they win.
+**(30/07/2025, 17:45)** The two players appear as a lemon and a lime. A tree ~~appears~~ is on screen, with branches acting as steps that allow them to climb the tree. Once they reach the top of the tree, the arms and legs of the lemon and lime disappear, leaving only the two fruits hanging out in the tree, with smiles on their faces. If both players are in the tree when the timer runs out, they win.
 -- Or perhaps a small timer starts when they reach the top of the tree. Once it counts down three seconds, the players win?
+
+**(10/11/2025, 12:24)** Made small change to description.
 
 ### We'll Launch A Rocket
 ### We'll Dance A Tango
@@ -122,3 +124,9 @@ NOTE: If *holding hands* is implemented in this level, obviously there's no logi
 **(19:18)** You thought it might be cute if this level used the purple background of the prototypes (or another dark colour), and the sleeping characters were in a white outline.
 
 **It would be nice if a little animation could be playing that denotes a more complex interiority, but for the purposes of time I'll settle for "zzzz"*
+
+### We'll Wait In Line
+
+**(10/12/2025, 11:26 AEST)** The Silence Guys stand in a queue, surrounded by non-descript other characters that move slowly. The queue moves slowly, and the players along with it. However, if the players move at all, or press any of the action buttons, they will make a large amount of noise, causing the line to grind to a halt. The players simply need to wait for time to pass - once the Silence Guys are off-screen (or, at least, they reach the front of the line, perhaps?) the level is solved.
+
+*In a game all about taking action, I remain uncertain about levels that imply success can be achieved through ***passivity***, but I think the lesson here is more about ***patience*** so maybe I get away with it.*

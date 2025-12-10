@@ -84,3 +84,7 @@ It's been three weeks. While I'd like to properly post-mortem the point at which
 ## A note about a note about notes - 27/10/2025, 18:09
 
 I have just now finished working through the notes. I am now about to make the commit, then I'm going to make a salad. But I now have a framework to keep going, and I look forward to finally getting to this (hopefully) later this week.
+
+## Meanwhile, at a desk in Forest Lodge - 10/12/2025, 11:19 (AEST)
+
+Well, that absolutely didn't happen.
