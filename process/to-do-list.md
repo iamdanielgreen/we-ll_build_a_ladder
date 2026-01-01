@@ -5,9 +5,10 @@
 ~~- Add the dang button that moves to next level. Even if the final game doesn't need it. (Added 05/08/2025)~~ (Fully implemented in Test Build 02 - 20/08/2025)
 ~~- Add a timer-free mode? (Added 05/08/2025)~~ (Priority is now to make the game timer-free generally, but it's an interesting thought exercise to have the version *with* the timer be the extra option. - 20/08/2025)
 
-- Levels end with a clapping noise when solved. (Added 06/08/2025)
+- ~~Levels end with a clapping noise when solved. (Added 06/08/2025)~~
 - - [As of 20/08/2025] Clapping sounds recorded. Not yet implemented.
 - - - [31/08/2025 - Test version implemented within "We'll Take Action"/Test Build Three, Level 3]
+- - - - [01/01/2026 - As of Degree Show Build, this has been implemented in a somewhat final form. That is to say, this is done, and it could probably be made better, but it exists in the way that is intended.]
 
 ~~- Check references + onreadys as these may have changed when moving Test Build files into a new folder (Added 08/08/2025)~~ (As a result of a build based on new levels existing, I think this is resolved - 20/08/2025)
 ~~- - Create new scripts/update script names for test_build_levels (Added 08/08/205)~~
@@ -16,7 +17,8 @@
 ~~- - Tried to make this work, but it's not happening for some reason.~~ (Decided this wasn't necessary, and never quite worked the way I wanted it to anyway - 20/08/2025)
 ~~- Remove Next Level button at game end (Added 08/08/2025)~~
 ~~- - OR: Create scene asking for feedback (Added 08/08/2025)~~ (Feedback Screen added to Test Build 02 - Next Level button directs to Credits Screen at game's end - 20/08/2025)
-- Add a controls page (Added 08/08/2025)
+- ~~Add a controls page (Added 08/08/2025)~~ [01/01/2026 - I'm fairly certain this has been ticked off since the Degree Show Build.]
+
 
 - It's possible for the pause menu to load when level_win_menu is visible. Can we block this? (Added 11/08/2025)
 - Remember you're going to need to import sprites in the direction you want them to face. (Well, sure, but this isn't *that hard* to fix.) (Added 11/08/2025)
@@ -55,3 +57,16 @@
 - - You have notes in "ricky_script.gd" about this.
 
 - "We'll Try Again" text label in "OutOfTime.tscn" needs outline, or to be set to black. (Added 06/09/2025)
+
+- Create a proper "Blank Slate" (Added 01/01/2026):
+- - Walls and Floor
+- - Placeholder characters (Action Monsters make most sense, since they're the "correct" height)
+- - A background (doesn't matter which, stick with tutorial background?)
+- - "Basic" character controls
+- - "Basic" level script.
+
+- Fix colliders on TreeRight (in "We'll Climb A Tree"). Character behaves weirdly within level. (Added 01/01/2026)
+- - Also, check how you did this with other levels/characters. Why is it behaving weirdly here?
+
+- Complete TreeLeft and Tree Right animation frames. (Added 01/01/2026)
+

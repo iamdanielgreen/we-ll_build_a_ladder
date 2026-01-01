@@ -4,7 +4,7 @@ extends AudioStreamPlayer
 
 const level_music = preload("res://assets/audio/music/WBAL_Music_WFTD.wav")
 
-func _play_music(music: AudioStream, volume = 0.0):
+func _play_music(music: AudioStream, volume = -0.5):
 	if stream == music:
 		return
 		

@@ -1,0 +1,110 @@
+[gd_scene load_steps=18 format=3 uid="uid://c3kolqd0grbmh"]
+
+[ext_resource type="Script" uid="uid://b2xdxk84gc4jv" path="res://scripts/players/03-action/player_left.gd" id="1_25ig3"]
+[ext_resource type="Texture2D" uid="uid://dm5yx10lkdskb" path="res://assets/sprites/characters/03_action/ActionLeft/action/ActionLeft_Action_01.png" id="2_gmifs"]
+[ext_resource type="Texture2D" uid="uid://b3vqh2q0am2yi" path="res://assets/sprites/characters/03_action/ActionLeft/action/ActionLeft_Action_02.png" id="3_i3lm6"]
+[ext_resource type="Texture2D" uid="uid://cmmyu5olsypnv" path="res://assets/sprites/characters/03_action/ActionLeft/action/ActionLeft_Action_03.png" id="4_7qqrs"]
+[ext_resource type="Texture2D" uid="uid://d23qlp68xxfep" path="res://assets/sprites/characters/03_action/ActionLeft/action/ActionLeft_Action_04.png" id="5_7jd4q"]
+[ext_resource type="Texture2D" uid="uid://cje5hffgtvj08" path="res://assets/sprites/characters/03_action/ActionLeft/action-walk/ActionLeft_action-walk_01.png" id="6_h6bbx"]
+[ext_resource type="Texture2D" uid="uid://hb4kauy1fwjr" path="res://assets/sprites/characters/03_action/ActionLeft/action-walk/ActionLeft_action-walk_02.png" id="7_qby8g"]
+[ext_resource type="Texture2D" uid="uid://45rwrmxwb2fg" path="res://assets/sprites/characters/03_action/ActionLeft/action-walk/ActionLeft_action-walk_03.png" id="8_fl7by"]
+[ext_resource type="Texture2D" uid="uid://buy6r4jqn4kub" path="res://assets/sprites/characters/03_action/ActionLeft/action-walk/ActionLeft_action-walk_04.png" id="9_54lbd"]
+[ext_resource type="Texture2D" uid="uid://brjklo7f0tk1l" path="res://assets/sprites/characters/00_tree/TreeLeft/idle/ClimbRight_idle_01.png" id="10_wsmcp"]
+[ext_resource type="Texture2D" uid="uid://el8nrvpg8kw3" path="res://assets/sprites/characters/03_action/ActionLeft/walk/ActionLeft_Walk_01.png" id="14_fyd1m"]
+[ext_resource type="Texture2D" uid="uid://nthjib5jlbg0" path="res://assets/sprites/characters/03_action/ActionLeft/walk/ActionLeft_Walk_02.png" id="15_35jh3"]
+[ext_resource type="Texture2D" uid="uid://cyqb580f6n1ue" path="res://assets/sprites/characters/03_action/ActionLeft/walk/ActionLeft_Walk_03.png" id="16_i4r81"]
+[ext_resource type="Texture2D" uid="uid://bygypgxnii0pe" path="res://assets/sprites/characters/03_action/ActionLeft/walk/ActionLeft_Walk_04.png" id="17_imoks"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8x1j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gmifs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i3lm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7qqrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7jd4q")
+}],
+"loop": true,
+"name": &"action",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_h6bbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qby8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fl7by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_54lbd")
+}],
+"loop": true,
+"name": &"action-walk",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_wsmcp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_fyd1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_35jh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_i4r81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_imoks")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_la24y"]
+radius = 11.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_knelu"]
+radius = 9.0
+height = 34.0
+
+[node name="PlayerLeft" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_25ig3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_s8x1j")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_la24y")
+
+[node name="HoldingHandsCollider" type="Area2D" parent="." groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoldingHandsCollider"]
+position = Vector2(0, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_knelu")
+debug_color = Color(1, 1, 0, 0.419608)
+
+[connection signal="area_shape_entered" from="HoldingHandsCollider" to="." method="_on_holding_hands_collider_area_shape_entered"]
+[connection signal="area_shape_exited" from="HoldingHandsCollider" to="." method="_on_holding_hands_collider_area_shape_exited"]
