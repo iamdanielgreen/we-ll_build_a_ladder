@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://e6ngsh7t8f4v"]
 
-[ext_resource type="Script" uid="uid://bybi0bwxtp6i2" path="res://scripts/levels/we_ll_take_action_demo.gd" id="1_4xm4o"]
+[ext_resource type="Script" uid="uid://bybi0bwxtp6i2" path="res://scripts/levels/level-candidates/we_ll_take_action_demo.gd" id="1_4xm4o"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_ek2yi"]
 [ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_nm806"]
 [ext_resource type="PackedScene" uid="uid://q3wpvviwnbt1" path="res://scenes/players/03_action/player_left.tscn" id="4_8do48"]

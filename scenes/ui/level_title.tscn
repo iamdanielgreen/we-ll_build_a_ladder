@@ -28,6 +28,27 @@ text = "We'll Make A Movement"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="we-ll_use_a_placeholder" type="Label" parent="TextLabels"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.5
+offset_top = -51.5
+offset_right = 300.5
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_a33bo")
+theme_override_font_sizes/font_size = 75
+text = "We'll Use A Placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="we_jump_for_joy_text" type="Label" parent="TextLabels"]
 visible = false
 anchors_preset = 8

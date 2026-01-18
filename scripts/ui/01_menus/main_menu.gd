@@ -48,7 +48,8 @@ func _on_start_game_button_pressed() -> void:
 	timer_off_button.grab_focus()
 	
 func _on_timer_off_button_pressed() -> void:
-	GameManager.current_game_mode = GameManager.game_mode.TimerOff
+	# NOTE: THE LINE BELOW IS WHAT YOU WANT TO USE WHEN YOU TEST TURNING THE TIMER OFF.
+	GameManager.current_game_mode = GameManager.game_mode.TimerOff 
 	#get_tree().change_scene_to_file("res://scenes/levels/test_build_three_levels/test_build_three_level_1.tscn")
 	get_tree().change_scene_to_file("res://scenes/levels/degree_show_build/degree_show_build_1.tscn")
 

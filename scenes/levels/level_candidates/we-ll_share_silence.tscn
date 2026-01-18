@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://budur0sxlnwgt"]
 
-[ext_resource type="Script" uid="uid://dhp0t16j4rrkv" path="res://scripts/levels/we-ll_share_silence.gd" id="1_ec4u6"]
+[ext_resource type="Script" uid="uid://dhp0t16j4rrkv" path="res://scripts/levels/level-candidates/we-ll_share_silence.gd" id="1_ec4u6"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_xy0ea"]
 [ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_fhygl"]
 [ext_resource type="Texture2D" uid="uid://dhaioof0sqniy" path="res://assets/sprites/backgrounds/bg_blue_watercolour.png" id="4_voq76"]

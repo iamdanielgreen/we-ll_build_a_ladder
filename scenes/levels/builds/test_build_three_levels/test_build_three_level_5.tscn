@@ -1,22 +1,21 @@
-[gd_scene load_steps=17 format=4 uid="uid://cxespnv0yr13y"]
+[gd_scene load_steps=16 format=4 uid="uid://bvcb0mq6y2u1n"]
 
-[ext_resource type="Script" uid="uid://b02m665ucturl" path="res://scripts/levels/prototypes/we-ll_take_action.gd" id="1_lfn1m"]
-[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_5r6b8"]
-[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_s6evc"]
-[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="4_j7tbh"]
-[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="5_j728p"]
-[ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="6_qity3"]
-[ext_resource type="AudioStream" uid="uid://cjyo70i83hhv1" path="res://assets/audio/effects/Yeah_Chorus_of_One.wav" id="7_qgdce"]
-[ext_resource type="AudioStream" uid="uid://orj532qlpjly" path="res://assets/audio/effects/ClappingTest.wav" id="8_h1jvo"]
-[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="9_hh4th"]
-[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="10_qxsc1"]
-[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="11_nlme3"]
-[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="12_he630"]
-[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="13_mxwbd"]
-[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="14_nxdfw"]
+[ext_resource type="Script" uid="uid://cpcjdxepdqiwe" path="res://scripts/levels/builds/test_build_three_levels/test_build_three_level_5.gd" id="1_mit0f"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_1dkd3"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_q6ugu"]
+[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="4_nigwb"]
+[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="5_b5q74"]
+[ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="6_d3rm5"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="7_urae1"]
+[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="8_54o1s"]
+[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="9_e8ji2"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="10_agmp3"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="11_6akg0"]
+[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="12_2woas"]
+[ext_resource type="PackedScene" uid="uid://x3r6l552uiae" path="res://scenes/items/test_macguffin.tscn" id="13_alg42"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fliv"]
-texture = ExtResource("6_qity3")
+texture = ExtResource("6_d3rm5")
 0:0/0 = 0
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -99,22 +98,22 @@ physics_layer_0/collision_mask = 2
 physics_layer_1/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_2fliv")
 
-[node name="we-ll_take_action" type="Node2D"]
-script = ExtResource("1_lfn1m")
+[node name="test_build_three_level_5" type="Node2D"]
+script = ExtResource("1_mit0f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
-script = ExtResource("2_5r6b8")
+script = ExtResource("2_1dkd3")
 
-[node name="WorldBoundaries" parent="." instance=ExtResource("3_s6evc")]
+[node name="WorldBoundaries" parent="." instance=ExtResource("3_q6ugu")]
 
 [node name="Players" type="Node" parent="."]
 
-[node name="PlayerLeft" parent="Players" instance=ExtResource("4_j7tbh")]
+[node name="PlayerLeft" parent="Players" instance=ExtResource("4_nigwb")]
 z_index = 1
 position = Vector2(-174, 96)
 
-[node name="PlayerRight" parent="Players" instance=ExtResource("5_j728p")]
+[node name="PlayerRight" parent="Players" instance=ExtResource("5_b5q74")]
 position = Vector2(174, 96)
 
 [node name="TileLayers" type="Node" parent="."]
@@ -126,32 +125,31 @@ tile_set = SubResource("TileSet_0k1se")
 
 [node name="Platforms" type="TileMapLayer" parent="TileLayers"]
 z_index = -4
-tile_map_data = PackedByteArray("AADy/wcAAgADAAAAAADz/wcAAgABAAAAAAD0/wcAAgACAAAAAAD1/wcAAgADAAAAAAD2/wcAAgAEAAAAAAD3/wcAAgAFAAAAAAD4/wcAAgAGAAAAAAD5/wcAAgAAAAAAAAD6/wcAAgABAAAAAAD7/wcAAgACAAAAAAD8/wcAAgADAAAAAAD9/wcAAgAEAAAAAAD+/wcAAgAFAAAAAAD//wcAAgAGAAAAAAAAAAcAAgAAAAAAAAABAAcAAgABAAAAAAACAAcAAgACAAAAAAADAAcAAgADAAAAAAAEAAcAAgAEAAAAAAAFAAcAAgAFAAAAAAAGAAcAAgAGAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgABAAAAAAAJAAcAAgACAAAAAAAKAAcAAgADAAAAAAALAAcAAgAEAAAAAAAMAAcAAgAFAAAAAAANAAcAAgAEAAAAAADx/wcAAgAAAAAAAAAOAAcAAgAGAAAAAAA=")
+tile_map_data = PackedByteArray("AADy/wcAAgADAAAAAADz/wcAAgABAAAAAAD0/wcAAgACAAAAAAD1/wcAAgADAAAAAAD2/wcAAgAEAAAAAAD3/wcAAgAFAAAAAAD4/wQAAgAAAAAAAAD4/wcAAgAGAAAAAAD5/wQAAgABAAAAAAD5/wcAAgAAAAAAAAD6/wQAAgACAAAAAAD6/wcAAgABAAAAAAD7/wQAAgADAAAAAAD7/wcAAgACAAAAAAD8/wQAAgABAAAAAAD8/wcAAgADAAAAAAD9/wQAAgACAAAAAAD9/wcAAgAEAAAAAAD+/wQAAgADAAAAAAD+/wcAAgAFAAAAAAD//wQAAgAEAAAAAAD//wcAAgAGAAAAAAAAAAQAAgABAAAAAAAAAAcAAgAAAAAAAAABAAQAAgACAAAAAAABAAcAAgABAAAAAAACAAQAAgADAAAAAAACAAcAAgACAAAAAAADAAQAAgABAAAAAAADAAcAAgADAAAAAAAEAAQAAgABAAAAAAAEAAcAAgAEAAAAAAAFAAQAAgACAAAAAAAFAAcAAgAFAAAAAAAGAAQAAgADAAAAAAAGAAcAAgAGAAAAAAAHAAQAAgAGAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgABAAAAAAAJAAcAAgACAAAAAAAKAAcAAgADAAAAAAALAAcAAgAEAAAAAAAMAAcAAgAFAAAAAAANAAcAAgAEAAAAAADz/wEAAgAAAAAAAAD0/wEAAgABAAAAAAD1/wEAAgACAAAAAAD2/wEAAgADAAAAAAD3/wEAAgAEAAAAAAD4/wEAAgAFAAAAAAD5/wEAAgAGAAAAAAAFAAEAAgAAAAAAAAAGAAEAAgABAAAAAAAHAAEAAgACAAAAAAAIAAEAAgADAAAAAAAJAAEAAgAEAAAAAAAKAAEAAgAFAAAAAAALAAEAAgAGAAAAAAD5//7/AgAAAAAAAAD6//7/AgABAAAAAAD7//7/AgAGAAAAAAABAP//AgAAAAAAAAACAP//AgAFAAAAAAADAP//AgAGAAAAAAD8//v/AgAAAAAAAAD9//v/AgABAAAAAAD+//v/AgACAAAAAAD///v/AgADAAAAAAAAAPv/AgAEAAAAAAABAPv/AgAFAAAAAAACAPv/AgAGAAAAAAAFAP3/AgAAAAAAAAAGAP3/AgABAAAAAAAHAP3/AgACAAAAAAAIAP3/AgAGAAAAAADx/wcAAgAAAAAAAAAOAAcAAgAGAAAAAAA=")
 tile_set = SubResource("TileSet_0k1se")
-
-[node name="Audio" type="Node" parent="."]
-
-[node name="YeahTest" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("7_qgdce")
-
-[node name="ClappingTest" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("8_h1jvo")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("9_hh4th")]
+[node name="PauseMenu" parent="UI" instance=ExtResource("7_urae1")]
 visible = false
 
-[node name="LevelTitle" parent="UI" instance=ExtResource("10_qxsc1")]
+[node name="LevelTitle" parent="UI" instance=ExtResource("8_54o1s")]
 visible = false
 
-[node name="CountdownTimer" parent="UI" instance=ExtResource("11_nlme3")]
+[node name="CountdownTimer" parent="UI" instance=ExtResource("9_e8ji2")]
 
-[node name="OutOfTime" parent="UI" instance=ExtResource("12_he630")]
+[node name="OutOfTime" parent="UI" instance=ExtResource("10_agmp3")]
 visible = false
 
-[node name="LevelWinMenu" parent="UI" instance=ExtResource("13_mxwbd")]
+[node name="LevelWinMenu" parent="UI" instance=ExtResource("11_6akg0")]
 visible = false
 
-[node name="TutorialPrompts" parent="UI" instance=ExtResource("14_nxdfw")]
+[node name="tutorial_prompts" parent="UI" instance=ExtResource("12_2woas")]
 visible = false
+
+[node name="test_macguffin" parent="." instance=ExtResource("13_alg42")]
+z_index = -1
+position = Vector2(-9, -97)
+
+[connection signal="body_entered" from="test_macguffin" to="." method="_on_test_macguffin_body_entered"]
+[connection signal="body_exited" from="test_macguffin" to="." method="_on_test_macguffin_body_exited"]

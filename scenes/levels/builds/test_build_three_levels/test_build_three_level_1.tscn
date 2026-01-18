@@ -1,20 +1,20 @@
-[gd_scene load_steps=15 format=4 uid="uid://dxagl35tmc3to"]
+[gd_scene load_steps=15 format=4 uid="uid://l7etk86hhg5i"]
 
-[ext_resource type="Script" uid="uid://crhfhgobujt15" path="res://scripts/levels/test_build_three_levels/test_build_three_level_2.gd" id="1_48d6a"]
-[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_pulri"]
-[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_oteqy"]
-[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="4_73a68"]
-[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="5_kccjc"]
-[ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="6_i87qs"]
-[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="7_r7o8i"]
-[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="8_xotja"]
-[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="9_2uev2"]
-[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="10_suiys"]
-[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="11_5siqx"]
-[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="12_tqs3w"]
+[ext_resource type="Script" uid="uid://c0htj3t4fniha" path="res://scripts/levels/builds/test_build_three_levels/test_build_three_level_1.gd" id="1_tk68v"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_gubg6"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_u2e77"]
+[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="4_0ip60"]
+[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="5_7bsai"]
+[ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="6_nlrjf"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="7_7mxks"]
+[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="8_mg88m"]
+[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="9_hagkt"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="10_iqor7"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="11_jtj2m"]
+[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="12_y0gyo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fliv"]
-texture = ExtResource("6_i87qs")
+texture = ExtResource("6_nlrjf")
 0:0/0 = 0
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -97,22 +97,22 @@ physics_layer_0/collision_mask = 2
 physics_layer_1/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_2fliv")
 
-[node name="test_build_three_level_2" type="Node2D"]
-script = ExtResource("1_48d6a")
+[node name="test_build_three_level_1" type="Node2D"]
+script = ExtResource("1_tk68v")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
-script = ExtResource("2_pulri")
+script = ExtResource("2_gubg6")
 
-[node name="WorldBoundaries" parent="." instance=ExtResource("3_oteqy")]
+[node name="WorldBoundaries" parent="." instance=ExtResource("3_u2e77")]
 
 [node name="Players" type="Node" parent="."]
 
-[node name="PlayerLeft" parent="Players" instance=ExtResource("4_73a68")]
+[node name="PlayerLeft" parent="Players" instance=ExtResource("4_0ip60")]
 z_index = 1
 position = Vector2(-174, 96)
 
-[node name="PlayerRight" parent="Players" instance=ExtResource("5_kccjc")]
+[node name="PlayerRight" parent="Players" instance=ExtResource("5_7bsai")]
 position = Vector2(174, 96)
 
 [node name="TileLayers" type="Node" parent="."]
@@ -129,19 +129,19 @@ tile_set = SubResource("TileSet_0k1se")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("7_r7o8i")]
+[node name="PauseMenu" parent="UI" instance=ExtResource("7_7mxks")]
 visible = false
 
-[node name="LevelTitle" parent="UI" instance=ExtResource("8_xotja")]
+[node name="LevelTitle" parent="UI" instance=ExtResource("8_mg88m")]
 visible = false
 
-[node name="CountdownTimer" parent="UI" instance=ExtResource("9_2uev2")]
+[node name="CountdownTimer" parent="UI" instance=ExtResource("9_hagkt")]
 
-[node name="OutOfTime" parent="UI" instance=ExtResource("10_suiys")]
+[node name="OutOfTime" parent="UI" instance=ExtResource("10_iqor7")]
 visible = false
 
-[node name="LevelWinMenu" parent="UI" instance=ExtResource("11_5siqx")]
+[node name="LevelWinMenu" parent="UI" instance=ExtResource("11_jtj2m")]
 visible = false
 
-[node name="TutorialPrompts" parent="UI" instance=ExtResource("12_tqs3w")]
+[node name="TutorialPrompts" parent="UI" instance=ExtResource("12_y0gyo")]
 visible = false

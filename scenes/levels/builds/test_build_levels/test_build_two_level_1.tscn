@@ -1,21 +1,20 @@
-[gd_scene load_steps=16 format=4 uid="uid://bvcb0mq6y2u1n"]
+[gd_scene load_steps=15 format=4 uid="uid://ssqpp0b8tscv"]
 
-[ext_resource type="Script" uid="uid://cpcjdxepdqiwe" path="res://scripts/levels/test_build_three_levels/test_build_three_level_5.gd" id="1_mit0f"]
-[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_1dkd3"]
-[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_q6ugu"]
-[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="4_nigwb"]
-[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="5_b5q74"]
-[ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="6_d3rm5"]
-[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="7_urae1"]
-[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="8_54o1s"]
-[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="9_e8ji2"]
-[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="10_agmp3"]
-[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="11_6akg0"]
-[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="12_2woas"]
-[ext_resource type="PackedScene" uid="uid://x3r6l552uiae" path="res://scenes/items/test_macguffin.tscn" id="13_alg42"]
+[ext_resource type="Script" uid="uid://br5oc2wvcqgui" path="res://scripts/levels/builds/test_build_levels/test_build_two_level_1.gd" id="1_y52h7"]
+[ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="2_relnk"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_utihk"]
+[ext_resource type="PackedScene" uid="uid://dw4wntmk3vm5r" path="res://scenes/players/03_action/player_right.tscn" id="3_skayv"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_unjc0"]
+[ext_resource type="Texture2D" uid="uid://pdqtu5vgi6yk" path="res://assets/sprites/00_placeholders/temple-tileset.png" id="4_xjulm"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="5_24kf5"]
+[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="6_d8ajx"]
+[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="7_sajo5"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="8_a4uij"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="9_7yw6a"]
+[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="10_k61u6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fliv"]
-texture = ExtResource("6_d3rm5")
+texture = ExtResource("4_xjulm")
 0:0/0 = 0
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -98,22 +97,22 @@ physics_layer_0/collision_mask = 2
 physics_layer_1/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_2fliv")
 
-[node name="test_build_three_level_5" type="Node2D"]
-script = ExtResource("1_mit0f")
+[node name="test_build_two_level_1" type="Node2D"]
+script = ExtResource("1_y52h7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
-script = ExtResource("2_1dkd3")
+script = ExtResource("2_utihk")
 
-[node name="WorldBoundaries" parent="." instance=ExtResource("3_q6ugu")]
+[node name="WorldBoundaries" parent="." instance=ExtResource("3_unjc0")]
 
 [node name="Players" type="Node" parent="."]
 
-[node name="PlayerLeft" parent="Players" instance=ExtResource("4_nigwb")]
+[node name="PlayerLeft" parent="Players" instance=ExtResource("2_relnk")]
 z_index = 1
 position = Vector2(-174, 96)
 
-[node name="PlayerRight" parent="Players" instance=ExtResource("5_b5q74")]
+[node name="PlayerRight" parent="Players" instance=ExtResource("3_skayv")]
 position = Vector2(174, 96)
 
 [node name="TileLayers" type="Node" parent="."]
@@ -125,31 +124,24 @@ tile_set = SubResource("TileSet_0k1se")
 
 [node name="Platforms" type="TileMapLayer" parent="TileLayers"]
 z_index = -4
-tile_map_data = PackedByteArray("AADy/wcAAgADAAAAAADz/wcAAgABAAAAAAD0/wcAAgACAAAAAAD1/wcAAgADAAAAAAD2/wcAAgAEAAAAAAD3/wcAAgAFAAAAAAD4/wQAAgAAAAAAAAD4/wcAAgAGAAAAAAD5/wQAAgABAAAAAAD5/wcAAgAAAAAAAAD6/wQAAgACAAAAAAD6/wcAAgABAAAAAAD7/wQAAgADAAAAAAD7/wcAAgACAAAAAAD8/wQAAgABAAAAAAD8/wcAAgADAAAAAAD9/wQAAgACAAAAAAD9/wcAAgAEAAAAAAD+/wQAAgADAAAAAAD+/wcAAgAFAAAAAAD//wQAAgAEAAAAAAD//wcAAgAGAAAAAAAAAAQAAgABAAAAAAAAAAcAAgAAAAAAAAABAAQAAgACAAAAAAABAAcAAgABAAAAAAACAAQAAgADAAAAAAACAAcAAgACAAAAAAADAAQAAgABAAAAAAADAAcAAgADAAAAAAAEAAQAAgABAAAAAAAEAAcAAgAEAAAAAAAFAAQAAgACAAAAAAAFAAcAAgAFAAAAAAAGAAQAAgADAAAAAAAGAAcAAgAGAAAAAAAHAAQAAgAGAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgABAAAAAAAJAAcAAgACAAAAAAAKAAcAAgADAAAAAAALAAcAAgAEAAAAAAAMAAcAAgAFAAAAAAANAAcAAgAEAAAAAADz/wEAAgAAAAAAAAD0/wEAAgABAAAAAAD1/wEAAgACAAAAAAD2/wEAAgADAAAAAAD3/wEAAgAEAAAAAAD4/wEAAgAFAAAAAAD5/wEAAgAGAAAAAAAFAAEAAgAAAAAAAAAGAAEAAgABAAAAAAAHAAEAAgACAAAAAAAIAAEAAgADAAAAAAAJAAEAAgAEAAAAAAAKAAEAAgAFAAAAAAALAAEAAgAGAAAAAAD5//7/AgAAAAAAAAD6//7/AgABAAAAAAD7//7/AgAGAAAAAAABAP//AgAAAAAAAAACAP//AgAFAAAAAAADAP//AgAGAAAAAAD8//v/AgAAAAAAAAD9//v/AgABAAAAAAD+//v/AgACAAAAAAD///v/AgADAAAAAAAAAPv/AgAEAAAAAAABAPv/AgAFAAAAAAACAPv/AgAGAAAAAAAFAP3/AgAAAAAAAAAGAP3/AgABAAAAAAAHAP3/AgACAAAAAAAIAP3/AgAGAAAAAADx/wcAAgAAAAAAAAAOAAcAAgAGAAAAAAA=")
+tile_map_data = PackedByteArray("AADy/wcAAgADAAAAAADz/wcAAgABAAAAAAD0/wcAAgACAAAAAAD1/wcAAgADAAAAAAD2/wcAAgAEAAAAAAD3/wcAAgAFAAAAAAD4/wcAAgAGAAAAAAD5/wcAAgAAAAAAAAD6/wcAAgABAAAAAAD7/wcAAgACAAAAAAD8/wcAAgADAAAAAAD9/wcAAgAEAAAAAAD+/wcAAgAFAAAAAAD//wcAAgAGAAAAAAAAAAcAAgAAAAAAAAABAAcAAgABAAAAAAACAAcAAgACAAAAAAADAAcAAgADAAAAAAAEAAcAAgAEAAAAAAAFAAcAAgAFAAAAAAAGAAcAAgAGAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgABAAAAAAAJAAcAAgACAAAAAAAKAAcAAgADAAAAAAALAAcAAgAEAAAAAAAMAAcAAgAFAAAAAAANAAcAAgAEAAAAAADx/wcAAgAAAAAAAAAOAAcAAgAGAAAAAAA=")
 tile_set = SubResource("TileSet_0k1se")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("7_urae1")]
+[node name="PauseMenu" parent="UI" instance=ExtResource("5_24kf5")]
 visible = false
 
-[node name="LevelTitle" parent="UI" instance=ExtResource("8_54o1s")]
+[node name="LevelTitle" parent="UI" instance=ExtResource("6_d8ajx")]
 visible = false
 
-[node name="CountdownTimer" parent="UI" instance=ExtResource("9_e8ji2")]
+[node name="CountdownTimer" parent="UI" instance=ExtResource("7_sajo5")]
 
-[node name="OutOfTime" parent="UI" instance=ExtResource("10_agmp3")]
+[node name="OutOfTime" parent="UI" instance=ExtResource("8_a4uij")]
 visible = false
 
-[node name="LevelWinMenu" parent="UI" instance=ExtResource("11_6akg0")]
+[node name="LevelWinMenu" parent="UI" instance=ExtResource("9_7yw6a")]
 visible = false
 
-[node name="tutorial_prompts" parent="UI" instance=ExtResource("12_2woas")]
+[node name="TutorialPrompts" parent="UI" instance=ExtResource("10_k61u6")]
 visible = false
-
-[node name="test_macguffin" parent="." instance=ExtResource("13_alg42")]
-z_index = -1
-position = Vector2(-9, -97)
-
-[connection signal="body_entered" from="test_macguffin" to="." method="_on_test_macguffin_body_entered"]
-[connection signal="body_exited" from="test_macguffin" to="." method="_on_test_macguffin_body_exited"]

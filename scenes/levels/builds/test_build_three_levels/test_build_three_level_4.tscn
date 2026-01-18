@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://doto5mvus1gca"]
 
-[ext_resource type="Script" uid="uid://ncs7vorwtpcp" path="res://scripts/levels/test_build_three_levels/test_build_three_level_4.gd" id="1_tl3hy"]
+[ext_resource type="Script" uid="uid://ncs7vorwtpcp" path="res://scripts/levels/builds/test_build_three_levels/test_build_three_level_4.gd" id="1_tl3hy"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_ocg4o"]
 [ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_80uqp"]
 [ext_resource type="PackedScene" uid="uid://c1ga3ku8h8jtx" path="res://scenes/players/00_prototypes/prototype_player_left.tscn" id="4_o8inu"]
