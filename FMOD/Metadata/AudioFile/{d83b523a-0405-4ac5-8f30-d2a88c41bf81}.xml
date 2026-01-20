@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d83b523a-0405-4ac5-8f30-d2a88c41bf81}">
+		<property name="assetPath">
+			<value>char/grow-left/GrowLeft_walk.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.2510416666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fdbe6339-d095-4bb1-b928-a0cfd8cac4db}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EventFolder" id="{577cd292-e92b-48f2-bda4-baeae937e3ff}">
+		<property name="name">
+			<value>GrowRight</value>
+		</property>
+		<relationship name="folder">
+			<destination>{771abc96-af7f-4c50-9027-17a596e0959c}</destination>
+		</relationship>
+	</object>
+</objects>

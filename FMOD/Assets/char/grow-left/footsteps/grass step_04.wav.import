@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://de0cb1mcm8c0i"
+path="res://.godot/imported/grass step_04.wav-b9c4832088a849bfa0fb76f7d7f6e958.sample"
+
+[deps]
+
+source_file="res://FMOD/Assets/char/grow-left/footsteps/grass step_04.wav"
+dest_files=["res://.godot/imported/grass step_04.wav-b9c4832088a849bfa0fb76f7d7f6e958.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

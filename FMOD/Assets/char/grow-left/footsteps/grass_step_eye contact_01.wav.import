@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://h64g3fkthj8x"
+path="res://.godot/imported/grass_step_eye contact_01.wav-fc1d075ca7e77f6b34e0c1b0e08e6424.sample"
+
+[deps]
+
+source_file="res://FMOD/Assets/char/grow-left/footsteps/grass_step_eye contact_01.wav"
+dest_files=["res://.godot/imported/grass_step_eye contact_01.wav-fc1d075ca7e77f6b34e0c1b0e08e6424.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

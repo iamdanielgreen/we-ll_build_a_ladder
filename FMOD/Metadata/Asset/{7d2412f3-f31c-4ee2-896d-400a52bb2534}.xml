@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{7d2412f3-f31c-4ee2-896d-400a52bb2534}">
+		<property name="color">
+			<value>Red Light 2</value>
+		</property>
+		<property name="assetPath">
+			<value>game/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fdbe6339-d095-4bb1-b928-a0cfd8cac4db}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{24333ee0-ae8d-4bb1-b39e-93752dda5d3d}">
+		<property name="assetPath">
+			<value>music/WBAL_Music_WFTD.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>117.62938775510204</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fdbe6339-d095-4bb1-b928-a0cfd8cac4db}</destination>
+		</relationship>
+	</object>
+</objects>

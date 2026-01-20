@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{1655aea3-83c7-49ca-96a3-ce4d8ecf8ced}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
+		<property name="assetPath">
+			<value>char/grow-left/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fdbe6339-d095-4bb1-b928-a0cfd8cac4db}</destination>
+		</relationship>
+	</object>
+</objects>

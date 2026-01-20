@@ -529,6 +529,8 @@ z_index = -10
 position = Vector2(960, 540)
 texture = ExtResource("6_y4aia")
 
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/StartGame_Button" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Controls_Button" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Credits_Button" to="." method="_on_credits_button_pressed"]

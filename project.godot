@@ -8,6 +8,10 @@
 
 config_version=5
 
+[Fmod]
+
+General/banks_path="res://FmodBank/Desktop"
+
 [application]
 
 config/name="We'll Build A Ladder"
@@ -21,6 +25,7 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/gameManager.gd"
 AudioPlayer="*res://scenes/tools/audio_player.tscn"
+FmodManager="*res://addons/fmod/FmodManager.gd"
 
 [dialogic]
 
@@ -37,6 +42,10 @@ window/stretch/mode="viewport"
 [editor]
 
 movie_writer/movie_file="C:/Users/iamda/Documents/00_Projects/2025/01_Games/03_We'll Build A Ladder/Ephemera/Video Clips/WBAL_Gameplay_Test.avi"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fmod/plugin.cfg")
 
 [global_group]
 

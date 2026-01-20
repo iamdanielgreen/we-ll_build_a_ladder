@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{9e7dd6fc-4198-4aba-a0e7-780e87515558}">
+		<property name="color">
+			<value>Purple Light 1</value>
+		</property>
+		<property name="assetPath">
+			<value>ui/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fdbe6339-d095-4bb1-b928-a0cfd8cac4db}</destination>
+		</relationship>
+	</object>
+</objects>
