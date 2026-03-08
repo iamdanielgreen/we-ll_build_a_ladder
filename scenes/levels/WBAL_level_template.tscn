@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://hjj1rhgqknuc"]
+[gd_scene format=3 uid="uid://hjj1rhgqknuc"]
 
 [ext_resource type="Script" uid="uid://cg6gepwd73nev" path="res://scripts/levels/WBAL_level_template.gd" id="1_qsa24"]
 [ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_wvsdq"]
@@ -15,52 +15,52 @@
 [ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="13_ai7ul"]
 [ext_resource type="AudioStream" uid="uid://orj532qlpjly" path="res://assets/audio/effects/ClappingTest.wav" id="14_3q4h1"]
 
-[node name="WBAL_Level_Template" type="Node2D"]
+[node name="WBAL_Level_Template" type="Node2D" unique_id=1782342206]
 script = ExtResource("1_qsa24")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1526883499]
 zoom = Vector2(4, 4)
 script = ExtResource("2_wvsdq")
 
-[node name="WorldBoundaries" parent="." instance=ExtResource("3_gmbnw")]
+[node name="WorldBoundaries" parent="." unique_id=1235863242 instance=ExtResource("3_gmbnw")]
 
-[node name="Floor" parent="." instance=ExtResource("4_0viyx")]
+[node name="Floor" parent="." unique_id=1110336592 instance=ExtResource("4_0viyx")]
 
-[node name="Players" type="Node" parent="."]
+[node name="Players" type="Node" parent="." unique_id=1647217325]
 
-[node name="TemplateLeft" parent="Players" instance=ExtResource("5_qsa24")]
+[node name="TemplateLeft" parent="Players" unique_id=2086573908 instance=ExtResource("5_qsa24")]
 position = Vector2(-174, 94)
 
-[node name="TemplateRight" parent="Players" instance=ExtResource("6_8b85u")]
+[node name="TemplateRight" parent="Players" unique_id=1650886283 instance=ExtResource("6_8b85u")]
 position = Vector2(174, 94)
 
-[node name="LevelAssets" type="Node" parent="."]
+[node name="LevelAssets" type="Node" parent="." unique_id=1734232213]
 
-[node name="bgSinglePlatform" type="Sprite2D" parent="LevelAssets"]
+[node name="bgSinglePlatform" type="Sprite2D" parent="LevelAssets" unique_id=1529673610]
 z_index = -10
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_ecmvw")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=898564409]
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("8_uc1jb")]
+[node name="PauseMenu" parent="UI" unique_id=1044276131 instance=ExtResource("8_uc1jb")]
 visible = false
 
-[node name="LevelTitle" parent="UI" instance=ExtResource("9_hbhck")]
+[node name="LevelTitle" parent="UI" unique_id=725630522 instance=ExtResource("9_hbhck")]
 visible = false
 
-[node name="CountdownTimer" parent="UI" instance=ExtResource("10_b0oy5")]
+[node name="CountdownTimer" parent="UI" unique_id=1581373075 instance=ExtResource("10_b0oy5")]
 
-[node name="OutOfTime" parent="UI" instance=ExtResource("11_gl6q5")]
+[node name="OutOfTime" parent="UI" unique_id=655403327 instance=ExtResource("11_gl6q5")]
 visible = false
 
-[node name="LevelWinMenu" parent="UI" instance=ExtResource("12_ap1rc")]
+[node name="LevelWinMenu" parent="UI" unique_id=896112128 instance=ExtResource("12_ap1rc")]
 visible = false
 
-[node name="TutorialPrompts" parent="UI" instance=ExtResource("13_ai7ul")]
+[node name="TutorialPrompts" parent="UI" unique_id=864519416 instance=ExtResource("13_ai7ul")]
 visible = false
 
-[node name="Audio" type="Node" parent="."]
+[node name="Audio" type="Node" parent="." unique_id=133539954]
 
-[node name="ClappingTest" type="AudioStreamPlayer" parent="Audio"]
+[node name="ClappingTest" type="AudioStreamPlayer" parent="Audio" unique_id=102150344]
 stream = ExtResource("14_3q4h1")

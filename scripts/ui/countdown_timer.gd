@@ -25,13 +25,6 @@ func _process(delta) -> void:
 	$TimerDisplay/Hundredths.text = "%02d" % hundredths
 	
 	#NOTE 22/06/2025: THIS IS ONLY USEFUL IF YOU WANT A TIMER BUT SOMETIMES WANT TO TURN IT OFF.
-	
-	##NOTE 01/09/2024 - First run at Endless Fight - created strange bug where timer disappeared, but then tried to call stop_timer()...
-	##... after the score hit 2, and would cause the game to crash.
-	##NOTE 02/09/2024 - Second test build showed this bug doesn't exist outside the engine. Go figure...
-	##... BUT joke victory screen doesn't trigger either. Just take the win I guess.
-	#if game_manager.current_game_mode == game_manager.game_mode.EndlessFight:
-		#queue_free()
 		
 	if GameManager.current_game_mode == GameManager.game_mode.TimerOff:
 		queue_free()

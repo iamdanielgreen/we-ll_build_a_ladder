@@ -21,7 +21,10 @@ func _on_next_level_button_pressed() -> void:
 		# NOTE: PLAYS SOUNDTRACK IF THE "THE END" THING DOESN'T WORK
 		get_node("/root/AudioPlayer").playing = true
 		get_tree().change_scene_to_file("res://scenes/ui/menus/main_menu.tscn")
-		
+	
+	elif current_scene_file == "res://scenes/levels/WBAL_level_template.tscn":
+		get_tree().reload_current_scene()
+	
 	else:
 		get_tree().change_scene_to_file(next_level_path)
 

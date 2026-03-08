@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://w1n1spgbj0tv"]
+[gd_scene format=3 uid="uid://w1n1spgbj0tv"]
 
 [ext_resource type="Texture2D" uid="uid://bh0x4hnu0q28r" path="res://assets/sprites/ui/actions/switch_buttons_down_outline_blk.png" id="2_4w37e"]
 [ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_txs6r"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bn66yvw27yhko" path="res://assets/sprites/ui/movement/switch_dpad_horizontal_outline_blk.png" id="4_4w37e"]
 [ext_resource type="Texture2D" uid="uid://t7tqfehnh6ot" path="res://assets/sprites/ui/movement/switch_stick_l_horizontal_blk.png" id="5_3x2rw"]
 
-[node name="tutorial_prompts" type="Control"]
+[node name="tutorial_prompts" type="Control" unique_id=1434560033]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,9 +15,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="text_labels" type="Node" parent="."]
+[node name="text_labels" type="Node" parent="." unique_id=914610253]
 
-[node name="jump_text" type="Label" parent="text_labels"]
+[node name="jump_text" type="Label" parent="text_labels" unique_id=908771472]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,13 +37,13 @@ text = "Jump"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="down_action_button_icon" type="Sprite2D" parent="text_labels/jump_text"]
+[node name="down_action_button_icon" type="Sprite2D" parent="text_labels/jump_text" unique_id=538903059]
 texture_filter = 2
 position = Vector2(-44.5, 24.5)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_4w37e")
 
-[node name="action_text" type="Label" parent="text_labels"]
+[node name="action_text" type="Label" parent="text_labels" unique_id=976831843]
 visible = false
 z_index = 10
 anchors_preset = 8
@@ -65,13 +65,13 @@ text = "Action"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="left_action_button_icon" type="Sprite2D" parent="text_labels/action_text"]
+[node name="left_action_button_icon" type="Sprite2D" parent="text_labels/action_text" unique_id=650274617]
 texture_filter = 2
 position = Vector2(-44.5, 24.5)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("3_4w37e")
 
-[node name="nothing_text" type="Label" parent="text_labels"]
+[node name="nothing_text" type="Label" parent="text_labels" unique_id=385725074]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -91,7 +91,27 @@ text = "Something will come from \"Nothing\""
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="move_text" type="Label" parent="text_labels"]
+[node name="placeholder_tutorial_text" type="Label" parent="text_labels" unique_id=269414943]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.5
+offset_top = -25.5
+offset_right = 337.5
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_txs6r")
+theme_override_font_sizes/font_size = 75
+text = "PLACEHOLDER TUTORIAL TEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="move_text" type="Label" parent="text_labels" unique_id=1281393640]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -111,13 +131,13 @@ text = "Move"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="dpad_movement_h_icon" type="Sprite2D" parent="text_labels/move_text"]
+[node name="dpad_movement_h_icon" type="Sprite2D" parent="text_labels/move_text" unique_id=2024937919]
 texture_filter = 2
 position = Vector2(-202.5, 24.5)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("4_4w37e")
 
-[node name="slash_text" type="Label" parent="text_labels/move_text"]
+[node name="slash_text" type="Label" parent="text_labels/move_text" unique_id=991347898]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -137,18 +157,18 @@ text = "/"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="left_analogue_stick_h_icon" type="Sprite2D" parent="text_labels/move_text"]
+[node name="left_analogue_stick_h_icon" type="Sprite2D" parent="text_labels/move_text" unique_id=112235900]
 texture_filter = 2
 position = Vector2(-52.5, 24.5)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("5_3x2rw")
 
-[node name="left_action_button_icon" type="Sprite2D" parent="text_labels/move_text/left_analogue_stick_h_icon"]
+[node name="left_action_button_icon" type="Sprite2D" parent="text_labels/move_text/left_analogue_stick_h_icon" unique_id=233934662]
 visible = false
 position = Vector2(5.33337, 0)
 texture = ExtResource("3_rcqsf")
 
-[node name="TEST" type="Control" parent="text_labels"]
+[node name="TEST" type="Control" parent="text_labels" unique_id=497635690]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

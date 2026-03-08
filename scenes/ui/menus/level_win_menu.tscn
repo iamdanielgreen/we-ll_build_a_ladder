@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://djf41hksfjemg"]
+[gd_scene format=3 uid="uid://djf41hksfjemg"]
 
 [ext_resource type="Script" uid="uid://dqe0locpth0uy" path="res://scripts/ui/01_menus/level_win_menu.gd" id="1_bsj0w"]
 [ext_resource type="FontFile" uid="uid://c14dpk564mpel" path="res://assets/fonts/OstrichSans-Heavy.otf" id="2_teebo"]
 
-[node name="LevelWinMenu" type="CanvasLayer"]
+[node name="LevelWinMenu" type="CanvasLayer" unique_id=325902959]
 process_mode = 3
 script = ExtResource("1_bsj0w")
 
-[node name="level_win_text" type="Label" parent="."]
+[node name="level_win_text" type="Label" parent="." unique_id=290032417]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -27,7 +27,7 @@ text = "We have succeeded"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LevelWinMenu_Buttons" type="VBoxContainer" parent="."]
+[node name="LevelWinMenu_Buttons" type="VBoxContainer" parent="." unique_id=939450975]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -43,30 +43,32 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="next_level_button" type="Button" parent="LevelWinMenu_Buttons"]
+[node name="next_level_button" type="Button" parent="LevelWinMenu_Buttons" unique_id=1299952371]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_teebo")
 theme_override_font_sizes/font_size = 30
 text = "Next Level"
 
-[node name="restart_button" type="Button" parent="LevelWinMenu_Buttons"]
+[node name="restart_button" type="Button" parent="LevelWinMenu_Buttons" unique_id=1026603693]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_teebo")
 theme_override_font_sizes/font_size = 30
 text = "Restart"
 
-[node name="main_menu_button" type="Button" parent="LevelWinMenu_Buttons"]
+[node name="main_menu_button" type="Button" parent="LevelWinMenu_Buttons" unique_id=1267008014]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_teebo")
 theme_override_font_sizes/font_size = 30
 text = "Main Menu"
 
-[node name="quit_button" type="Button" parent="LevelWinMenu_Buttons"]
-visible = false
+[node name="quit_button" type="Button" parent="LevelWinMenu_Buttons" unique_id=740481572]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_teebo")
+theme_override_font_sizes/font_size = 30
 text = "Quit"
 
 [connection signal="pressed" from="LevelWinMenu_Buttons/next_level_button" to="." method="_on_next_level_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0gul5vt2ly3f"]
+[gd_scene format=3 uid="uid://c0gul5vt2ly3f"]
 
 [ext_resource type="Script" uid="uid://8yfrnavsikks" path="res://scripts/ui/01_menus/main_menu.gd" id="1_flhq8"]
 [ext_resource type="FontFile" uid="uid://s25petjrnke" path="res://assets/fonts/LeagueScriptNumberOne.otf" id="2_ct055"]
@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://cqmkl6dndngra" path="res://assets/audio/effects/the_end.wav" id="8_ykpw6"]
 [ext_resource type="Texture2D" uid="uid://0ux4kw5bporf" path="res://assets/sprites/ui/menus/WBAL_Controls_Screen_NoHands.png" id="10_h4dpu"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1113955942]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_flhq8")
 
-[node name="TitleScreen" type="Control" parent="."]
+[node name="TitleScreen" type="Control" parent="." unique_id=1800543025]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +30,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainMenuButtons" type="VBoxContainer" parent="TitleScreen"]
+[node name="MainMenuButtons" type="VBoxContainer" parent="TitleScreen" unique_id=820549291]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -45,7 +45,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="StartGame_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
+[node name="StartGame_Button" type="Button" parent="TitleScreen/MainMenuButtons" unique_id=149071076]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -54,7 +54,7 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 70
 text = "Start Game"
 
-[node name="Controls_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
+[node name="Controls_Button" type="Button" parent="TitleScreen/MainMenuButtons" unique_id=39572630]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -62,7 +62,7 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 70
 text = "Controls"
 
-[node name="Credits_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
+[node name="Credits_Button" type="Button" parent="TitleScreen/MainMenuButtons" unique_id=1537573987]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -71,7 +71,16 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 70
 text = "Credits"
 
-[node name="Who_Are_You_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
+[node name="Quit_Button" type="Button" parent="TitleScreen/MainMenuButtons" unique_id=1039792821]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_h1kbi")
+theme_override_font_sizes/font_size = 70
+text = "Quit Game"
+
+[node name="Who_Are_You_Button" type="Button" parent="TitleScreen/MainMenuButtons" unique_id=1186718585]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
@@ -81,7 +90,7 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 70
 text = "WHO IS DANIEL GREEN?"
 
-[node name="Feedback_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
+[node name="Feedback_Button" type="Button" parent="TitleScreen/MainMenuButtons" unique_id=1144995273]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
@@ -91,21 +100,12 @@ theme_override_font_sizes/font_size = 55
 text = "Playtest Feedback
 "
 
-[node name="Quit_Button" type="Button" parent="TitleScreen/MainMenuButtons"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("2_h1kbi")
-theme_override_font_sizes/font_size = 55
-text = "Quit Game"
-
-[node name="title_screem" type="Sprite2D" parent="TitleScreen"]
+[node name="title_screem" type="Sprite2D" parent="TitleScreen" unique_id=838379660]
 z_index = -9
 position = Vector2(960, 540)
 texture = ExtResource("3_dhmlp")
 
-[node name="WIP_screen" type="Control" parent="."]
+[node name="WIP_screen" type="Control" parent="." unique_id=45991130]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -116,7 +116,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="WIP_screen"]
+[node name="VBoxContainer" type="VBoxContainer" parent="WIP_screen" unique_id=1594219581]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -124,7 +124,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="wip_text" type="Label" parent="WIP_screen/VBoxContainer"]
+[node name="wip_text" type="Label" parent="WIP_screen/VBoxContainer" unique_id=1429110981]
 layout_mode = 2
 theme_override_constants/line_spacing = 5
 theme_override_constants/paragraph_spacing = 5
@@ -140,14 +140,14 @@ thank you for playing.
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="wipContinueButton" type="Button" parent="WIP_screen/VBoxContainer"]
+[node name="wipContinueButton" type="Button" parent="WIP_screen/VBoxContainer" unique_id=760451448]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 80
 text = "Continue"
 
-[node name="GameMode_Screen" type="Control" parent="."]
+[node name="GameMode_Screen" type="Control" parent="." unique_id=718305907]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -156,7 +156,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="wip_text" type="Label" parent="GameMode_Screen"]
+[node name="wip_text" type="Label" parent="GameMode_Screen" unique_id=120347854]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -184,7 +184,7 @@ thank you for playing.
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GameMode_text" type="Label" parent="GameMode_Screen"]
+[node name="GameMode_text" type="Label" parent="GameMode_Screen" unique_id=1181530848]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -199,7 +199,7 @@ text = "Game Mode"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="HBoxContainer" parent="GameMode_Screen"]
+[node name="VBoxContainer" type="HBoxContainer" parent="GameMode_Screen" unique_id=586730321]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -212,7 +212,7 @@ grow_vertical = 2
 theme_override_constants/separation = 250
 alignment = 1
 
-[node name="TimerOff_Button" type="Button" parent="GameMode_Screen/VBoxContainer"]
+[node name="TimerOff_Button" type="Button" parent="GameMode_Screen/VBoxContainer" unique_id=94071334]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -220,7 +220,7 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 85
 text = "We'll Take Our Time"
 
-[node name="TimerOff_Description_Text" type="Label" parent="GameMode_Screen/VBoxContainer/TimerOff_Button"]
+[node name="TimerOff_Description_Text" type="Label" parent="GameMode_Screen/VBoxContainer/TimerOff_Button" unique_id=236380553]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -239,7 +239,7 @@ theme_override_font_sizes/font_size = 50
 text = "Original Game"
 horizontal_alignment = 1
 
-[node name="TimerOn_Button" type="Button" parent="GameMode_Screen/VBoxContainer"]
+[node name="TimerOn_Button" type="Button" parent="GameMode_Screen/VBoxContainer" unique_id=1935094895]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -247,7 +247,7 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 85
 text = "We'll Challenge Ourselves"
 
-[node name="TimerOn_Description_Text" type="Label" parent="GameMode_Screen/VBoxContainer/TimerOn_Button"]
+[node name="TimerOn_Description_Text" type="Label" parent="GameMode_Screen/VBoxContainer/TimerOn_Button" unique_id=168872773]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -265,22 +265,22 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 50
 text = "Levels feature a 10-second timer"
 
-[node name="OhMyGoodness" type="AudioStreamPlayer" parent="GameMode_Screen"]
+[node name="OhMyGoodness" type="AudioStreamPlayer" parent="GameMode_Screen" unique_id=2055192169]
 stream = ExtResource("5_dhmlp")
 volume_db = 1.0
 
-[node name="PlaytestFeedback_Screen" type="Control" parent="."]
+[node name="PlaytestFeedback_Screen" type="Control" parent="." unique_id=337306468]
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="FeedbackGroup" type="Control" parent="PlaytestFeedback_Screen"]
+[node name="FeedbackGroup" type="Control" parent="PlaytestFeedback_Screen" unique_id=1133296880]
 anchors_preset = 0
 offset_top = 50.0
 offset_bottom = 50.0
 
-[node name="PlaytestFeedback_Text" type="Label" parent="PlaytestFeedback_Screen/FeedbackGroup"]
+[node name="PlaytestFeedback_Text" type="Label" parent="PlaytestFeedback_Screen/FeedbackGroup" unique_id=215880777]
 layout_mode = 0
 offset_left = 30.0
 offset_right = 1023.0
@@ -291,7 +291,7 @@ theme_override_font_sizes/font_size = 80
 text = "Playtest Feedback"
 vertical_alignment = 1
 
-[node name="ThankYou_text" type="Label" parent="PlaytestFeedback_Screen/FeedbackGroup"]
+[node name="ThankYou_text" type="Label" parent="PlaytestFeedback_Screen/FeedbackGroup" unique_id=778667680]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 170.0
@@ -306,12 +306,12 @@ text = "thank you for playing this test build of \"We'll Build A Ladder\".
 you can leave feedback using the qr code below."
 vertical_alignment = 1
 
-[node name="FeedbackQRcode" type="Sprite2D" parent="PlaytestFeedback_Screen/FeedbackGroup"]
+[node name="FeedbackQRcode" type="Sprite2D" parent="PlaytestFeedback_Screen/FeedbackGroup" unique_id=1613767058]
 position = Vector2(304, 560)
 scale = Vector2(1.15, 1.15)
 texture = ExtResource("5_p0q51")
 
-[node name="Feedback_MainMenu_button" type="Button" parent="PlaytestFeedback_Screen/FeedbackGroup"]
+[node name="Feedback_MainMenu_button" type="Button" parent="PlaytestFeedback_Screen/FeedbackGroup" unique_id=1589854298]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 860.0
@@ -322,7 +322,7 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 60
 text = "Main Menu"
 
-[node name="Credits_Screen" type="Control" parent="."]
+[node name="Credits_Screen" type="Control" parent="." unique_id=1113657617]
 process_mode = 3
 visible = false
 layout_mode = 1
@@ -332,17 +332,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Credits_Screen"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits_Screen" unique_id=1914836863]
 layout_mode = 0
 offset_left = 955.0
 offset_top = 135.0
 offset_right = 995.0
 offset_bottom = 175.0
 
-[node name="CreditsLogoBlk" type="Sprite2D" parent="Credits_Screen/VBoxContainer"]
+[node name="CreditsLogoBlk" type="Sprite2D" parent="Credits_Screen/VBoxContainer" unique_id=1008910743]
 texture = ExtResource("8_h4dpu")
 
-[node name="Final_Credits_Text" type="Label" parent="Credits_Screen"]
+[node name="Final_Credits_Text" type="Label" parent="Credits_Screen" unique_id=168128089]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -370,7 +370,7 @@ Thank You:
 Renato Baroni, Pippin Barr, Andrew Bennett, Ian Brightwood, Kat Brightwood, Samuel Bruce, V Buckenham,
 Alex Byrne, Ben Byrne, Josh Conry, Rachelle Conry, Ines Cabral Proenca, Laura Carey, Mads de Silva Wheeler,
 Ben Elgart, Alyson Dalby, Fede Fasce, Rebecca Flynn, Dragos Farcas, Emma Fox, Stephen Fox, Sophia Goldberg, 
-Maddalena Grattanola, Joanne Green, Kristina Green, Ricky Haggett, Sue Hearn, Matthew Hilzinger, Thomas Hunt,
+Maddalena Grattarola, Joanne Green, Kristina Green, Ricky Haggett, Sue Hearn, Matthew Hilzinger, Thomas Hunt,
 Miyuki Jokiranta, Jon Klassen, Michelle Klomp, Julia Mascetti, Richard Milward, Nick Murray, Karolina Novak,
 Seb Quack, Sly-Tone Cafe, Julian Ramundi, Harry Smyth, Riana Suen, Jo Summers, Vicky Wong 
 and Kate Byrne, for everything.
@@ -380,7 +380,7 @@ full credits available at: https://iamdanielgreen.itch.io/well-build-a-ladder
 Thank you for playing. Ceasefire now. freedom for palestine."
 horizontal_alignment = 1
 
-[node name="Credits_MainMenu_Button" type="Button" parent="Credits_Screen"]
+[node name="Credits_MainMenu_Button" type="Button" parent="Credits_Screen" unique_id=427623394]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -399,7 +399,7 @@ theme_override_font_sizes/font_size = 55
 text = "MAIN MENU"
 icon_alignment = 1
 
-[node name="WBAL_Credits_Text" type="Label" parent="Credits_Screen"]
+[node name="WBAL_Credits_Text" type="Label" parent="Credits_Screen" unique_id=1402675077]
 visible = false
 layout_mode = 1
 anchors_preset = 5
@@ -417,7 +417,7 @@ text = "We'll Build A Ladder"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Name_Credits_Text" type="Label" parent="Credits_Screen/WBAL_Credits_Text"]
+[node name="Name_Credits_Text" type="Label" parent="Credits_Screen/WBAL_Credits_Text" unique_id=1274005952]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -436,7 +436,7 @@ text = "A game by Daniel Green"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Prototype_Credits_Text" type="Label" parent="Credits_Screen/WBAL_Credits_Text"]
+[node name="Prototype_Credits_Text" type="Label" parent="Credits_Screen/WBAL_Credits_Text" unique_id=1904219317]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -469,7 +469,7 @@ https://www.theleagueofmoveabletype.com/ostrich-sans
 \"League script\" by Haley Fiege: https://www.theleagueofmoveabletype.com/league-script"
 horizontal_alignment = 1
 
-[node name="CreditsScreen_Buttons" type="HBoxContainer" parent="Credits_Screen"]
+[node name="CreditsScreen_Buttons" type="HBoxContainer" parent="Credits_Screen" unique_id=578386897]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -484,16 +484,16 @@ offset_bottom = -104.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Credits_Feedback_Button" type="Button" parent="Credits_Screen/CreditsScreen_Buttons"]
+[node name="Credits_Feedback_Button" type="Button" parent="Credits_Screen/CreditsScreen_Buttons" unique_id=1308344896]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 55
 text = "PLAYTEST FEEDBACK"
 
-[node name="TheEnd" type="AudioStreamPlayer" parent="Credits_Screen"]
+[node name="TheEnd" type="AudioStreamPlayer" parent="Credits_Screen" unique_id=195196144]
 stream = ExtResource("8_ykpw6")
 
-[node name="Controls_Screen" type="Control" parent="."]
+[node name="Controls_Screen" type="Control" parent="." unique_id=799301256]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -502,11 +502,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlsPNG" type="Sprite2D" parent="Controls_Screen"]
+[node name="ControlsPNG" type="Sprite2D" parent="Controls_Screen" unique_id=1882618380]
 position = Vector2(960, 540)
 texture = ExtResource("10_h4dpu")
 
-[node name="Controls_Main_Menu_Button" type="Button" parent="Controls_Screen"]
+[node name="Controls_Main_Menu_Button" type="Button" parent="Controls_Screen" unique_id=1730565753]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -523,20 +523,18 @@ theme_override_fonts/font = ExtResource("2_h1kbi")
 theme_override_font_sizes/font_size = 55
 text = "Main Menu"
 
-[node name="bgNotebook" type="Sprite2D" parent="."]
+[node name="bgNotebook" type="Sprite2D" parent="." unique_id=680904991]
 visible = false
 z_index = -10
 position = Vector2(960, 540)
 texture = ExtResource("6_y4aia")
 
-[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
-
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/StartGame_Button" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Controls_Button" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Credits_Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="TitleScreen/MainMenuButtons/Quit_Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Who_Are_You_Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="TitleScreen/MainMenuButtons/Feedback_Button" to="." method="_on_feedback_button_pressed"]
-[connection signal="pressed" from="TitleScreen/MainMenuButtons/Quit_Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="WIP_screen/VBoxContainer/wipContinueButton" to="." method="_on_wip_continue_button_pressed"]
 [connection signal="pressed" from="GameMode_Screen/VBoxContainer/TimerOff_Button" to="." method="_on_timer_off_button_pressed"]
 [connection signal="pressed" from="GameMode_Screen/VBoxContainer/TimerOn_Button" to="." method="_on_timer_on_button_pressed"]
