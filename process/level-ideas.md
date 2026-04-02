@@ -9,6 +9,7 @@
 - DESIGN NOTE: Is this really needed? It's a cute bit, but is it too obvious?
 
 **(25/08/2025, 09:00)** Began prototyping level.
+**(12/09/2025)** "Finished" level exists within Degree Show Build of game.
 
 ### We'll Jump For Joy
 
@@ -17,6 +18,7 @@
 - After five seconds, a tutorial prompt appears on screen instructing players to press the Down Action Button
 
 **(20/07/2025, whilst on a plane)** Prototype created. Currently works, and has been inserted into main sequence. It's currently the only level inserted into the main sequence.
+**(12/09/2025)** "Finished" level exists within Degree Show Build of game.
 
 ### (They do nothing) We'll Take Action 
 
@@ -26,6 +28,7 @@
 - DESIGN NOTE: Are all the tutorials in the void? The idea being that as the whole game moves along the whole game/world starts to come to life, take shape?
 - - Also, this is ostensibly another version of "We'll Jump For Joy". But you now realise that all the tutorials shouldn't be all that difficult to solve, and really just the simplest version of each potential action possible - in order to get to the wider game as quick as possible.
 
+**(12/09/2025)** "Finished" level exists within Degree Show Build of game.
 
 ### We'll ~~Look After~~ Take Care of Each Other / We Take Care of Each Other
 
@@ -44,12 +47,19 @@ The two players appear on screen. They are in a white void. All they have to so 
 
 **(25/08/2025, 09:01)** This level is currently an outlier compared to the rest of the game. There is no other level that uses the mechanic of taking *no action* as an action. I still like what this represents (even if it blurs the lines of what the game itself is trying to communicate), so I would like to keep it, but perhaps this isn't a tutorial level - perhaps it just sits somewhere towards the end of the game, as a curveball to the players.
 
+**(12/09/2025)** "Finished" level exists within Degree Show Build of game.
+
 
 ## Game Levels
 
 ### (You Build A Wall) We'll Build A Ladder
 
-**(30/07/2025, 17:40)** The two players stand in front of a wall. A pile of wood sits in front of the wall. The players approach the wall, and as they each press the action button, a ladder starts to emerge from the pile. Once the ladder is taller than the wall itself, the players win.
+**(30/07/2025, 17:40)** The two players stand in front of a wall. A pile of wood sits in front of the wall. The players approach the wall, and as they each press the action button, a ladder starts to emerge from the pile. Once the ladder is taller than the wall itself, the ~~players win~~ *the level is solved* (edit on 08/03/2026). 
+
+**(08/03/2026, 14:32)** An attempt was made to prototype this level at some point between 21:00 on 11/09/2025 and 07:00 12/09/2025, but it never quite worked other than for one fleeting moment which you could then never replicate. So you abandoned this in favour of finishing the levels you *did* have. No record of this version remains, it was all deleted at the time due to avoiding futher distraction.
+
+**(08/03/2026, 14:36)** New prototype started.
+
 
 ### We'll Fix A Fence
 ### We'll Carry A Drink
@@ -58,6 +68,8 @@ The two players appear on screen. They are in a white void. All they have to so 
 ### We'll Climb A Mountain
 ### We'll Surf A Crowd
 ### We'll Raise A Glass
+
+
 ### We'll Climb A Tree
 
 **(30/07/2025, 17:45)** The two players appear as a lemon and a lime. A tree ~~appears~~ is on screen, with branches acting as steps that allow them to climb the tree. Once they reach the top of the tree, the arms and legs of the lemon and lime disappear, leaving only the two fruits hanging out in the tree, with smiles on their faces. If both players are in the tree when the timer runs out, they win.
@@ -130,3 +142,8 @@ NOTE: If *holding hands* is implemented in this level, obviously there's no logi
 **(10/12/2025, 11:26 AEST)** The Silence Guys stand in a queue, surrounded by non-descript other characters that move slowly. The queue moves slowly, and the players along with it. However, if the players move at all, or press any of the action buttons, they will make a large amount of noise, causing the line to grind to a halt. The players simply need to wait for time to pass - once the Silence Guys are off-screen (or, at least, they reach the front of the line, perhaps?) the level is solved.
 
 *In a game all about taking action, I remain uncertain about levels that imply success can be achieved through ***passivity***, but I think the lesson here is more about ***patience*** so maybe I get away with it.*
+
+
+### We'll Make Space For Others
+
+**(26/02/2026, at some point after 20:00 & 31/03/2026, at some point between 17:00-18:00)** Two characters are on a train in a crowded passenger car. The doors open for others to get on, but there is no space. If the players move in opposite directions, those waiting outside can get on the train, and the level is solved.

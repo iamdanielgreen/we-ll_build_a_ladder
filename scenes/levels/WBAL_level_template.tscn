@@ -29,10 +29,10 @@ script = ExtResource("2_wvsdq")
 [node name="Players" type="Node" parent="." unique_id=1647217325]
 
 [node name="TemplateLeft" parent="Players" unique_id=2086573908 instance=ExtResource("5_qsa24")]
-position = Vector2(-174, 94)
+position = Vector2(-174, 93)
 
 [node name="TemplateRight" parent="Players" unique_id=1650886283 instance=ExtResource("6_8b85u")]
-position = Vector2(174, 94)
+position = Vector2(174, 93)
 
 [node name="LevelAssets" type="Node" parent="." unique_id=1734232213]
 

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dufg3vlpva5fo"]
+
+[ext_resource type="Script" uid="uid://lv4fgvd60m85" path="res://scripts/items/00_ladder/ladder_ladder.gd" id="1_wmy4o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmy4o"]
+size = Vector2(16, 80)
+
+[node name="ladder_ladder" type="StaticBody2D" unique_id=797315856 groups=["ladder"]]
+script = ExtResource("1_wmy4o")
+
+[node name="placeholder_ladder" type="Polygon2D" parent="." unique_id=147103317]
+position = Vector2(-9.536743e-07, 4.7683716e-07)
+color = Color(0.95686275, 0.96862745, 0.25882354, 1)
+polygon = PackedVector2Array(-8.0000305, -39.999996, -8.0000305, 40, 8, 40, 8, -39.999996)
+uv = PackedVector2Array(-104, -39.999996, -104, 40.000008, 104.00003, 40.000008, 104.00003, -40)
+polygons = [PackedInt32Array(0, 3, 2, 1)]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2016794989]
+shape = SubResource("RectangleShape2D_wmy4o")

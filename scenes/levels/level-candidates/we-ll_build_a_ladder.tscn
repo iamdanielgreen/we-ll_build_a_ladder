@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://cps3dpxqj8sgg"]
+
+[ext_resource type="Script" uid="uid://cl7biokx0k1iy" path="res://scripts/levels/level-candidates/we-ll_build_a_ladder.gd" id="1_m6p7m"]
+[ext_resource type="Script" uid="uid://bpo1stkscwj61" path="res://scripts/screenshot_camera.gd" id="2_6mtqx"]
+[ext_resource type="PackedScene" uid="uid://bt7c7i6kfmkg1" path="res://scenes/tools/world_boundaries.tscn" id="3_fhpoo"]
+[ext_resource type="PackedScene" uid="uid://dk8oc2275vqic" path="res://scenes/tools/WorldFloor.tscn" id="4_mmrjw"]
+[ext_resource type="PackedScene" uid="uid://5exchnglweha" path="res://scenes/players/00_ladder/LadderLeft.tscn" id="5_mmrjw"]
+[ext_resource type="PackedScene" uid="uid://p6ngk66y4br6" path="res://scenes/players/00_ladder/LadderRight.tscn" id="6_vw2ef"]
+[ext_resource type="Texture2D" uid="uid://c72tpmqy1ujq" path="res://assets/sprites/backgrounds/bg_single_platform.png" id="7_m8i4r"]
+[ext_resource type="PackedScene" uid="uid://cgy1clvu0rn7v" path="res://scenes/items/00_ladder/ladder_wall.tscn" id="8_6mtqx"]
+[ext_resource type="PackedScene" uid="uid://dexbghebo1vra" path="res://scenes/ui/menus/pause_menu.tscn" id="8_l3kw0"]
+[ext_resource type="Texture2D" uid="uid://dev7f1lp2fomy" path="res://assets/sprites/ui/actions/switch_buttons_left_outline_blk.svg" id="8_vw2ef"]
+[ext_resource type="PackedScene" uid="uid://japowg7peu4c" path="res://scenes/items/00_ladder/ladder_wood.tscn" id="9_8prtv"]
+[ext_resource type="PackedScene" uid="uid://btq6qqh12hbij" path="res://scenes/ui/level_title.tscn" id="9_thvff"]
+[ext_resource type="PackedScene" uid="uid://bq8qlq4ecrkft" path="res://scenes/ui/countdown_timer.tscn" id="10_cikkn"]
+[ext_resource type="PackedScene" uid="uid://dufg3vlpva5fo" path="res://scenes/items/00_ladder/ladder_ladder.tscn" id="10_m8i4r"]
+[ext_resource type="PackedScene" uid="uid://cukihpfcauofe" path="res://scenes/ui/menus/out_of_time.tscn" id="11_fph65"]
+[ext_resource type="PackedScene" uid="uid://db8dpn6hatruc" path="res://scenes/items/00_ladder/ladder_threshold.tscn" id="12_8prtv"]
+[ext_resource type="PackedScene" uid="uid://djf41hksfjemg" path="res://scenes/ui/menus/level_win_menu.tscn" id="12_86hvx"]
+[ext_resource type="PackedScene" uid="uid://w1n1spgbj0tv" path="res://scenes/ui/tutorial_prompts.tscn" id="13_ufoqd"]
+[ext_resource type="AudioStream" uid="uid://orj532qlpjly" path="res://assets/audio/effects/ClappingTest.wav" id="14_7c75v"]
+
+[node name="we-ll_build_a_ladder" type="Node2D" unique_id=1782342206]
+script = ExtResource("1_m6p7m")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1526883499]
+zoom = Vector2(4, 4)
+script = ExtResource("2_6mtqx")
+
+[node name="WorldBoundaries" parent="." unique_id=1235863242 instance=ExtResource("3_fhpoo")]
+
+[node name="Floor" parent="." unique_id=1110336592 instance=ExtResource("4_mmrjw")]
+
+[node name="Players" type="Node" parent="." unique_id=1647217325]
+
+[node name="LadderLeft" parent="Players" unique_id=885699010 instance=ExtResource("5_mmrjw")]
+position = Vector2(-174, 93)
+
+[node name="LadderRight" parent="Players" unique_id=1263641486 instance=ExtResource("6_vw2ef")]
+position = Vector2(174, 93)
+
+[node name="LevelAssets" type="Node" parent="." unique_id=1734232213]
+
+[node name="bgSinglePlatform" type="Sprite2D" parent="LevelAssets" unique_id=1529673610]
+z_index = -10
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_m8i4r")
+
+[node name="left_action_button_icon" type="Sprite2D" parent="LevelAssets" unique_id=1591482102]
+visible = false
+texture_filter = 2
+position = Vector2(-44.5, 144.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_vw2ef")
+
+[node name="ladder_wall" parent="LevelAssets" unique_id=57658544 instance=ExtResource("8_6mtqx")]
+modulate = Color(1, 1, 1, 0.84313726)
+z_index = -9
+position = Vector2(0, 60)
+
+[node name="ladder_wood" parent="LevelAssets" unique_id=147103317 instance=ExtResource("9_8prtv")]
+modulate = Color(1, 1, 1, 0.84313726)
+position = Vector2(0, 84)
+
+[node name="ladder_ladder" parent="LevelAssets" unique_id=154687596 instance=ExtResource("10_m8i4r")]
+z_index = -1
+position = Vector2(0, 96)
+
+[node name="ladder_threshold" parent="LevelAssets" unique_id=1432413601 instance=ExtResource("12_8prtv")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=898564409]
+
+[node name="PauseMenu" parent="UI" unique_id=1044276131 instance=ExtResource("8_l3kw0")]
+visible = false
+
+[node name="LevelTitle" parent="UI" unique_id=725630522 instance=ExtResource("9_thvff")]
+visible = false
+
+[node name="CountdownTimer" parent="UI" unique_id=1581373075 instance=ExtResource("10_cikkn")]
+
+[node name="OutOfTime" parent="UI" unique_id=655403327 instance=ExtResource("11_fph65")]
+visible = false
+
+[node name="LevelWinMenu" parent="UI" unique_id=896112128 instance=ExtResource("12_86hvx")]
+visible = false
+
+[node name="TutorialPrompts" parent="UI" unique_id=864519416 instance=ExtResource("13_ufoqd")]
+visible = false
+
+[node name="Audio" type="Node" parent="." unique_id=133539954]
+
+[node name="ClappingTest" type="AudioStreamPlayer" parent="Audio" unique_id=102150344]
+stream = ExtResource("14_7c75v")

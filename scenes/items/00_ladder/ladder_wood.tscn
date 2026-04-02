@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://japowg7peu4c"]
+
+[ext_resource type="Script" uid="uid://b58ixfkrfuhpk" path="res://scripts/items/00_ladder/ladder_wood.gd" id="1_1xvbn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jgxjx"]
+radius = 18.285713
+height = 73.14285
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgxjx"]
+size = Vector2(48, 32)
+
+[node name="ladder_wood" type="Polygon2D" unique_id=147103317]
+position = Vector2(-4.7683716e-07, 0)
+scale = Vector2(1.75, 1.7500001)
+color = Color(0.15882993, 0.03330041, 0.025726704, 1)
+polygon = PackedVector2Array(-24, -16, -24, 15.999999, 24, 15.999999, 24, -16)
+uv = PackedVector2Array(-104, -39.999996, -104, 40.000008, 104.00003, 40.000008, 104.00003, -40)
+polygons = [PackedInt32Array(0, 3, 2, 1)]
+script = ExtResource("1_1xvbn")
+
+[node name="WoodBuildCollider" type="Area2D" parent="." unique_id=96676073]
+rotation = 1.5707964
+scale = Vector2(1, 0.9999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodBuildCollider" unique_id=1064015572]
+scale = Vector2(1, 1.0000001)
+shape = SubResource("CapsuleShape2D_jgxjx")
+debug_color = Color(1, 1, 0, 0.41960785)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=351104532]
+
+[node name="WoodSolidCollider" type="CollisionShape2D" parent="StaticBody2D" unique_id=2026924746]
+position = Vector2(4.7683716e-07, 0)
+shape = SubResource("RectangleShape2D_jgxjx")
+
+[connection signal="body_entered" from="WoodBuildCollider" to="." method="_on_wood_build_collider_body_entered"]
+[connection signal="body_exited" from="WoodBuildCollider" to="." method="_on_wood_build_collider_body_exited"]

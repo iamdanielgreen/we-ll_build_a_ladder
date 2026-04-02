@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cgy1clvu0rn7v"]
+
+[node name="ladder_wall" type="Polygon2D" unique_id=147103317]
+color = Color(0.74509805, 0.29411766, 0.25882354, 1)
+polygon = PackedVector2Array(-136, -56, -136, 48, 136, 48, 136, -56)
+uv = PackedVector2Array(-104, -39.999996, -104, 40.000008, 104.00003, 40.000008, 104.00003, -40)
+polygons = [PackedInt32Array(0, 3, 2, 1)]

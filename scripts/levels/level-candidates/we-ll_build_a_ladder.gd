@@ -3,11 +3,11 @@
 extends Node2D
 
 @onready var countdown_timer: CanvasLayer = $UI/CountdownTimer
-@onready var level_title: Label = $"UI/LevelTitle/TextLabels/we-ll_use_a_placeholder"
+@onready var level_title: Label = $UI/LevelTitle/TextLabels/well_use_a_placeholder
 @onready var tutorial_text: Node = $UI/TutorialPrompts/text_labels/placeholder_tutorial_text
 
-@onready var player_left: CharacterBody2D = $Players/TemplateLeft
-@onready var player_right: CharacterBody2D = $Players/TemplateRight
+@onready var player_left: CharacterBody2D = $Players/LadderLeft
+@onready var player_right: CharacterBody2D = $Players/LadderRight
 
 @onready var level_win_screen: CanvasLayer = $UI/LevelWinMenu
 @onready var next_level_button: Button = $UI/LevelWinMenu/LevelWinMenu_Buttons/next_level_button
@@ -36,8 +36,14 @@ func _process(_delta: float) -> void:
 			win_condition = true
 		else:
 			win_condition = true
+			
+	if GameManager.ladder_hit == 6:
+		win_condition = true
+		
 		
 	if win_condition:
+		#NOTE: BELOW FUNCTION IS FOR TEST PURPOSES.
+		#disable_controls()
 		await get_tree().create_timer(0.5).timeout
 		levelEnd()
 		
@@ -58,6 +64,7 @@ func _process(_delta: float) -> void:
 			#pass
 
 func levelStart():
+	GameManager.ladder_hit = 0
 	level_title.visible = true
 	countdown_timer.visible = false
 	get_tree().paused = true
@@ -129,3 +136,9 @@ func levelEnd():
 		#level_win_screen.show()
 		#next_level_button.grab_focus()
 		#get_tree().paused = true
+		
+#NOTE: BELOW FUNCTION IS FOR TEST PURPOSES.
+#func disable_controls():
+	#player_left.set_process(false)
+	#player_left.set_physics_process(false)
+	#player_left.set_process_input(false)

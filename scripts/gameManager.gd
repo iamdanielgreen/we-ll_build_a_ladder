@@ -6,15 +6,29 @@ enum game_mode {TimerOn, TimerOff}
 
 var current_game_mode: game_mode
 
-var happy_plant = false
-var ladder_hit = false
-
 var PL_holdhands = false
 var PR_holdhands = false
 var player_in_range = false
 var holding_hands = false
 
 var demo_credits = false
+
+#LEVEL X: WE'LL BUILD A LADDER
+var PL_canBuild = false
+
+var ladder_hit = 0
+
+
+#LEVEL X: WE'LL GROW TOGETHER
+var happy_plant = false
+
+
+
+
+
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

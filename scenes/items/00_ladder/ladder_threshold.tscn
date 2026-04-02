@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://db8dpn6hatruc"]
+
+[ext_resource type="Script" uid="uid://xpp6ngsp6his" path="res://scripts/items/00_ladder/ladder_threshold.gd" id="1_mnroe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnroe"]
+size = Vector2(96, 4)
+
+[node name="ladder_threshold" type="Polygon2D" unique_id=147103317]
+position = Vector2(-9.536743e-07, 4.7683716e-07)
+color = Color(0, 0.96862745, 0.25882354, 1)
+polygon = PackedVector2Array(-48, -4.0000005, -47.999992, 0, 48, 0, 48, -4.0000005)
+uv = PackedVector2Array(-104, -39.999996, -104, 40.000008, 104.00003, 40.000008, 104.00003, -40)
+polygons = [PackedInt32Array(0, 3, 2, 1)]
+script = ExtResource("1_mnroe")
+metadata/_edit_vertical_guides_ = [-150.0]
+
+[node name="ThresholdCollider" type="Area2D" parent="." unique_id=1072892035]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThresholdCollider" unique_id=275397763]
+position = Vector2(9.536743e-07, -2.0000002)
+shape = SubResource("RectangleShape2D_mnroe")
+
+[connection signal="body_entered" from="ThresholdCollider" to="." method="_on_threshold_collider_body_entered"]
