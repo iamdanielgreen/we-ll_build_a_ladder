@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 @onready var PR_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+@onready var PR_action_icon: Sprite2D = $left_action_button_icon
+
 const SPEED = 130.0 #NOTE: DEFAULT IS 300.0
 const JUMP_VELOCITY = -300.0 #NOTE: DEFAULT IS -400.0
 
@@ -77,6 +79,11 @@ func _physics_process(delta: float) -> void:
 				#PR_sprite.play("run")
 
 	move_and_slide()
+	
+	if GameManager.builder_count == 2 and GameManager.active_player == 2:
+		PR_action_icon.show()
+	else:
+		PR_action_icon.hide()
 
 
 #func _on_holding_hands_collider_body_entered(body: Node2D) -> void:

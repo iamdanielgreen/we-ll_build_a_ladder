@@ -9,6 +9,7 @@
 - DESIGN NOTE: Is this really needed? It's a cute bit, but is it too obvious?
 
 **(25/08/2025, 09:00)** Began prototyping level.
+
 **(12/09/2025)** "Finished" level exists within Degree Show Build of game.
 
 ### We'll Jump For Joy
@@ -35,9 +36,9 @@
 **(31/07/2025, 12:12)** One player is sad. The other player can make them feel better by offering to hold their hand. If the other player accepts this, they win the level.
 - It's worth thinking about that so far this the only example of a level where the solution is based around holding hands. Does this create problems for future you?
 
-### (They make noise) We'll Share Silence
+### ~~(They make noise)~~ We'll Share Silence
 **(30/07/2025, 17:53 (Edited 03/08/25, 13:29))**
-*DESIGN NOTE: Do the tutorial levels show the prompt sentence (e.g., "They build a wall, We Build A Ladder")? Let's try it and see if it's weird.*
+*DESIGN NOTE: Do the tutorial levels show the prompt sentence (e.g., "They build a wall, We Build A Ladder")? Let's try it and see if it's weird.* **(UPDATE: 11/04/2026, 18:39)** *It might be weird. I've lately been considering whether or not the title appears before or after the level is solved, except the intention is that the prompt is a hint to the player. So let's leave it for now and I'll try to stop overthinking it.*
 
 The two players appear on screen. They are in a white void. All they have to so is remain still. If they do this for three seconds, they ~~complete the puzzle~~ solve the level.
 
@@ -49,10 +50,11 @@ The two players appear on screen. They are in a white void. All they have to so 
 
 **(12/09/2025)** "Finished" level exists within Degree Show Build of game.
 
+**(11/04/2026, 18:36)** Updated title of level. I've also been wondering whether or not this is a Tutorial Level after all. It served a particular purpose in the Degree Show Build, but it doesn't quite fit in the arc of levels you're thinking about for the broader game.
 
 ## Game Levels
 
-### (You Build A Wall) We'll Build A Ladder
+### ~~(You Build A Wall)~~ We'll Build A Ladder
 
 **(30/07/2025, 17:40)** The two players stand in front of a wall. A pile of wood sits in front of the wall. The players approach the wall, and as they each press the action button, a ladder starts to emerge from the pile. Once the ladder is taller than the wall itself, the ~~players win~~ *the level is solved* (edit on 08/03/2026). 
 
@@ -60,17 +62,42 @@ The two players appear on screen. They are in a white void. All they have to so 
 
 **(08/03/2026, 14:36)** New prototype started.
 
+**(06/04/2026, 21:47)** Gameplay prototype complete. Updated title of level.
+
 
 ### We'll Fix A Fence
+
+**(10/05/2025)** Added as part of original list.
+
 ### We'll Carry A Drink
+
+**(10/05/2025)** Added as part of original list.
+
 ### We'll Have A Picnic
+
+**(10/05/2025)** Added as part of original list.
+
 ### We'll Make A Fire
+
+**(10/05/2025)** Added as part of original list.
+
 ### We'll Climb A Mountain
+
+**(10/05/2025)** Added as part of original list.
+
 ### We'll Surf A Crowd
+
+**(10/05/2025)** Added as part of original list.
+
+**(10/04/2026)** The players control two characters; an anthropomorphised Boogie Board, and a sea of people (The Crowd). The Boogie Board begins the level on a stage on the side of the screen, jumping on to The Crowd. In turn, The Crowd jumps up and down, jostling the Boogie Board along the screen - causing the level to be solved. 
+
 ### We'll Raise A Glass
 
+**(10/05/2025)** Added as part of original list.
 
 ### We'll Climb A Tree
+
+**(10/05/2025)** Added as part of original list.
 
 **(30/07/2025, 17:45)** The two players appear as a lemon and a lime. A tree ~~appears~~ is on screen, with branches acting as steps that allow them to climb the tree. Once they reach the top of the tree, the arms and legs of the lemon and lime disappear, leaving only the two fruits hanging out in the tree, with smiles on their faces. If both players are in the tree when the timer runs out, they win.
 -- Or perhaps a small timer starts when they reach the top of the tree. Once it counts down three seconds, the players win?
@@ -143,7 +170,26 @@ NOTE: If *holding hands* is implemented in this level, obviously there's no logi
 
 *In a game all about taking action, I remain uncertain about levels that imply success can be achieved through ***passivity***, but I think the lesson here is more about ***patience*** so maybe I get away with it.*
 
-
 ### We'll Make Space For Others
 
 **(26/02/2026, at some point after 20:00 & 31/03/2026, at some point between 17:00-18:00)** Two characters are on a train in a crowded passenger car. The doors open for others to get on, but there is no space. If the players move in opposite directions, those waiting outside can get on the train, and the level is solved.
+
+### We'll Tidy Up *(Not entirely sold on this title.)*
+
+**(07/04/2026)** Two characters (one holding a bag that is revealed with the Action Button, and the other a piece of litter) are on a flat plane. When the character holding the bag reveals it, the smaller character can jump inside. When this happens, the level is solved.
+
+**(Edited 11/04/2026, 18:50)** Two characters - one styled after a cassowary and holding a bag that is revealed with the Action Button, and the other a liter piece of litter - are on a flat plane. When the Cassowary reveals the bag, the litter can jump inside. When this happens, the level is solved.
+
+### We'll Offer A Lift 
+
+**(07/04/2026)** A frog is waiting by the side of a busy road, with traffic buzzing by. A car is in the lane closest to the frog - and is here to give the frog a lift. When the frog gets in the car, the car drives away and the level is solved.
+
+**(Edited 11/04/2026, 18:55)** A frog (one character) is waiting by the side of a busy road, with traffic buzzing by. A car (the other character) is in the lane closest to the frog - and is here to give the frog a lift. When the frog gets in the car, the car can drive away and the level is solved.
+
+### We'll Make A Mess 
+
+**(10/04/2026)** Two characters stand in front of a large wall. Tins of paint are visible on the ground in front of it, and the characters visibly hold one each in their hands. Pressing the Action Button causes them to throw paint at the wall. Once the wall is covered, the level is solved.
+
+### We'll Go To The Gallery 
+
+**(10/04/2026)** The Silence Guys are in an Art Gallery. In the middle of the screen is a bench pointed at a large painting on the wall i front of it. If the Silence Guys sit on the bench (using the Action Button), the level is solved.

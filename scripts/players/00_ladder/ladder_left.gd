@@ -81,10 +81,18 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	if GameManager.PL_canBuild:
+	if GameManager.builder_count == 2 and GameManager.active_player == 1:
 		PL_action_icon.show()
 	else:
 		PL_action_icon.hide()
+	
+
+	#NOTE: SPECIFICALLY FOR TEST RELATING TO SINGLE PLAYER COLLIDER REACTION, PRIOR TO
+	# VAR GameManager.can_build TEST ON 04/04/26
+	#if GameManager.PL_canBuild:
+		#PL_action_icon.show()
+	#else:
+		#PL_action_icon.hide()
 
 #func _on_holding_hands_collider_body_entered(body: Node2D) -> void:
 	##if body.is_in_group("player") and GameManager.PR_holdhands:

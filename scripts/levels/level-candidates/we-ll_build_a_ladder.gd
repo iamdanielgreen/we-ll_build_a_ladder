@@ -22,6 +22,7 @@ var win_condition = false
 
 func _ready() -> void:
 	levelStart()
+	print("Active Player is " + str(GameManager.active_player))
 	#tutorial_prompt() #NOTE: REENABLE IF YOU NEED A TUTORIAL FOR SOME REASON.
 
 func _process(_delta: float) -> void:
@@ -37,7 +38,8 @@ func _process(_delta: float) -> void:
 		else:
 			win_condition = true
 			
-	if GameManager.ladder_hit == 6:
+	if GameManager.ladder_count == 6:
+		GameManager.can_build = false
 		win_condition = true
 		
 		
@@ -64,7 +66,8 @@ func _process(_delta: float) -> void:
 			#pass
 
 func levelStart():
-	GameManager.ladder_hit = 0
+	GameManager.active_player = 0
+	GameManager.ladder_count = 0
 	level_title.visible = true
 	countdown_timer.visible = false
 	get_tree().paused = true

@@ -70,5 +70,19 @@
 
 - Complete TreeLeft and Tree Right animation frames. (Added 01/01/2026)
 
-- Players within template still don't quite start on floor when level begins (you can see them drop to the floor when gravity kicks in). (Added 08/03/2026)
-- - Does this happen in other levels? (Added 08/03/2026)
+~~- Players within template still don't quite start on floor when level begins (you can see them drop to the floor when gravity kicks in). (Added 08/03/2026)~~
+~~- - Does this happen in other levels? (Added 08/03/2026)~~ **[02/04/2026: You somewhat fixed this on 10/03. There's still a very small amount of movement when the level starts, but you wonder if only you can see this.]**
+
+- In **We'll Build A Ladder**:
+- - The win condition is achieved by the GameManager registering six movements of the ladder. It would be nice if this was actually connected to the collision of the ladder with some sort of non-visible collider. (Added 02/04/2026)
+- - - Disable player controls once win state is achieved (so they can't keep slamming the button and have the ladder keep moving)   
+~~- - Implement a system to display whose turn it is.~~ **[Implemented as of 06/04/2026]**
+- - Clear any active text labels/visible prompts once win condition is achieved.
+- - Set Z Index of ladder object to -9 within level scene. 
+
+- Create new and animated artwork for the button icons. (Added 11/04/2026)
+
+- Implement a system wherein a shape icon appears over the heads of the characters, so that the players can clearly see whose turn it is.
+
+- Find a way to use an iris shot that closes over the characters as the levels end. (Added 11/04/2026)
+- - Is this one iris per character, or one iris that closes over the midpoint between the two characters?
